@@ -474,6 +474,27 @@ the current position of point, then move it to the beginning of the line."
       twittering-initial-timeline-spec-string
       '(":replies" ":home"))
 
+;; intergration
+;;; mac dictionary
+;;;; take from https://github.com/renard/dictionary-app/blob/master/dictionary-app.el
+(defun dictionary-app-search (&optional term)
+  "Search for TERM in OSX Dictionary.app.
+
+If TERM is nil, try in order terms in the region, then
+`word-at-point' finally read from minibuffer."
+  (interactive)
+  (let ((term
+         (cond
+          (term term)
+          ((region-active-p) (buffer-substring-no-properties (mark) (point)))
+          ((word-at-point) (substring-no-properties (word-at-point)))
+          (t (read-from-minibuffer "Look up for: ")))))
+    (when term
+      (shell-command (format "open 'dict://%s'" (url-hexify-string term))))))
+
+(global-set-key (kbd "C-M-g") '(lambda () (interactive) (dictionary-app-search (current-word))))
+
+
 ;; session
 ;;; desktop
 (desktop-save-mode 1)
