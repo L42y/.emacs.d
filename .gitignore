@@ -1,2 +1,16 @@
-el-get
+# Packages
+elpa/
+el-get/
+
+# Records
+tramp
+.ido.last
 .smex-items
+ac-comphist.dat
+
+# Desktop
+emacs-desktop
+.emacs.desktop.lock
+
+# EShell
+eshell/
