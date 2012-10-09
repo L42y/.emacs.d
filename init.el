@@ -103,11 +103,11 @@
 
 ;;; choose my own fonts
 (defun frame-setting ()
-  (set-frame-font "monofur 12")
+  (set-frame-font "monofur 15")
   (dolist (charset '(kana han symbol cjk-misc bopomofo))
     (set-fontset-font (frame-parameter nil 'font)
                       charset
-                      (font-spec :family "文泉驿等宽微米黑" :size 13))))
+                      (font-spec :family "华文黑体" :size 13))))
 (if (and (fboundp 'daemonp) (daemonp))
     (add-hook 'after-make-frame-functions
               (lambda (frame)
