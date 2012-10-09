@@ -56,14 +56,13 @@
       (append
        '(el-get
          helm
+         go-mode
          js2-mode
-         ;; php+-mode
          python-mode
          haml-mode
-         ;; jinja2-mode
          sass-mode
          scss-mode
-         ;; less-css-mode
+         jinja2-mode
          calfw
          popwin
          full-ack
@@ -477,7 +476,6 @@ the current position of point, then move it to the beginning of the line."
       twittering-use-master-password t
       twittering-initial-timeline-spec-string
       '(":replies" ":home"))
-
 
 ;; session
 ;;; desktop
