@@ -466,9 +466,6 @@ the current position of point, then move it to the beginning of the line."
 (require 'popwin)
 (setq display-buffer-function 'popwin:display-buffer)
 
-;;; full-ack
-(setq ack-executable "/usr/bin/ack-grep")
-
 ;;; twit
 (setq twittering-username "L42y"
       twittering-icon-mode t
