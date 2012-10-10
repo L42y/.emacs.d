@@ -58,6 +58,7 @@
          helm
          go-mode
          js2-mode
+         web-mode
          python-mode
          haml-mode
          sass-mode
