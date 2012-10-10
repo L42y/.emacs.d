@@ -404,11 +404,6 @@
 (setq scss-compile-at-save nil)
 
 
-;; less css
-(setq less-css-compile-at-save nil)
-(setq less-css-lessc-command "/home/bug/.npm/less/1.3.0/package/bin/lessc")
-
-
 ;; rainbow
 (add-hook 'css-mode-hook 'rainbow-turn-on)
 
