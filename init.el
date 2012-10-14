@@ -223,8 +223,12 @@
 
 
 ;; auto-complte
-(require 'auto-complete)
-(global-auto-complete-mode t)
+(require 'auto-complete-config)
+(ac-config-default)
+(dolist (hook '(sass-mode-hook
+                scss-mode-hook
+                haml-mode-hook))
+  (add-hook hook (lambda () (auto-complete-mode 1))))
 (define-key ac-completing-map (kbd "C-n") 'ac-next)
 (define-key ac-completing-map (kbd "C-p") 'ac-previous)
 (define-key ac-complete-mode-map "\r" nil)
