@@ -246,15 +246,6 @@
 (setq ido-save-directory-list-file "~/.emacs.d/.ido.last")
 
 
-;; default key to switch buffer is C-x b, but that's not easy enough
-;;
-;; when you do that, to kill emacs either close its frame from the window
-;; manager or do M-x kill-emacs.  Don't need a nice shortcut for a once a
-;; week (or day) action.
-(global-set-key (kbd "C-x C-c") 'ido-switch-buffer)
-(global-set-key (kbd "C-x C-b") 'ibuffer)
-
-
 ;; C-x C-j opens dired with the cursor right on the file you're editing
 (require 'dired-x)
 
@@ -269,6 +260,7 @@
 
 ;; ibuffer
 (require 'ibuffer)
+(global-set-key (kbd "C-x C-b") 'ibuffer)
 
 ;;; jump to most recent buffer name at ibuffer list
 (defadvice ibuffer (around ibuffer-point-to-most-recent) ()
