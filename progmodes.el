@@ -32,18 +32,16 @@
 
 
 ;; hl-tags-mode
-(require 'hl-tags-mode)
 (add-hook 'sgml-mode-hook (lambda () (hl-tags-mode 1)))
 (add-hook 'nxml-mode-hook (lambda () (hl-tags-mode 1)))
 
 
 ;;; zencoding
-(require 'zencoding-mode)
+(add-hook 'web-mode-hook 'zencoding-mode)
 (add-hook 'sgml-mode-hook 'zencoding-mode)
 
 
 ;;; haml
-(require 'haml-mode)
 (add-to-list 'auto-mode-alist '("\\.haml\\'" . haml-mode))
 (add-hook 'haml-mode-hook '(lambda ()
                              (add-hook 'before-save-hook
@@ -52,13 +50,11 @@
 
 
 ;; scss
-(autoload 'scss-mode "scss-mode")
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
 (setq scss-compile-at-save nil)
 
 
 ;;; auto insert
-(require 'autoinsert)
 (auto-insert-mode)
 (setq auto-insert-directory "~/.emacs.d/templates/")
 (setq auto-insert-query nil)

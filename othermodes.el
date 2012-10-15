@@ -24,8 +24,6 @@
 
 
 ;;; use ido for minibuffer completion
-(require 'ido)
-
 (ido-mode t)
 (setq ido-show-dot-for-dired t)
 (setq ido-enable-flex-matching t)
@@ -35,7 +33,6 @@
 
 
 ;;; ibuffer
-(require 'ibuffer)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
 ;;; jump to most recent buffer name at ibuffer list
@@ -88,7 +85,6 @@
 
 
 ;;; popwin
-(require 'popwin)
 (setq display-buffer-function 'popwin:display-buffer)
 
 
