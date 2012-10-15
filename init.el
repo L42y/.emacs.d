@@ -11,6 +11,7 @@
 (require 'cl)
 (require 'pkg)
 (require 'global)
+(require 'keybindings)
 
 
 ;; not me
@@ -44,19 +45,6 @@
                 (with-selected-frame frame
                   (frame-setting))))
   (frame-setting))
-
-
-;; key binding
-
-;;; comment
-(global-set-key (kbd "C-'") 'comment-dwim)
-(global-set-key (kbd "C-c g") 'comment-or-uncomment-region)
-
-;;; quit emacs
-(global-set-key (kbd "C-x C-k") 'save-buffers-kill-emacs)
-
-;;; disable keys
-(global-unset-key (kbd "<pause>"))
 
 ;; helper
 ;;; make buffer name uniquify
