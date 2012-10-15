@@ -352,10 +352,6 @@ the current position of point, then move it to the beginning of the line."
 ;;; notify
 (require 'notifications)
 
-;;; calendar
-(require 'calfw)
-(require 'calfw-cal)
-
 ;;; popwin
 (require 'popwin)
 (setq display-buffer-function 'popwin:display-buffer)
