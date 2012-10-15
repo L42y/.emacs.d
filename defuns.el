@@ -57,4 +57,5 @@ If TERM is nil, try in order terms in the region, then
     (when term
       (shell-command (format "open 'dict://%s'" (url-hexify-string term))))))
 
+
 (provide 'defuns)

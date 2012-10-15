@@ -16,7 +16,7 @@
 
 
 (require 'cl)
-(require 'pkg)
+(require 'pkgs)
 (require 'defuns)
 (require 'global)
 (require 'progmodes)
