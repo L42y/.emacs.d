@@ -59,7 +59,7 @@
          go-mode
          js2-mode
          web-mode
-         ;; python-mode
+         python-mode
          haml-mode
          sass-mode
          scss-mode
@@ -334,17 +334,6 @@
             (set (make-local-variable 'sgml-basic-offset) 4)
             (sgml-guess-indent)))
 
-;; php+ mode
-;; (require 'php+-mode)
-;; (php+-mode-setup)
-
-;; cedet
-(global-ede-mode 1)
-;; (add-to-list 'semantic-default-submodes 'global-semantic-idle-summary-mode)
-;; (add-to-list 'semantic-default-submodes 'global-semantic-idle-completions-mode)
-
-;; (semantic-mode 1)
-
 ;; python
 (setq python-python-command "python2")
 
@@ -354,8 +343,6 @@
 
 
 ;; ctags
-(setq path-to-ctags "/usr/bin/ctags")
-
 (defun create-tags (dir-name)
   "Create tags file."
   (interactive "DDirectory: ")
@@ -403,9 +390,6 @@
 ;; rainbow
 (add-hook 'css-mode-hook 'rainbow-turn-on)
 
-
-;; yasnippet
-;; (yas/initialize)
 
 ;;; auto insert
 (require 'autoinsert)
