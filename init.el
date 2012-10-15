@@ -59,7 +59,7 @@
          go-mode
          js2-mode
          web-mode
-         python-mode
+         ;; python-mode
          haml-mode
          sass-mode
          scss-mode
@@ -72,6 +72,7 @@
          virtualenv
          nginx-mode
          sr-speedbar
+         golden-ratio
          hl-tags-mode
          auto-complete
          pkgbuild-mode
@@ -465,6 +466,9 @@ the current position of point, then move it to the beginning of the line."
 ;;; popwin
 (require 'popwin)
 (setq display-buffer-function 'popwin:display-buffer)
+
+;;; golden ratio
+(golden-ratio-enable)
 
 ;;; twit
 (setq twittering-username "L42y"
