@@ -246,19 +246,6 @@
                       ("Dired" (mode . dired-mode)))))))
 
 
-;; sr-speedbar
-(require 'sr-speedbar)
-(global-set-key (kbd "C-c C-s") 'sr-speedbar-toggle)
-(global-set-key (kbd "C-c C-o") 'sr-speedbar-select-window)
-
-(setq speedbar-show-unknown-files t)
-(setq speedbar-smart-directory-expand-flag t)
-(setq speedbar-use-images nil)
-(setq sr-speedbar-auto-refresh nil)
-(setq sr-speedbar-right-side nil)
-(setq sr-speedbar-width-console 40)
-
-
 ;; electric
 (electric-pair-mode t)
 (electric-layout-mode t)
