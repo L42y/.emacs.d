@@ -10,6 +10,7 @@
 
 (require 'cl)
 (require 'pkg)
+(require 'global)
 
 
 ;; not me
@@ -30,26 +31,6 @@
 ;; load color theme
 (load-theme 'monokai)
 
-
-;;general
-
-;;; encoding
-(prefer-coding-system 'utf-8)
-(setq default-buffer-file-coding-system 'utf-8)
-
-
-;;; on to the visual settings
-(menu-bar-mode -1)
-(tool-bar-mode -1)                      ; no tool bar with icons
-(scroll-bar-mode -1)                    ; no scroll bars
-(line-number-mode 1)                    ; have line numbers and
-(column-number-mode 1)                  ; column numbers in the mode line
-(setq inhibit-splash-screen t)          ; no splash screen, thanks
-
-(global-hl-line-mode)                   ; highlight current line
-(show-paren-mode 1)
-(global-linum-mode 1)                   ; add line numbers on the left
-
 ;;; choose my own fonts
 (defun frame-setting ()
   (set-frame-font "monofur 15")
@@ -63,25 +44,6 @@
                 (with-selected-frame frame
                   (frame-setting))))
   (frame-setting))
-
-;; title bar format
-(setq frame-title-format "%b @ %f")
-
-;;; take from https://github.com/josh/emacs.d/blob/master/global.el by @joshpeek
-;;; disable auto-save files (#foo#)
-(setq auto-save-default nil)
-;;; disable backup files (foo~)
-(setq backup-inhibited t)
-;;; disable auto-save-list/.saves
-(setq auto-save-list-file-prefix nil)
-;;; disable bell
-(setq visible-bell nil)
-;;; always open in the same window
-(setq ns-pop-up-frames nil)
-;;; show extra whitespace
-(setq show-trailing-whitespace t)
-;;; hide empty line fringe
-(set-default 'indicate-empty-lines nil)
 
 
 ;; key binding
@@ -105,51 +67,6 @@
 ;;; purge outdated buffer
 (require 'midnight)
 (setq midnight-mode 't)
-
-;;; avoid compiz manager rendering bugs
-(add-to-list 'default-frame-alist '(alpha . 100))
-
-;;; under mac, have Command as Meta and keep Option for localized input
-(when (string-match "apple-darwin" system-configuration)
-  (setq mac-allow-anti-aliasing t)
-  (setq mac-command-modifier 'meta)
-  (setq mac-option-modifier 'none))
-
-;; Use the clipboard, pretty please, so that copy/paste "works"
-(setq x-select-enable-clipboard t)
-
-;; Navigate windows with M-<arrows>
-(windmove-default-keybindings 'meta)
-(setq windmove-wrap-around t)
-
-;; winner-mode provides C-<left> to get back to previous window layout
-(winner-mode 1)
-
-;; whenever an external process changes a file underneath emacs, and there
-;; was no unsaved changes in the corresponding buffer, just revert its
-;; content to reflect what's on-disk.
-(global-auto-revert-mode 1)
-
-;; M-x shell is a nice shell interface to use, let's make it colorful.  If
-;; you need a terminal emulator rather than just a shell, consider M-x term
-;; instead.
-(autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
-(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
-
-;; If you do use M-x term, you will notice there's line mode that acts like
-;; emacs buffers, and there's the default char mode that will send your
-;; input char-by-char, so that curses application see each of your key
-;; strokes.
-;;
-;; The default way to toggle between them is C-c C-j and C-c C-k, let's
-;; better use just one key to do the same.
-(require 'term)
-(define-key term-raw-map  (kbd "C-'") 'term-line-mode)
-(define-key term-mode-map (kbd "C-'") 'term-char-mode)
-
-;; Have C-y act as usual in term-mode, to avoid C-' C-y C-'
-;; Well the real default would be C-c C-j C-y C-c C-k.
-(define-key term-raw-map  (kbd "C-y") 'term-paste)
 
 
 ;; helm
@@ -379,16 +296,6 @@ If TERM is nil, try in order terms in the region, then
       (shell-command (format "open 'dict://%s'" (url-hexify-string term))))))
 
 (global-set-key (kbd "C-M-g") '(lambda () (interactive) (dictionary-app-search (current-word))))
-
-
-;; session
-;;; desktop
-(desktop-save-mode 1)
-(setq desktop-path '("~/.emacs.d/"))
-(setq desktop-dirname "~/.emacs.d/")
-(setq desktop-base-file-name "emacs-desktop")
-(setq desktop-restore-eager 20
-      desktop-lazy-verbose nil)
 
 
 ;; transparency
