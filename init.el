@@ -8,43 +8,18 @@
 
 (add-to-list 'load-path "~/.emacs.d")
 
-(require 'cl)
-(require 'pkg)
-(require 'global)
-(require 'keybindings)
 
-
-;; not me
+;;; load color theme
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(auto-indent-next-pair-timer-interval (quote ((default 0.0005))))
  '(custom-safe-themes (quote ("27690557dea9e52cf8dd81773e5e779309431ff00a4ebcc88b8cae336eeefa04" default))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-
-;; load color theme
 (load-theme 'monokai)
 
-;;; choose my own fonts
-(defun frame-setting ()
-  (set-frame-font "monofur 15")
-  (dolist (charset '(kana han symbol cjk-misc bopomofo))
-    (set-fontset-font (frame-parameter nil 'font)
-                      charset
-                      (font-spec :family "华文黑体" :size 13))))
-(if (and (fboundp 'daemonp) (daemonp))
-    (add-hook 'after-make-frame-functions
-              (lambda (frame)
-                (with-selected-frame frame
-                  (frame-setting))))
-  (frame-setting))
+
+(require 'cl)
+(require 'pkg)
+(require 'defuns)
+(require 'global)
+(require 'keybindings)
 
 ;; helper
 ;;; make buffer name uniquify
@@ -102,14 +77,6 @@
 (require 'dired-x)
 
 
-;; full screen
-(defun fullscreen ()
-  (interactive)
-  (set-frame-parameter nil 'fullscreen
-                       (if (frame-parameter nil 'fullscreen) nil 'fullboth)))
-(global-set-key [f11] 'fullscreen)
-
-
 ;; ibuffer
 (require 'ibuffer)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
@@ -165,13 +132,6 @@
 (setq js2-basic-offset 2)
 
 
-;; ctags
-(defun create-tags (dir-name)
-  "Create tags file."
-  (interactive "DDirectory: ")
-  (shell-command (format "%s -f %s/TAGS -e -R %s" path-to-ctags dir-name (directory-file-name dir-name))))
-
-
 ;; nxhtml
 (setq nxml-child-indent 4 ; global nxhtml child mode indent
       ourcomments-ido-ctrl-tab t
@@ -222,19 +182,6 @@
 (define-auto-insert "\.py" "python.py")
 
 
-;;; C-a behaviour
-(defun smart-line-beginning ()
-  "Move point to the beginning of text on the current line; if that is already
-the current position of point, then move it to the beginning of the line."
-  (interactive)
-  (let ((pt (point)))
-    (back-to-indentation)
-    (when (eq pt (point))
-      (beginning-of-line))))
-
-(global-set-key (kbd "C-a") 'smart-line-beginning)
-
-
 ;; write
 ;;; org
 (require 'org-install)
@@ -263,27 +210,6 @@ the current position of point, then move it to the beginning of the line."
 
 ;;; golden ratio
 (golden-ratio-enable)
-
-
-;; intergration
-;;; mac dictionary
-;;;; take from https://github.com/renard/dictionary-app/blob/master/dictionary-app.el
-(defun dictionary-app-search (&optional term)
-  "Search for TERM in OSX Dictionary.app.
-
-If TERM is nil, try in order terms in the region, then
-`word-at-point' finally read from minibuffer."
-  (interactive)
-  (let ((term
-         (cond
-          (term term)
-          ((region-active-p) (buffer-substring-no-properties (mark) (point)))
-          ((word-at-point) (substring-no-properties (word-at-point)))
-          (t (read-from-minibuffer "Look up for: ")))))
-    (when term
-      (shell-command (format "open 'dict://%s'" (url-hexify-string term))))))
-
-(global-set-key (kbd "C-M-g") '(lambda () (interactive) (dictionary-app-search (current-word))))
 
 
 ;; transparency
