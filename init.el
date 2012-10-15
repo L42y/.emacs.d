@@ -64,20 +64,14 @@
          sass-mode
          scss-mode
          jinja2-mode
-         calfw
          popwin
-         full-ack
          powerline
-         yasnippet
-         virtualenv
          nginx-mode
-         sr-speedbar
          golden-ratio
          hl-tags-mode
          auto-complete
          pkgbuild-mode
-         zencoding-mode
-         twittering-mode)
+         zencoding-mode)
        (mapcar 'el-get-source-name el-get-sources)))
 
 ;;; install new packages and init already installed packages
@@ -318,22 +312,6 @@
 
 
 ;; coding
-;; indent
-(setq-default indent-tabs-mode nil)
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; (add-hook 'write-file-hooks                                   ;;
-;;           (lambda () (if (not indent-tabs-mode)               ;;
-;;                          (untabify (point-min) (point-max)))) ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
-;; html
-(add-hook 'html-mode-hook
-          (lambda ()
-            ;; Default indentation is usually 2 spaces, changing to 4.
-            (set (make-local-variable 'sgml-basic-offset) 4)
-            (sgml-guess-indent)))
-
 ;; python
 (setq python-python-command "python2")
 
@@ -445,13 +423,6 @@ the current position of point, then move it to the beginning of the line."
 ;;; golden ratio
 (golden-ratio-enable)
 
-;;; twit
-(setq twittering-username "L42y"
-      twittering-icon-mode t
-      twittering-timer-interval 60
-      twittering-use-master-password t
-      twittering-initial-timeline-spec-string
-      '(":replies" ":home"))
 
 ;; intergration
 ;;; mac dictionary
