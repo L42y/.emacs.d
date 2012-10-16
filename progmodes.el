@@ -18,6 +18,14 @@
 (electric-layout-mode t)
 
 
+;;; C
+(add-hook 'c-mode-hook
+          '(lambda ()
+             (c-set-style "k&r")
+             (setq tab-width 8)
+             (setq c-basic-offset 8)))
+
+
 ;;; python
 (setq python-python-command "python2")
 
@@ -43,10 +51,6 @@
 
 ;;; haml
 (add-to-list 'auto-mode-alist '("\\.haml\\'" . haml-mode))
-(add-hook 'haml-mode-hook '(lambda ()
-                             (add-hook 'before-save-hook
-                                       (lambda ()
-                                         (untabify (point-min) (point-max))))))
 
 
 ;; scss
