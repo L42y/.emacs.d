@@ -14,7 +14,6 @@
 
 ;;; electric
 (electric-pair-mode t)
-(electric-indent-mode t)
 (electric-layout-mode t)
 
 
@@ -51,7 +50,10 @@
 
 ;;; haml
 (add-to-list 'auto-mode-alist '("\\.haml\\'" . haml-mode))
-
+(add-hook 'haml-mode-hook
+	  (lambda ()
+	    (setq indent-tabs-mode nil)
+	    (define-key haml-mode-map "\C-m" 'newline-and-indent)))
 
 ;; scss
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
