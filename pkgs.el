@@ -39,6 +39,7 @@
          golden-ratio
          hl-tags-mode
          auto-complete
+	 smart-forward
          pkgbuild-mode
          zencoding-mode)
        (mapcar 'el-get-source-name el-get-sources)))
