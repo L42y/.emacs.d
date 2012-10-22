@@ -27,6 +27,7 @@
 
 ;;; python
 (setq python-python-command "python2")
+(add-hook 'python-mode-hook 'jedi:setup)
 
 
 ;;; javascript

@@ -33,6 +33,7 @@
          sass-mode
          scss-mode
          jinja2-mode
+	 jedi
          popwin
          powerline
          nginx-mode
