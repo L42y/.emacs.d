@@ -36,6 +36,7 @@
          popwin
          powerline
          nginx-mode
+	 virtualenv
          golden-ratio
          hl-tags-mode
          auto-complete
