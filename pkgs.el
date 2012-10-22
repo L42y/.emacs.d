@@ -24,25 +24,29 @@
 (setq my-packages
       (append
        '(el-get
-         helm
+
+	 ; major modes
          go-mode
          js2-mode
          web-mode
-         python-mode
          haml-mode
          sass-mode
          scss-mode
+         nginx-mode
          jinja2-mode
+         python-mode
+         pkgbuild-mode
+
+	 ; minor modes
 	 jedi
+         helm
          popwin
          powerline
-         nginx-mode
 	 virtualenv
          golden-ratio
          hl-tags-mode
          auto-complete
 	 smart-forward
-         pkgbuild-mode
          zencoding-mode)
        (mapcar 'el-get-source-name el-get-sources)))
 
