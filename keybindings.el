@@ -14,6 +14,11 @@
 (global-set-key (kbd "C-M-f") 'smart-forward)
 
 
+;;; helm
+(global-set-key (kbd "C-x C-a") 'helm-ack)
+(global-set-key (kbd "C-x C-y") 'helm-show-kill-ring)
+
+
 ;;; quit emacs
 (global-set-key (kbd "C-x C-k") 'save-buffers-kill-emacs)
 

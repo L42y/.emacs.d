@@ -41,6 +41,7 @@
 	 jedi
          helm
          popwin
+	 helm-ack
          powerline
 	 virtualenv
          golden-ratio

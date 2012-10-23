@@ -3,6 +3,7 @@
 (setq uniquify-buffer-name-style 'post-forward
       uniquify-separator "@")
 
+
 ;;; helm awesomeness
 (require 'helm-config)
 (helm-mode 1)
@@ -20,7 +21,9 @@
                      helm-c-source-locate                ;; use 'locate'
                      helm-c-source-buffer-not-found))))
 
-(global-set-key (kbd "C-x C-y") 'helm-show-kill-ring)
+;;; helm ack
+(setq helm-c-ack-auto-set-filetype nil)
+(setq helm-c-ack-thing-at-point 'symbol)
 
 
 ;;; use ido for minibuffer completion
