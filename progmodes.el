@@ -86,9 +86,7 @@
                  "param"
                  "option"
                  )
-                zencoding-self-closing-tags))
-  (add-hook 'html-mode-hook 'zencoding-mode)
-  (add-hook 'php-mode-hook 'zencoding-mode)
+                zencoding-self-closing-tags)))
 
 
 ;;; haml
