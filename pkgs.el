@@ -48,7 +48,6 @@
          golden-ratio
          hl-tags-mode
          auto-complete
-	 smart-forward
          zencoding-mode)
        (mapcar 'el-get-source-name el-get-sources)))
 
