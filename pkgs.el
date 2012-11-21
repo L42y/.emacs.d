@@ -40,6 +40,7 @@
 	 ; minor modes
 	 jedi
          helm
+	 rinari
          popwin
 	 helm-ack
          powerline
