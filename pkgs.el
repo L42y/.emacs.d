@@ -44,6 +44,7 @@
          popwin
 	 helm-ack
          powerline
+	 git-modes
 	 virtualenv
          golden-ratio
          hl-tags-mode
