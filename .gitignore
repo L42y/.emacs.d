@@ -4,6 +4,7 @@ el-get/
 
 # Records
 tramp
+.places
 .ido.last
 .smex-items
 ac-comphist.dat
