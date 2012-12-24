@@ -45,6 +45,8 @@
 	 helm-ack
          powerline
 	 git-modes
+	 undo-tree
+	 pony-mode
 	 virtualenv
          golden-ratio
          hl-tags-mode
