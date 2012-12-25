@@ -1,3 +1,11 @@
+;;; builtin package
+(require 'package)
+(add-to-list 'package-archives 
+    '("marmalade" .
+      "http://marmalade-repo.org/packages/"))
+(package-initialize)
+
+
 ;;; el-get
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
