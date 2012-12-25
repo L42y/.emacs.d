@@ -25,7 +25,7 @@
       (append
        '(el-get
 
-	 ; major modes
+         ;; major modes
          go-mode
          js2-mode
          web-mode
@@ -37,17 +37,17 @@
          python-mode
          pkgbuild-mode
 
-	 ; minor modes
-	 jedi
+         ;; minor modes
+         jedi
          helm
-	 rinari
+         rinari
          popwin
-	 helm-ack
+         helm-ack
          powerline
-	 git-modes
-	 undo-tree
-	 pony-mode
-	 virtualenv
+         git-modes
+         undo-tree
+         pony-mode
+         virtualenv
          golden-ratio
          hl-tags-mode
          auto-complete
