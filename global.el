@@ -70,9 +70,9 @@
   (setq mac-option-modifier 'none))
 
 
-;;; $PATH and exec-path
-(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
-(setq exec-path (append exec-path '("/usr/local/bin")))
+;;; $PATH
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
 
 
 (provide 'global)
