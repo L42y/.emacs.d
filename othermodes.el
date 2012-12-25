@@ -55,7 +55,7 @@
 
 
 ;;; org-mode awesomeness
-(require 'org-install)
+(require 'org)
 (define-key global-map "\C-ca" 'org-agenda)
 (add-hook 'org-mode-hook
           (lambda ()
