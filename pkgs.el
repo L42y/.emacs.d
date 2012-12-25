@@ -55,6 +55,7 @@
          git-modes
          undo-tree
          pony-mode
+         ibuffer-vc
          virtualenv
          golden-ratio
          hl-tags-mode

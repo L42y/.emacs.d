@@ -46,33 +46,12 @@
     (ibuffer-jump-to-buffer recent-buffer-name)))
 (ad-activate 'ibuffer)
 
-;;; ibuffer auto group
-(require 'ibuf-ext nil t)
-(when (featurep 'ibuf-ext)
-  (add-hook 'ibuffer-mode-hook
-            (lambda ()
-              (setq ibuffer-filter-groups
-                    '(("Org Life"
-                       (or (mode . org-mode)
-                           (mode . org-agenda-mode)))
-                      ("Web Development"
-                       (or (mode . js-mode)
-                           (mode . js2-mode)
-                           (mode . php-mode)
-                           (mode . web-mode)
-                           (mode . css-mode)
-                           (mode . sass-mode)
-                           (mode . scss-mode)
-                           (mode . html-mode)
-                           (mode . nxml-mode)
-                           (mode . haml-mode)
-                           (mode . jinja2-mode)
-                           (mode . nxhtml-mode)))
-                      ("Python"
-                       (or (mode . python-mode)))
-                      ("Emacs-Lisp" (or (mode . emacs-lisp-mode)))
-                      ("Buffer" (name . "\\*.*\\*"))
-                      ("Dired" (mode . dired-mode)))))))
+;;; ibuffer-vc
+(add-hook 'ibuffer-hook
+          (lambda ()
+            (ibuffer-vc-set-filter-groups-by-vc-root)
+            (unless (eq ibuffer-sorting-mode 'alphabetic)
+              (ibuffer-do-sort-by-alphabetic))))
 
 
 ;;; org-mode awesomeness
