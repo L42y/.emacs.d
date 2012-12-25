@@ -78,6 +78,9 @@
 ;;; org-mode awesomeness
 (require 'org-install)
 (define-key global-map "\C-ca" 'org-agenda)
+(add-hook 'org-mode-hook
+          (lambda ()
+            (toggle-truncate-lines)))
 
 
 ;;; dired
