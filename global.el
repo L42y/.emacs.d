@@ -19,6 +19,10 @@
 (global-linum-mode 1)          ; add line numbers on the left
 
 
+;;; shorter answer
+(defalias 'yes-or-no-p 'y-or-n-p)
+
+
 ;;; take from https://github.com/josh/emacs.d/blob/master/global.el by @joshpeek
 
 (setq auto-save-default nil)            ; disable auto-save files (#foo#)
