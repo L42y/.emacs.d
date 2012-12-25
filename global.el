@@ -2,6 +2,10 @@
 (setq frame-title-format "%b @ %f")
 
 
+;;; don't blink, please
+(blink-cursor-mode 0)
+
+
 ;;; on to the visual settings
 (menu-bar-mode -1)             ; no menubar
 (tool-bar-mode -1)             ; no toolbar
