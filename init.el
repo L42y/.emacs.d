@@ -10,9 +10,7 @@
 
 
 ;;; load color theme
-(custom-set-variables
- '(custom-safe-themes (quote ("27690557dea9e52cf8dd81773e5e779309431ff00a4ebcc88b8cae336eeefa04" default))))
-(load-theme 'monokai)
+(load-theme 'monokai t)
 
 
 (require 'cl)

@@ -40,7 +40,7 @@
 
 
 ;;; python
-(setq python-python-command "python2")
+(autoload 'jedi:setup "jedi" nil t)
 (add-hook 'python-mode-hook 'jedi:setup)
 
 
