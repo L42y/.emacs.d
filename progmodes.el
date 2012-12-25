@@ -1,3 +1,17 @@
+;;; code style
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+(setq indent-line-function 'insert-tab)
+
+;;; only use tab-width of 2 for certain modes.
+(mapc (lambda (hook)
+        (add-hook hook (lambda ()
+                         (setq-default tab-width 2))))
+      '(js2-mode-hook
+        js-mode-hook
+        css-mode-hook))
+
+
 ;;; auto-complte
 (require 'auto-complete-config)
 (ac-config-default)
