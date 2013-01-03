@@ -61,46 +61,6 @@
 (add-hook 'web-mode-hook 'zencoding-mode)
 (add-hook 'sgml-mode-hook 'zencoding-mode)
 
-;;; zencoding HTML5 // from http://fukuyama.co/zencoding
-(when (require 'zencoding-mode nil t)
-  (setq zencoding-block-tags
-        (append (list
-                 "article"
-                 "section"
-                 "aside"
-                 "nav"
-                 "figure"
-                 "address"
-                 "header"
-                 "footer")
-                zencoding-block-tags))
-  (setq zencoding-inline-tags
-        (append (list
-                 "textarea"
-                 "small"
-                 "time" "del" "ins"
-                 "sub"
-                 "sup"
-                 "i" "s" "b"
-                 "ruby" "rt" "rp"
-                 "bdo"
-                 "iframe" "canvas"
-                 "audio" "video"
-                 "ovject" "embed"
-                 "map"
-                 )
-                zencoding-inline-tags))
-  (setq zencoding-self-closing-tags
-        (append (list
-                 "wbr"
-                 "object"
-                 "source"
-                 "area"
-                 "param"
-                 "option"
-                 )
-                zencoding-self-closing-tags)))
-
 
 ;;; haml
 (add-to-list 'auto-mode-alist '("\\.haml\\'" . haml-mode))
