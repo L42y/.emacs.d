@@ -12,10 +12,6 @@
 (global-set-key (kbd "C-x C-k") 'save-buffers-kill-emacs)
 
 
-;;; full screen
-(global-set-key [f11] 'fullscreen)
-
-
 ;;; C-a
 (global-set-key (kbd "C-a") 'smart-line-beginning)
 

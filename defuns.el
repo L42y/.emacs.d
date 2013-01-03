@@ -15,14 +15,6 @@
   (frame-setting))
 
 
-;;; full screen
-(defun fullscreen ()
-  "Full screen FTW"
-  (interactive)
-  (set-frame-parameter nil 'fullscreen
-                       (if (frame-parameter nil 'fullscreen) nil 'fullboth)))
-
-
 ;;; ctags
 (defun create-tags (dir-name)
   "Create tags file."
