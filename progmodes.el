@@ -120,6 +120,7 @@
 (setq auto-insert-directory "~/.emacs.d/templates/")
 (setq auto-insert-query nil)
 (define-auto-insert "\.py" "python.py")
+(define-auto-insert "\.html" "html.html")
 
 
 (provide 'progmodes)
