@@ -26,6 +26,11 @@
 (setq helm-c-ack-thing-at-point 'symbol)
 
 
+;;; projectile
+(projectile-global-mode)
+(setq projectile-enable-caching t)
+
+
 ;;; use ido for minibuffer completion
 (ido-mode t)
 (setq ido-show-dot-for-dired t)

@@ -46,6 +46,8 @@
          pkgbuild-mode
 
          ;; minor modes
+         dash
+         s
          jedi
          helm
          rinari
@@ -56,6 +58,7 @@
          undo-tree
          pony-mode
          ibuffer-vc
+         projectile
          virtualenv
          golden-ratio
          hl-tags-mode
