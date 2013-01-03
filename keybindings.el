@@ -4,7 +4,6 @@
 
 
 ;;; helm
-(global-set-key (kbd "C-x C-a") 'helm-ack)
 (global-set-key (kbd "C-x C-y") 'helm-show-kill-ring)
 
 
@@ -14,14 +13,6 @@
 
 ;;; C-a
 (global-set-key (kbd "C-a") 'smart-line-beginning)
-
-
-;;; dictionary search
-(global-set-key (kbd "C-M-g") '(lambda () (interactive) (dictionary-app-search (current-word))))
-
-
-;;; disable keys
-(global-unset-key (kbd "<pause>"))
 
 
 (provide 'keybindings)
