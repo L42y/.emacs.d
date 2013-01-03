@@ -41,7 +41,6 @@
          sass-mode
          scss-mode
          nginx-mode
-         python-mode
          pkgbuild-mode
 
          ;; minor modes
