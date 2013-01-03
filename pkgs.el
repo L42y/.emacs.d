@@ -41,7 +41,6 @@
          sass-mode
          scss-mode
          nginx-mode
-         jinja2-mode
          python-mode
          pkgbuild-mode
 

@@ -48,9 +48,8 @@
 (setq js2-basic-offset 2)
 
 
-;;; jinja2
-(add-to-list 'auto-mode-alist '("\\.jinja\\'" . jinja2-mode))
-(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . jinja2-mode))
+;;; web-mode
+(add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 
 
 ;; hl-tags-mode
