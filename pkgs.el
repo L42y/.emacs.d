@@ -64,8 +64,7 @@
          golden-ratio
          hl-tags-mode
          auto-complete
-         zencoding-mode
-         exec-path-from-shell)
+         zencoding-mode)
        (mapcar 'el-get-source-name el-get-sources)))
 
 ;;; install new packages and init already installed packages
