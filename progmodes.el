@@ -53,6 +53,7 @@
 
 
 ;; hl-tags-mode
+(add-hook 'web-mode-hook (lambda () (hl-tags-mode 1)))
 (add-hook 'sgml-mode-hook (lambda () (hl-tags-mode 1)))
 (add-hook 'nxml-mode-hook (lambda () (hl-tags-mode 1)))
 
