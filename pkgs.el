@@ -54,6 +54,7 @@
          popwin
          helm-ack
          powerline
+         yasnippet
          git-modes
          undo-tree
          pony-mode
