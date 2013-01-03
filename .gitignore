@@ -9,6 +9,10 @@ tramp
 .smex-items
 ac-comphist.dat
 
+# Projectile
+.projectile
+projectile.cache
+
 # Desktop
 emacs-desktop
 .emacs.desktop.lock
