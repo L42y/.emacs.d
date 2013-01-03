@@ -52,7 +52,6 @@
          helm
          rinari
          popwin
-         helm-ack
          powerline
          yasnippet
          git-modes

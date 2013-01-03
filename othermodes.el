@@ -21,10 +21,6 @@
                      helm-c-source-locate                ;; use 'locate'
                      helm-c-source-buffer-not-found))))
 
-;;; helm ack
-(setq helm-c-ack-auto-set-filetype nil)
-(setq helm-c-ack-thing-at-point 'symbol)
-
 
 ;;; projectile
 (projectile-global-mode)
