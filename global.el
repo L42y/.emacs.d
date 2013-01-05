@@ -71,7 +71,8 @@
 
 
 ;;; $PATH
-(setenv "PATH" (shell-command-to-string "echo $PATH"))
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
 
 
 (provide 'global)
