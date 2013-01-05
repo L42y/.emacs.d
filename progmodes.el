@@ -26,6 +26,10 @@
 (define-key ac-complete-mode-map "\r" nil)
 
 
+;;; yasnippet
+(yas-global-mode 1)
+
+
 ;;; electric
 (electric-pair-mode t)
 (electric-layout-mode t)
