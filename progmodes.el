@@ -26,6 +26,10 @@
 (define-key ac-complete-mode-map "\r" nil)
 
 
+;;; flycheck
+(add-hook 'find-file-hook 'flycheck-mode-on)
+
+
 ;;; yasnippet
 (yas-global-mode 1)
 

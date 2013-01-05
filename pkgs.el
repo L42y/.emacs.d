@@ -50,6 +50,7 @@
          helm
          rinari
          popwin
+         flycheck
          powerline
          yasnippet
          git-modes
