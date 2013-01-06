@@ -24,7 +24,10 @@
    `(font-lock-string-face ((,class (:foreground "#DFD874"))))
    `(font-lock-type-face ((,class (:foreground "#89BDFF"))))
    `(font-lock-variable-name-face ((,class (:foreground "#A6E22A"))))
-   `(font-lock-warning-face ((,class (:foreground "#FD5FF1"))))))
+   `(font-lock-warning-face ((,class (:foreground "#FD5FF1"))))
+
+   `(flymake-errline ((,class (:foreground "#F1266F" :underline t))))
+   `(flymake-warnline ((,class (:foreground "#FD5FF1" :underline t))))))
 
 (provide-theme 'monokai)
 
