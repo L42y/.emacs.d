@@ -37,6 +37,7 @@
                 python-mode-hook
                 emacs-lisp-mode-hook))
   (add-hook hook (lambda () (flycheck-mode-on))))
+(setq flycheck-error-indicator nil)
 
 
 ;;; yasnippet
