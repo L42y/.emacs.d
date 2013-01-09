@@ -47,6 +47,8 @@
 ;;; electric
 (electric-pair-mode t)
 (electric-layout-mode t)
+(dolist (hook '(web-mode-hook))
+  (add-hook hook (lambda () (electric-indent-mode t))))
 
 
 ;;; C
