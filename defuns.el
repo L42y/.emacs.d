@@ -1,6 +1,6 @@
 ;;; choose my own fonts
 (defun frame-setting ()
-  (set-frame-font "monofur 15")
+  (set-frame-font "Ubuntu Mono 15")
   (dolist (charset '(kana han symbol cjk-misc bopomofo))
     (set-fontset-font (frame-parameter nil 'font)
                       charset
