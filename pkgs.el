@@ -49,7 +49,6 @@
          jedi
          helm
          rinari
-         popwin
          flycheck
          powerline
          yasnippet

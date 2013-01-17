@@ -84,10 +84,6 @@
              (define-key dired-mode-map "e" 'wdired-change-to-wdired-mode)))
 
 
-;;; popwin
-(setq display-buffer-function 'popwin:display-buffer)
-
-
 ;;; golden ratio
 (golden-ratio-enable)
 
