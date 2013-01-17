@@ -10,12 +10,6 @@
 (add-to-list 'desktop-modes-not-to-save 'dired-mode)
 
 
-;;; save point position between sessions
-(require 'saveplace)
-(setq-default save-place t)
-(setq save-place-file (expand-file-name ".places" user-emacs-directory))
-
-
 ;;; helm awesomeness
 (require 'helm-config)
 (helm-mode 1)
