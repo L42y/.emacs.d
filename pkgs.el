@@ -53,7 +53,6 @@
          powerline
          yasnippet
          git-modes
-         undo-tree
          pony-mode
          ibuffer-vc
          projectile
