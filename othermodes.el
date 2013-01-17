@@ -30,7 +30,6 @@
 
 ;;; projectile
 (projectile-global-mode)
-(setq projectile-enable-caching t)
 
 
 ;;; use ido for minibuffer completion
