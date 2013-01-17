@@ -78,11 +78,10 @@
             (toggle-truncate-lines)))
 
 
-;;; dired
-(setq dired-listing-switches "-aluh") ;; ls alias
 ;;; wdired
-(add-hook 'dired-mode-hook '(lambda ()
-                              (define-key dired-mode-map "e" 'wdired-change-to-wdired-mode)))
+(add-hook 'dired-mode-hook
+          '(lambda ()
+             (define-key dired-mode-map "e" 'wdired-change-to-wdired-mode)))
 
 
 ;;; popwin
