@@ -38,17 +38,6 @@
 (setq ido-save-directory-list-file "~/.emacs.d/.ido.last")
 
 
-;;; ibuffer
-(global-set-key (kbd "C-x C-b") 'ibuffer)
-
-;;; jump to most recent buffer name at ibuffer list
-(defadvice ibuffer (around ibuffer-point-to-most-recent) ()
-  "Open ibuffer with cursor pointed to most recent buffer name"
-  (let ((recent-buffer-name (buffer-name)))
-    ad-do-it
-    (ibuffer-jump-to-buffer recent-buffer-name)))
-(ad-activate 'ibuffer)
-
 ;;; ibuffer-vc
 (add-hook 'ibuffer-hook
           (lambda ()
