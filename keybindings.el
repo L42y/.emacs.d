@@ -4,8 +4,8 @@
 
 
 ;;; helm
+(global-set-key (kbd "C-c h") 'helm-projectile)
 (global-set-key (kbd "C-x C-y") 'helm-show-kill-ring)
-
 
 ;;; quit emacs
 (global-set-key (kbd "C-x C-k") 'save-buffers-kill-emacs)
