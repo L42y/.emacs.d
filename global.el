@@ -10,14 +10,11 @@
 (menu-bar-mode -1)             ; no menubar
 (tool-bar-mode -1)             ; no toolbar
 (scroll-bar-mode -1)           ; no scrollbar
-(line-number-mode 1)           ; have line numbers and
-(column-number-mode 1)         ; column numbers in the mode line
-(setq inhibit-splash-screen t) ; no splash screen, thanks
 
 (show-paren-mode 1)
 (global-hl-line-mode)          ; highlight current line
 (global-linum-mode 1)          ; add line numbers on the left
-
+(delete-selection-mode t)      ; delete marked text on typing
 
 ;;; shorter answer
 (defalias 'yes-or-no-p 'y-or-n-p)
