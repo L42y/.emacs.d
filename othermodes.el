@@ -4,6 +4,21 @@
       uniquify-separator "@")
 
 
+;;; desktop
+(desktop-save-mode 1)
+(setq desktop-path '("~/.emacs.d/"))
+(setq desktop-dirname "~/.emacs.d/")
+(setq desktop-base-file-name "emacs-desktop")
+(setq desktop-restore-eager 20
+      desktop-lazy-verbose nil)
+
+
+;;; save point position between sessions
+(require 'saveplace)
+(setq-default save-place t)
+(setq save-place-file (expand-file-name ".places" user-emacs-directory))
+
+
 ;;; helm awesomeness
 (require 'helm-config)
 (helm-mode 1)

@@ -45,21 +45,6 @@
 (setq auto-revert-verbose nil)
 
 
-;;; desktop
-(desktop-save-mode 1)
-(setq desktop-path '("~/.emacs.d/"))
-(setq desktop-dirname "~/.emacs.d/")
-(setq desktop-base-file-name "emacs-desktop")
-(setq desktop-restore-eager 20
-      desktop-lazy-verbose nil)
-
-
-;;; save point position between sessions
-(require 'saveplace)
-(setq-default save-place t)
-(setq save-place-file (expand-file-name ".places" user-emacs-directory))
-
-
 ;;; under mac, have Command as Meta and keep Option for localized input
 (when (string-match "apple-darwin" system-configuration)
   (setq mac-allow-anti-aliasing t)
