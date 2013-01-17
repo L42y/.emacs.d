@@ -6,11 +6,8 @@
 
 ;;; desktop
 (desktop-save-mode 1)
-(setq desktop-path '("~/.emacs.d/"))
-(setq desktop-dirname "~/.emacs.d/")
-(setq desktop-base-file-name "emacs-desktop")
-(setq desktop-restore-eager 20
-      desktop-lazy-verbose nil)
+(setq desktop-base-file-name ".emacs.desktop")
+(add-to-list 'desktop-modes-not-to-save 'dired-mode)
 
 
 ;;; save point position between sessions

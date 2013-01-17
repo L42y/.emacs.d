@@ -14,8 +14,7 @@ ac-comphist.dat
 projectile.cache
 
 # Desktop
-emacs-desktop
-.emacs.desktop.lock
+.emacs.desktop*
 
 # EShell
 eshell/
