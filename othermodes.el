@@ -35,9 +35,6 @@
 ;;; use ido for minibuffer completion
 (ido-mode t)
 (setq ido-show-dot-for-dired t)
-(setq ido-enable-flex-matching t)
-(setq ido-use-filename-at-point 'guess)
-(setq ido-auto-merge-work-directories-length -1)
 (setq ido-save-directory-list-file "~/.emacs.d/.ido.last")
 
 
