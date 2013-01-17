@@ -12,18 +12,15 @@
 
 ;;; helm awesomeness
 (require 'helm-config)
-(helm-mode 1)
-
 (global-set-key (kbd "C-x b")
                 (lambda() (interactive)
                   (helm
                    :prompt "Switch to: "
-                   :candidate-number-limit 15                 ;; up to 10 of each
+                   :candidate-number-limit 10                 ;; up to 10 of each
                    :sources
                    '(helm-c-source-buffers-list          ;; buffers
-                     helm-c-source-recentf               ;; recent files
-                     helm-c-source-bookmarks             ;; bookmarks
                      helm-c-source-files-in-current-dir  ;; current dir
+                     helm-c-source-recentf               ;; recent files
                      helm-c-source-locate                ;; use 'locate'
                      helm-c-source-buffer-not-found))))
 
