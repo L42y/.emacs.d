@@ -1,0 +1,2 @@
+* External Dependencies
+  [[https://github.com/ggreer/the_silver_searcher][The Silver Searcher]]

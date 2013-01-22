@@ -46,6 +46,7 @@
          ;; minor modes
          dash
          s
+         ag
          jedi
          helm
          rinari

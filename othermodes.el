@@ -1,3 +1,13 @@
+;;; ag.el
+(setq ag-arguments (list
+                    "--column"
+                    "--literal"
+                    "--nocolor"
+                    "--nogroup"
+                    "--all-text"
+                    "--smart-case"))
+
+
 ;;; make buffer name uniquify
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward
