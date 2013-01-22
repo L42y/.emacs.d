@@ -1,6 +1,6 @@
 ;;; builtin package
 (require 'package)
-(add-to-list 'package-archives 
+(add-to-list 'package-archives
     '("marmalade" .
       "http://marmalade-repo.org/packages/"))
 (package-initialize)
@@ -59,6 +59,7 @@
          virtualenv
          golden-ratio
          hl-tags-mode
+         ace-jump-mode
          auto-complete
          zencoding-mode
          exec-path-from-shell)
