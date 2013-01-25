@@ -2,19 +2,16 @@
 (setq frame-title-format "%b @ %f")
 
 
-;;; don't blink, please
-(blink-cursor-mode 0)
-
-
 ;;; on to the visual settings
-(menu-bar-mode -1)             ; no menubar
-(tool-bar-mode -1)             ; no toolbar
-(scroll-bar-mode -1)           ; no scrollbar
+(menu-bar-mode 0)         ; no menubar
+(tool-bar-mode 0)         ; no toolbar
+(scroll-bar-mode 0)       ; no scrollbar
+(blink-cursor-mode 0)     ; don't blink, please
 
 (show-paren-mode 1)
-(global-hl-line-mode)          ; highlight current line
-(global-linum-mode 1)          ; add line numbers on the left
-(delete-selection-mode t)      ; delete marked text on typing
+(global-hl-line-mode)     ; highlight current line
+(global-linum-mode)       ; add line numbers on the left
+(delete-selection-mode t) ; delete marked text on typing
 
 ;;; shorter answer
 (defalias 'yes-or-no-p 'y-or-n-p)
@@ -49,7 +46,8 @@
 (when (string-match "apple-darwin" system-configuration)
   (setq mac-allow-anti-aliasing t)
   (setq mac-command-modifier 'meta)
-  (setq mac-option-modifier 'none))
+  (setq mac-option-modifier 'super)
+  (setq ns-function-modifier 'hyper))
 
 
 ;;; $PATH
