@@ -8,6 +8,11 @@
                     "--smart-case"))
 
 
+;;; skewer
+(setq httpd-root "~/.emacs.d/el-get/skewer-mode")
+(httpd-start)
+
+
 ;;; make buffer name uniquify
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward

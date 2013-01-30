@@ -58,6 +58,7 @@
          ibuffer-vc
          projectile
          virtualenv
+         skewer-mode
          golden-ratio
          hl-tags-mode
          ace-jump-mode
