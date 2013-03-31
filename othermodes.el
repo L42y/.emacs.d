@@ -60,6 +60,11 @@
                      helm-c-source-buffer-not-found))))
 
 
+;;; $PATH
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
+
 ;;; projectile
 (projectile-global-mode)
 
