@@ -65,13 +65,6 @@
 (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 
 
-;; hl-tags-mode
-(dolist (hook '(web-mode-hook
-                sgml-mode-hook
-                nxml-mode-hook))
-  (add-hook hook (lambda () (hl-tags-mode t))))
-
-
 ;;; zencoding
 (add-hook 'web-mode-hook 'zencoding-mode)
 (add-hook 'sgml-mode-hook 'zencoding-mode)
