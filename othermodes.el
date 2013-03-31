@@ -83,8 +83,4 @@
              (define-key dired-mode-map "e" 'wdired-change-to-wdired-mode)))
 
 
-;;; golden ratio
-(golden-ratio-enable)
-
-
 (provide 'othermodes)
