@@ -3,6 +3,7 @@
 (setq-default tab-width 4)
 (setq indent-line-function 'insert-tab)
 
+
 ;;; only use tab-width of 2 for certain modes.
 (mapc (lambda (hook)
         (add-hook hook (lambda ()
@@ -75,6 +76,7 @@
 	  (lambda ()
 	    (setq indent-tabs-mode nil)
 	    (define-key haml-mode-map "\C-m" 'newline-and-indent)))
+
 
 ;; scss
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
