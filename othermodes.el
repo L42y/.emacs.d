@@ -26,6 +26,12 @@
 (setq ido-save-directory-list-file "~/.emacs.d/.ido.last")
 
 
+;;; wdired
+(add-hook 'dired-mode-hook
+          '(lambda ()
+             (define-key dired-mode-map "e" 'wdired-change-to-wdired-mode)))
+
+
 ;;; org-mode awesomeness
 (require 'org)
 (add-hook 'org-mode-hook
@@ -75,12 +81,6 @@
             (ibuffer-vc-set-filter-groups-by-vc-root)
             (unless (eq ibuffer-sorting-mode 'alphabetic)
               (ibuffer-do-sort-by-alphabetic))))
-
-
-;;; wdired
-(add-hook 'dired-mode-hook
-          '(lambda ()
-             (define-key dired-mode-map "e" 'wdired-change-to-wdired-mode)))
 
 
 (provide 'othermodes)
