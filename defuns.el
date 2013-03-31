@@ -1,10 +1,10 @@
 ;;; choose my own fonts
 (defun frame-setting ()
   (set-frame-font "Ubuntu Mono 15")
-  (dolist (charset '(kana han symbol cjk-misc bopomofo))
+  (if (display-graphic-p) (dolist (charset '(kana han symbol cjk-misc bopomofo))
     (set-fontset-font (frame-parameter nil 'font)
                       charset
-                      (font-spec :family "华文黑体" :size 13))))
+                      (font-spec :family "华文黑体" :size 13)))))
 
 
 (if (and (fboundp 'daemonp) (daemonp))
