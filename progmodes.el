@@ -1,3 +1,9 @@
+;;; progmodes.el --- Programming related things
+
+;;; Commentary:
+
+;;; Code:
+
 ;;; code style
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
@@ -28,8 +34,8 @@
 
 
 ;;; flycheck
+(require 'flycheck)
 (add-hook 'prog-mode-hook 'flycheck-mode)
-(setq flycheck-error-indicator nil)
 
 
 ;;; yasnippet
@@ -56,11 +62,14 @@
 
 
 ;;; javascript
+(require 'js)
+(require 'js2-mode)
 (setq js-indent-level 2
       js2-basic-offset 2)
 
 
 ;;; web-mode
+(require 'web-mode)
 (setq web-mode-markup-indent-offset 4)
 (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 
@@ -71,6 +80,7 @@
 
 
 ;;; haml
+(require 'haml-mode)
 (add-to-list 'auto-mode-alist '("\\.haml\\'" . haml-mode))
 (add-hook 'haml-mode-hook
 	  (lambda ()
@@ -79,11 +89,13 @@
 
 
 ;; scss
+(require 'scss-mode)
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
 (setq scss-compile-at-save nil)
 
 
 ;;; auto insert
+(require 'autoinsert)
 (auto-insert-mode)
 (setq auto-insert-directory "~/.emacs.d/templates/")
 (setq auto-insert-query nil)
@@ -92,3 +104,4 @@
 
 
 (provide 'progmodes)
+;;; progmodes.el ends here

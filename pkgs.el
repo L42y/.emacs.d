@@ -1,3 +1,9 @@
+;;; pkgs.el --- Emacs built-in package manager
+
+;;; Commentary:
+
+;;; Code:
+
 ;;; builtin package
 (require 'package)
 (add-to-list 'package-archives
@@ -6,3 +12,4 @@
 
 
 (provide 'pkgs)
+;;; pkgs.el ends here

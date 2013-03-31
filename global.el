@@ -1,3 +1,9 @@
+;;; global.el --- Random configs
+
+;;; Commentary:
+
+;;; Code:
+
 ;; title bar format
 (setq frame-title-format "%b @ %f")
 
@@ -37,10 +43,6 @@
 ;; content to reflect what's on-disk.
 (global-auto-revert-mode 1)
 
-;; also auto refresh dired, but be quiet about it
-(setq global-auto-revert-non-file-buffers t)
-(setq auto-revert-verbose nil)
-
 
 ;;; under mac, have Command as Meta and keep Option for localized input
 (when (string-match "apple-darwin" system-configuration)
@@ -51,3 +53,4 @@
 
 
 (provide 'global)
+;;; global.el ends here

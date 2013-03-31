@@ -1,3 +1,9 @@
+;;; monokai-theme.el --- Homemade monokai theme
+
+;;; Commentary:
+
+;;; Code:
+
 (deftheme monokai
   "almost monokai")
 

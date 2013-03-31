@@ -1,5 +1,12 @@
+;;; defuns.el --- Homemade defuns
+
+;;; Commentary:
+
+;;; Code:
+
 ;;; choose my own fonts
 (defun frame-setting ()
+  "Set fancy fonts for both code and chinese characters."
   (set-frame-font "Ubuntu Mono 15")
   (if (display-graphic-p) (dolist (charset '(kana han symbol cjk-misc bopomofo))
     (set-fontset-font (frame-parameter nil 'font)
@@ -17,8 +24,7 @@
 
 ;;; C-a behaviour
 (defun smart-line-beginning ()
-  "Move point to the beginning of text on the current line; if that is already
-the current position of point, then move it to the beginning of the line."
+  "Move point to the beginning of text on the current line; if that is already the current position of point, then move it to the beginning of the line."
   (interactive)
   (let ((pt (point)))
     (back-to-indentation)
@@ -27,3 +33,4 @@ the current position of point, then move it to the beginning of the line."
 
 
 (provide 'defuns)
+;;; defuns.el ends here

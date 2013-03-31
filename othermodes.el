@@ -1,3 +1,9 @@
+;;; other-modes.el --- Programming unrelated things
+
+;;; Commentary:
+
+;;; Code:
+
 ;; built-in packages
 ;;; make buffer name uniquify
 (require 'uniquify)
@@ -6,6 +12,7 @@
 
 
 ;;; desktop
+(require 'desktop)
 (desktop-save-mode 1)
 (setq desktop-path '("~/.emacs.d/"))
 (setq desktop-base-file-name ".emacs.desktop")
@@ -13,6 +20,7 @@
 
 
 ;;; use ido for minibuffer completion
+(require 'ido)
 (ido-mode t)
 (setq ido-show-dot-for-dired t)
 (setq ido-save-directory-list-file "~/.emacs.d/.ido.last")
@@ -27,6 +35,7 @@
 
 ;; third-party packages
 ;;; ag.el
+(require 'ag)
 (setq ag-arguments (list
                     "--column"
                     "--literal"
@@ -37,6 +46,7 @@
 
 
 ;;; skewer
+(require 'simple-httpd)
 (setq httpd-root "~/.emacs.d/el-get/skewer-mode")
 (httpd-start)
 
@@ -59,6 +69,7 @@
 
 
 ;;; ibuffer-vc
+(require 'ibuffer-vc)
 (add-hook 'ibuffer-hook
           (lambda ()
             (ibuffer-vc-set-filter-groups-by-vc-root)
@@ -73,3 +84,4 @@
 
 
 (provide 'othermodes)
+;;; othermodes.el ends here

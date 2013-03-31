@@ -1,3 +1,9 @@
+;;; keybindings.el --- Not just M-x
+
+;;; Commentary:
+
+;;; Code:
+
 ;;; ag
 (global-set-key (kbd "<f5>") 'ag-project-at-point)
 
@@ -42,3 +48,4 @@
 
 
 (provide 'keybindings)
+;;; keybindings.el ends here
