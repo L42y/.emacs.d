@@ -40,6 +40,11 @@
 
 
 ;; third-party packages
+;;; main-line
+(require 'main-line)
+(setq main-line-separator-style 'slant-left)
+
+
 ;;; ag.el
 (require 'ag)
 (setq ag-arguments (list
