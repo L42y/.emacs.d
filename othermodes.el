@@ -21,6 +21,7 @@
 
 ;;; desktop
 (desktop-save-mode 1)
+(setq desktop-path '("~/.emacs.d/"))
 (setq desktop-base-file-name ".emacs.desktop")
 (add-to-list 'desktop-modes-not-to-save 'dired-mode)
 
