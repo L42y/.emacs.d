@@ -13,12 +13,14 @@
    `(default ((,class (:background "#272821" :foreground "#F8F8F2"))))
    `(cursor ((,class (:background "#DAD085" :foreground "#656565"))))
    ;; Mode line faces
-   `(mode-line ((,class (:box (:line-width -1 :style released-button)
+   `(mode-line ((,class (:box nil
                          :background "white" :foreground "black"))))
+   `(mode-line-inactive ((,class (:box nil))))
    ;; hl-line face
    `(hl-line ((,class (:background "#1A1A1A"))))
    ;;
    `(fringe ((,class (:background "#222"))))
+   `(vertical-border ((,class (:foreground "#272821"))))
    ;; region face
    `(region ((,class (:background "#6DC5F1"))))
    ;; Font lock faces
