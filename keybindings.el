@@ -12,6 +12,10 @@
 (global-set-key (kbd "C-x C-y") 'helm-show-kill-ring)
 
 
+;;; magit
+(global-set-key (kbd "C-x C-z") 'magit-status)
+
+
 ;;; ace-jump
 (global-set-key (kbd "C-c SPC") 'ace-jump-mode)
 
@@ -22,6 +26,14 @@
 
 ;;; quit emacs
 (global-set-key (kbd "C-x C-k") 'save-buffers-kill-emacs)
+
+
+;;; org-mode
+(global-set-key (kbd "C-c a") 'org-agenda)
+
+
+;;; smex
+(global-set-key (kbd "C-x <RET>") 'smex)
 
 
 ;;; C-a
