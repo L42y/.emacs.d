@@ -32,12 +32,12 @@
                 (lambda() (interactive)
                   (helm
                    :prompt "Switch to: "
-                   :candidate-number-limit 10                 ;; up to 10 of each
+                   :candidate-number-limit 10
                    :sources
-                   '(helm-c-source-buffers-list          ;; buffers
-                     helm-c-source-files-in-current-dir  ;; current dir
-                     helm-c-source-recentf               ;; recent files
-                     helm-c-source-locate                ;; use 'locate'
+                   '(helm-c-source-buffers-list
+                     helm-c-source-files-in-current-dir
+                     helm-c-source-recentf
+                     helm-c-source-locate
                      helm-c-source-buffer-not-found))))
 
 
