@@ -47,17 +47,6 @@
 
 ;;; helm awesomeness
 (require 'helm-config)
-(global-set-key (kbd "C-x b")
-                (lambda() (interactive)
-                  (helm
-                   :prompt "Switch to: "
-                   :candidate-number-limit 10
-                   :sources
-                   '(helm-c-source-buffers-list
-                     helm-c-source-files-in-current-dir
-                     helm-c-source-recentf
-                     helm-c-source-locate
-                     helm-c-source-buffer-not-found))))
 
 
 ;;; $PATH
