@@ -23,6 +23,7 @@
 (require 'ido)
 (ido-mode t)
 (setq ido-show-dot-for-dired t)
+(setq ido-enable-flex-matching nil)
 (setq ido-save-directory-list-file "~/.emacs.d/.ido.last")
 
 
