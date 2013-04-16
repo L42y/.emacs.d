@@ -7,7 +7,7 @@
 ;;; choose my own fonts
 (defun frame-setting ()
   "Set fancy fonts for both code and chinese characters."
-  (set-frame-font "Ubuntu Mono 15")
+  (set-frame-font "monofur 15")
   (if (display-graphic-p) (dolist (charset '(kana han symbol cjk-misc bopomofo))
     (set-fontset-font (frame-parameter nil 'font)
                       charset
