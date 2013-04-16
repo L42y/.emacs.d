@@ -89,5 +89,10 @@
               (ibuffer-do-sort-by-alphabetic))))
 
 
+;;; rainbow-delimiters
+(require 'rainbow-delimiters)
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+
+
 (provide 'othermodes)
 ;;; othermodes.el ends here
