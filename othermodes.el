@@ -53,7 +53,6 @@
                     "--literal"
                     "--nocolor"
                     "--nogroup"
-                    "--all-text"
                     "--smart-case"))
 
 
