@@ -65,6 +65,7 @@
 ;;; web-mode
 (require 'web-mode)
 (setq web-mode-markup-indent-offset 4)
+(setq web-mode-disable-auto-pairing t)
 (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 
 
