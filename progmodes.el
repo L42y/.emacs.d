@@ -22,11 +22,7 @@
 ;;; auto-complte
 (require 'auto-complete-config)
 (ac-config-default)
-
-(dolist (hook '(sass-mode-hook
-                scss-mode-hook
-                haml-mode-hook))
-  (add-hook hook (lambda () (auto-complete-mode 1))))
+(add-hook 'prog-mode-hook 'auto-complete-mode)
 
 (define-key ac-completing-map (kbd "C-n") 'ac-next)
 (define-key ac-completing-map (kbd "C-p") 'ac-previous)
