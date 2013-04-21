@@ -39,7 +39,6 @@
 
 
 ;;; electric
-(electric-layout-mode t)
 (electric-indent-mode t)
 
 
