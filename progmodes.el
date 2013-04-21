@@ -10,6 +10,10 @@
 (setq indent-line-function 'insert-tab)
 
 
+;;; subword
+(add-hook 'prog-mode-hook 'subword-mode)
+
+
 ;;; only use tab-width of 2 for certain modes.
 (mapc (lambda (hook)
         (add-hook hook (lambda ()
