@@ -103,5 +103,12 @@
   (sp-local-tag  "<" "<_>" "</_>" :transform 'sp-match-sgml-tags))
 
 
+;;; tagedit
+(require 'tagedit)
+(add-hook 'web-mode-hook (lambda () (tagedit-mode 1)))
+(tagedit-add-paredit-like-keybindings)
+(tagedit-add-experimental-features)
+
+
 (provide 'othermodes)
 ;;; othermodes.el ends here
