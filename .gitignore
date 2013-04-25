@@ -1,17 +1,19 @@
 # Packages
 elpa/
 el-get/
+backups/
+auto-save-list/
 
 # Records
 tramp
-.places
+places
 .ido.last
 .smex-items
 ac-comphist.dat
 
 # Projectile
 .projectile
-projectile.cache
+projectile*
 
 # Desktop
 .emacs.desktop*

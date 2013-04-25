@@ -5,12 +5,6 @@
 ;;; Code:
 
 ;; built-in packages
-;;; make buffer name uniquify
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'post-forward
-      uniquify-separator "@")
-
-
 ;;; desktop
 (require 'desktop)
 (desktop-save-mode 1)
@@ -20,10 +14,7 @@
 
 
 ;;; use ido for minibuffer completion
-(require 'ido)
-(ido-mode t)
 (setq ido-show-dot-for-dired t)
-(setq ido-enable-flex-matching nil)
 (setq ido-save-directory-list-file "~/.emacs.d/.ido.last")
 
 
