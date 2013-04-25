@@ -67,6 +67,7 @@
 
 
 ;;; projectile
+(require 'projectile)
 (projectile-global-mode)
 
 
