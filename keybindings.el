@@ -43,6 +43,10 @@
 (global-set-key (kbd "C-x <RET>") 'smex)
 
 
+;;; expand-region
+(global-set-key (kbd "C-=") 'er/expand-region)
+
+
 ;;; C-a
 (global-set-key (kbd "C-a") 'smart-line-beginning)
 

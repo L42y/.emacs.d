@@ -97,5 +97,9 @@
 (tagedit-add-experimental-features)
 
 
+;;; expand-region
+(require 'expand-region)
+
+
 (provide 'othermodes)
 ;;; othermodes.el ends here
