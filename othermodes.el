@@ -101,5 +101,10 @@
 (require 'expand-region)
 
 
+;;; diff-hl
+(require 'diff-hl)
+(global-diff-hl-mode)
+
+
 (provide 'othermodes)
 ;;; othermodes.el ends here
