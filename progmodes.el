@@ -40,6 +40,7 @@
 
 ;;; yasnippet
 (yas-global-mode 1)
+(require 'angular-snippets)
 
 
 ;;; electric
