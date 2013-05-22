@@ -96,7 +96,7 @@
 
 ;;; tagedit
 (require 'tagedit)
-(add-hook 'web-mode-hook (lambda () (tagedit-mode 1)))
+(add-hook 'html-mode-hook (lambda () (tagedit-mode 1)))
 (tagedit-add-paredit-like-keybindings)
 (tagedit-add-experimental-features)
 

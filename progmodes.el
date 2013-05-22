@@ -71,13 +71,6 @@
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
 
-;;; web-mode
-(require 'web-mode)
-(setq web-mode-markup-indent-offset 4)
-(setq web-mode-disable-auto-pairing t)
-(add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
-
-
 ;;; zencoding
 (add-hook 'web-mode-hook 'zencoding-mode)
 (add-hook 'sgml-mode-hook 'zencoding-mode)
