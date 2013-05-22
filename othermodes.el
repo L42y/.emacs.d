@@ -80,6 +80,10 @@
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
 
+;;; sgml
+(setq sgml-basic-offset 4)
+
+
 ;;; smartparens
 (require 'smartparens)
 (require 'smartparens-config)
