@@ -84,6 +84,10 @@
 (require 'sgml-mode)
 (setq sgml-basic-offset 4)
 
+;;; after deleting a tag, indent properly
+(defadvice sgml-delete-tag (after reindent activate)
+  (indent-region (point-min) (point-max)))
+
 
 ;;; zencoding
 (require 'simplezen)
