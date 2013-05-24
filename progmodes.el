@@ -71,11 +71,6 @@
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
 
-;;; zencoding
-(add-hook 'web-mode-hook 'zencoding-mode)
-(add-hook 'sgml-mode-hook 'zencoding-mode)
-
-
 ;; scss
 (require 'scss-mode)
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
