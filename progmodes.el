@@ -76,15 +76,6 @@
 (add-hook 'sgml-mode-hook 'zencoding-mode)
 
 
-;;; haml
-(require 'haml-mode)
-(add-to-list 'auto-mode-alist '("\\.haml\\'" . haml-mode))
-(add-hook 'haml-mode-hook
-	  (lambda ()
-	    (setq indent-tabs-mode nil)
-	    (define-key haml-mode-map "\C-m" 'newline-and-indent)))
-
-
 ;; scss
 (require 'scss-mode)
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
