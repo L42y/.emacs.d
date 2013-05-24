@@ -116,6 +116,10 @@
 (require 'expand-region)
 
 
+;;; multiple-cursors
+(require 'multiple-cursors)
+
+
 ;;; diff-hl
 (require 'diff-hl)
 (global-diff-hl-mode)
