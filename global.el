@@ -5,7 +5,8 @@
 ;;; Code:
 
 ;;; load color theme
-(load-theme 'monokai t)
+(if (display-graphic-p)
+    (load-theme 'monokai t))
 
 
 ;;; better defaults
