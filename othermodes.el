@@ -18,6 +18,14 @@
 (setq ido-save-directory-list-file "~/.emacs.d/.ido.last")
 
 
+;;; whitespace
+(require 'whitespace)
+(setq whitespace-line-column 80)
+(setq whitespace-style '(face lines-tail))
+
+(add-hook 'prog-mode-hook 'whitespace-mode)
+
+
 ;;; wdired
 (add-hook 'dired-mode-hook
           '(lambda ()
