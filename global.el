@@ -4,6 +4,10 @@
 
 ;;; Code:
 
+;;; load color theme
+(load-theme 'monokai t)
+
+
 ;;; better defaults
 (require 'better-defaults)
 

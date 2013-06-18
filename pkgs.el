@@ -28,6 +28,7 @@
                       js2-mode
                       magit
                       markdown-mode
+                      monokai-theme
                       multiple-cursors
                       nrepl
                       org

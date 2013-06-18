@@ -15,10 +15,6 @@
 (add-to-list 'load-path "~/.emacs.d")
 
 
-;;; load color theme
-(load-theme 'monokai t)
-
-
 (require 'pkgs)
 (require 'defuns)
 (require 'global)
