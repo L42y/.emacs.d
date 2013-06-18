@@ -56,6 +56,10 @@
              (setq c-basic-offset 8)))
 
 
+;;; clojure
+(add-hook 'clojure-mode-hook 'paredit-mode)
+
+
 ;;; python
 (require 'jedi)
 (add-hook 'python-mode-hook 'jedi:setup)

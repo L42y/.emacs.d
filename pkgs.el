@@ -17,6 +17,8 @@
                       angular-snippets
                       auto-complete
                       better-defaults
+                      clojure-mode
+                      clojure-test-mode
                       diff-hl
                       exec-path-from-shell
                       expand-region
