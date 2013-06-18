@@ -35,6 +35,7 @@
                       nrepl
                       org
                       paredit
+                      pkgbuild-mode
                       projectile
                       rainbow-delimiters
                       scss-mode
