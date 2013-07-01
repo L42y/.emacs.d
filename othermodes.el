@@ -112,9 +112,6 @@
 (require 'smartparens-config)
 (smartparens-global-mode t)
 (show-smartparens-global-mode t)
-(sp-with-modes '(web-mode)
-  (sp-local-pair "<" ">")
-  (sp-local-tag  "<" "<_>" "</_>" :transform 'sp-match-sgml-tags))
 
 
 ;;; tagedit
