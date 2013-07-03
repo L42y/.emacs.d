@@ -11,6 +11,8 @@
 (setq desktop-path '("~/.emacs.d/"))
 (setq desktop-base-file-name ".emacs.desktop")
 (add-to-list 'desktop-modes-not-to-save 'dired-mode)
+(setq desktop-restore-eager 20
+      desktop-lazy-verbose nil)
 
 
 ;;; use ido for minibuffer completion
