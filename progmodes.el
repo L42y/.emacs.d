@@ -37,6 +37,7 @@
 ;;; flycheck
 (require 'flycheck)
 (add-hook 'prog-mode-hook 'flycheck-mode)
+(setq flycheck-check-syntax-automatically '(mode-enabled save))
 
 
 ;;; yasnippet
