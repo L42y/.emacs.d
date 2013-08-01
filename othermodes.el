@@ -142,5 +142,10 @@
 (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
 
 
+;;; magit
+(require 'magit-commit-training-wheels)
+(ad-activate 'magit-log-edit-commit)
+
+
 (provide 'othermodes)
 ;;; othermodes.el ends here
