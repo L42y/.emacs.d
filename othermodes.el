@@ -147,5 +147,12 @@
 (ad-activate 'magit-log-edit-commit)
 
 
+;;; virtualenvwrapper
+(require 'virtualenvwrapper)
+(venv-initialize-interactive-shells)
+(venv-initialize-eshell)
+(setq venv-location "~/.virtualenvs/")
+
+
 (provide 'othermodes)
 ;;; othermodes.el ends here

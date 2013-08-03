@@ -45,6 +45,7 @@
                       smartparens
                       smex
                       tagedit
+                      virtualenvwrapper
                       yasnippet))
 
 (dolist (package my-packages)
