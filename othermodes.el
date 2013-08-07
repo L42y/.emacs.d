@@ -154,5 +154,14 @@
 (setq venv-location "~/.virtualenvs/")
 
 
+;;; tern
+(add-hook 'js2-mode-hook (lambda () (tern-mode t)))
+(eval-after-load 'tern
+   '(progn
+      (require 'tern-auto-complete)
+      (tern-ac-setup)))
+(setq tern-ac-on-dot t)
+
+
 (provide 'othermodes)
 ;;; othermodes.el ends here

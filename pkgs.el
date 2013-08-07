@@ -45,6 +45,8 @@
                       smartparens
                       smex
                       tagedit
+                      tern
+                      tern-auto-complete
                       virtualenvwrapper
                       yasnippet))
 
