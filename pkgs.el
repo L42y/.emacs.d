@@ -19,6 +19,7 @@
                       clojure-mode
                       clojure-test-mode
                       diff-hl
+                      emmet-mode
                       exec-path-from-shell
                       expand-region
                       flycheck
@@ -39,7 +40,6 @@
                       projectile
                       rainbow-delimiters
                       scss-mode
-                      simplezen
                       smartparens
                       smex
                       tagedit

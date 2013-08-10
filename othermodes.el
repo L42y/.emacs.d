@@ -91,8 +91,9 @@
 
 
 ;;; zencoding
-(require 'simplezen)
-(define-key html-mode-map (kbd "TAB") 'simplezen-expand-or-indent-for-tab)
+(require 'emmet-mode)
+(add-hook 'sgml-mode-hook 'emmet-mode)
+(add-hook 'css-mode-hook  'emmet-mode)
 
 
 ;;; smartparens
