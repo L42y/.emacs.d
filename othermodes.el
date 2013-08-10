@@ -93,11 +93,6 @@
 ;;; zencoding
 (require 'simplezen)
 (define-key html-mode-map (kbd "TAB") 'simplezen-expand-or-indent-for-tab)
-(defun --setup-simplezen ()
-  (set (make-local-variable 'yas/fallback-behavior)
-       '(apply simplezen-expand-or-indent-for-tab)))
-(add-hook 'sgml-mode-hook '--setup-simplezen)
-
 
 
 ;;; smartparens

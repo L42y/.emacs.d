@@ -40,11 +40,6 @@
 (setq flycheck-check-syntax-automatically '(mode-enabled save))
 
 
-;;; yasnippet
-(yas-global-mode 1)
-(require 'angular-snippets)
-
-
 ;;; electric
 (electric-indent-mode t)
 

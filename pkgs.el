@@ -14,7 +14,6 @@
 ;;; install missing packages
 (defvar my-packages '(ag
                       ace-jump-mode
-                      angular-snippets
                       auto-complete
                       better-defaults
                       clojure-mode
@@ -46,8 +45,7 @@
                       tagedit
                       tern
                       tern-auto-complete
-                      virtualenvwrapper
-                      yasnippet))
+                      virtualenvwrapper))
 
 (dolist (package my-packages)
   (unless (package-installed-p package)
