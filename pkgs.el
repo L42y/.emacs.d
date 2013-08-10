@@ -41,7 +41,6 @@
                       rainbow-delimiters
                       scss-mode
                       simplezen
-                      skewer-mode
                       smartparens
                       smex
                       tagedit

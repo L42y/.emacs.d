@@ -53,16 +53,6 @@
                     "--smart-case"))
 
 
-;;; skewer
-(require 'simple-httpd)
-(setq httpd-root "~/.emacs.d/el-get/skewer-mode")
-(httpd-start)
-
-(add-hook 'skewer-css-mode-hook
-          (lambda ()
-            (add-hook 'after-save-hook 'skewer-css-eval-buffer nil t)))
-
-
 ;;; helm awesomeness
 (require 'helm-config)
 
