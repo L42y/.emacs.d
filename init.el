@@ -11,7 +11,9 @@
 
 ;;; Code:
 
-(add-to-list 'load-path "~/.emacs.d")
+(defvar sweet-home (file-name-directory load-file-name))
+(defvar savefile-path (expand-file-name "savefile" sweet-home))
+(add-to-list 'load-path sweet-home)
 
 
 (require 'pkgs)
