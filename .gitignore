@@ -2,7 +2,7 @@
 elpa/
 
 # Backups
-aut-save-list/
+auto-save-list/
 backups/
 
 # Save files
