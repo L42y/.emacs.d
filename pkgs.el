@@ -29,7 +29,6 @@
                       jedi
                       js2-mode
                       magit
-                      magit-commit-training-wheels
                       markdown-mode
                       monokai-theme
                       multiple-cursors
