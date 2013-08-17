@@ -56,12 +56,7 @@
 ;; third-party packages
 ;;; ag.el
 (require 'ag)
-(setq ag-arguments (list
-                    "--column"
-                    "--literal"
-                    "--nocolor"
-                    "--nogroup"
-                    "--smart-case"))
+(setq ag-highlight-search t)
 
 
 ;;; helm awesomeness
