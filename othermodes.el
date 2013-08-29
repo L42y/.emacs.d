@@ -52,6 +52,41 @@
           (lambda ()
             (toggle-truncate-lines)))
 
+(require 'org-publish)
+(setq org-publish-project-alist
+      '(("blog"
+         :components ("blog-content" "blog-static"))
+        ("blog-content"
+         :base-directory "~/Writing/Blog/"
+         :base-extension "org"
+         :html-extension "html"
+         :publishing-directory "/ssh:bug@org.l42y.com#4444:/srv/http/l42y.org/"
+         :recursive t
+         :publishing-function org-html-publish-to-html
+         :export-with-tags nil
+         :headline-levels 4
+         :table-of-contents nil
+         :section-numbers nil
+         :sub-superscript nil
+         :todo-keywords nil
+         :author nil
+         :creator-info nil
+         :html-doctype "<doctype html>"
+         :html-xml-declaration nil
+         :html-preamble nil
+         :html-postamble nil
+         :html-head-include-default-style nil
+         :style "<link rel=\"stylesheet\" href=\"/_/css/main.css\">"
+         :timestamp t
+         :exclude-tags ("noexport" "todo")
+         :auto-preamble t)
+        ("blog-static"
+         :base-directory "~/Writing/Blog/_/"
+         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\"
+         :publishing-directory "/ssh:bug@org.l42y.com#4444:/srv/http/l42y.org/_/"
+         :recursive t
+         :publishing-function org-publish-attachment)))
+
 
 ;; third-party packages
 ;;; ag.el
