@@ -38,6 +38,8 @@
 (setq whitespace-style '(face lines-tail))
 
 (add-hook 'prog-mode-hook 'whitespace-mode)
+(add-hook 'prog-mode-hook
+          '(lambda () (setq show-trailing-whitespace t)))
 
 
 ;;; wdired
