@@ -54,6 +54,16 @@
           (lambda ()
             (toggle-truncate-lines)))
 
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((emacs-lisp . t)
+   (sh . t)
+   (js . t)
+   (org . t)
+   (python . t)
+   (emacs-lisp . t)))
+(setq org-src-fontify-natively t)
+
 
 ;; third-party packages
 ;;; ag.el
