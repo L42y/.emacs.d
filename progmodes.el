@@ -27,7 +27,6 @@
 ;;; auto-complte
 (require 'auto-complete-config)
 (ac-config-default)
-(add-hook 'prog-mode-hook 'auto-complete-mode)
 (setq ac-comphist-file (expand-file-name "ac-comphist" savefile-path))
 
 (define-key ac-completing-map (kbd "C-n") 'ac-next)
