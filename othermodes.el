@@ -170,5 +170,9 @@
 (setq smex-save-file (expand-file-name "smex" savefile-path))
 
 
+;;; ispell
+(setq-default ispell-program-name "hunspell")
+
+
 (provide 'othermodes)
 ;;; othermodes.el ends here
