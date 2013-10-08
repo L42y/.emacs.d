@@ -6,8 +6,11 @@
 
 ;;; builtin package
 (require 'package)
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(setq package-archives
+      '(("gnu" . "http://elpa.gnu.org/packages/")
+        ("org" . "http://orgmode.org/elpa/")
+        ("melpa" . "http://melpa.milkbox.net/packages/")
+        ))
 (package-initialize)
 
 
@@ -34,6 +37,7 @@
                       multiple-cursors
                       nrepl
                       org
+                      org-plus-contrib
                       paredit
                       pkgbuild-mode
                       projectile
