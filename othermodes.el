@@ -169,7 +169,9 @@
 
 
 ;;; ispell
-(setq-default ispell-program-name "hunspell")
+(setq ispell-dictionary "english")
+(setq-default ispell-program-name "aspell")
+(add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
 
 (provide 'othermodes)

@@ -2,24 +2,13 @@
   [[https://github.com/ggreer/the_silver_searcher][The Silver Searcher]]
 
 * Spell Checking
-  - Installing [[http://hunspell.sourceforge.net][Hunspell]]
+  - Installing [[http://aspell.net/][ASpell]]
     - Mac
       #+BEGIN_SRC sh
-        brew install hunspell
+        brew install aspell --with-lang-en
       #+END_SRC
 
     - Arch Linux
       #+BEGIN_SRC sh
-        pacman -S hunspell
-      #+END_SRC
-
-  - Installing Dictionary
-    - Mac
-      - Download [[http://extensions.openoffice.org/en/project/english-dictionaries-apache-openoffice][English Dictionary]] and unzip
-
-      - Copy *.{aff,dic} to ~/Library/Spelling/
-
-    - Arch Linux
-      #+BEGIN_SRC sh
-        pacman -S hunspell-en
+        pacman -S aspell aspell-en
       #+END_SRC
