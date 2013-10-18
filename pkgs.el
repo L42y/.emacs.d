@@ -31,6 +31,7 @@
                       ibuffer-vc
                       jedi
                       js2-mode
+                      json-mode
                       magit
                       markdown-mode
                       monokai-theme
