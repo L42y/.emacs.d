@@ -11,6 +11,10 @@
 (prefer-coding-system 'utf-8)
 
 
+;; linum
+(add-hook 'prog-mode-hook 'linum-mode)
+
+
 ;;; subword
 (add-hook 'prog-mode-hook 'subword-mode)
 

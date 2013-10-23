@@ -19,7 +19,6 @@
 
 ;;; global enabled modes
 (global-hl-line-mode)     ; highlight current line
-(global-linum-mode)       ; add line numbers on the left
 (delete-selection-mode t) ; delete marked text on typing
 
 ;;; shorter answer
