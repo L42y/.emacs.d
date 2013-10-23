@@ -19,6 +19,7 @@
                       ace-jump-mode
                       auto-complete
                       better-defaults
+                      cider
                       clojure-mode
                       clojure-test-mode
                       diff-hl
@@ -36,7 +37,6 @@
                       markdown-mode
                       monokai-theme
                       multiple-cursors
-                      nrepl
                       org
                       org-plus-contrib
                       paredit
