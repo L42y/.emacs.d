@@ -44,10 +44,6 @@
 (setq flycheck-check-syntax-automatically '(mode-enabled save))
 
 
-;;; electric
-(electric-indent-mode t)
-
-
 ;;; C
 (add-hook 'c-mode-hook
           '(lambda ()
