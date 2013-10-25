@@ -29,6 +29,7 @@
                       flycheck
                       helm
                       helm-projectile
+                      htmlize
                       ibuffer-vc
                       jedi
                       js2-mode
