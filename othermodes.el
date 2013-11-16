@@ -64,6 +64,45 @@
    (emacs-lisp . t)))
 (setq org-src-fontify-natively t)
 
+(require 'org-publish)
+(setq org-html-doctype "html5"
+      org-html-html5-fancy t
+      org-html-metadata-timestamp-format "%Y-%m-%d %H:%M")
+(setq org-publish-project-alist
+      '(("L42y"
+         :components ("L42y-content" "L42y-static" "L42y-rss"))
+        ("L42y-content"
+         :base-directory "~/Dropbox/Emacs/Org/L42y.org/"
+         :base-extension "org"
+         :html-extension "html"
+         :publishing-directory "~/BTSync/L42y.org/"
+         :publishing-function (org-html-publish-to-html)
+         :with-toc nil
+         :recursive t
+         :html-preamble nil
+         :html-postamble nil
+         :section-numbers nil
+         :html-head-extra
+         "<link rel=\"stylesheet\" href=\"/_/css/main.css\">"
+         :htmlized-source t
+         :html-head-include-scripts nil
+         :html-head-include-default-style nil)
+        ("L42y-static"
+         :base-directory "~/Dropbox/Emacs/Org/L42y.org/_/"
+         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf"
+         :publishing-directory "~/BTSync/L42y.org/_/"
+         :recursive t
+         :publishing-function (org-publish-attachment))
+        ("L42y-rss"
+         :base-directory "~/Dropbox/Emacs/Org/L42y.org/"
+         :base-extension "org"
+         :publishing-function (org-rss-publish-to-rss)
+         :publishing-directory "~/BTSync/L42y.org/"
+         :exclude ".*"
+         :include ("writing.org")
+         :with-toc nil
+         :html-link-home "https://l42y.com/"
+         :html-link-use-abs-url t)))
 
 ;; third-party packages
 ;;; ag.el
