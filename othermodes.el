@@ -54,6 +54,11 @@
           (lambda ()
             (toggle-truncate-lines)))
 
+(require 'org-crypt)
+(org-crypt-use-before-save-magic)
+(setq org-tags-exclude-from-inheritance (quote ("crypt")))
+(setq org-crypt-key "i@l42y.com")
+
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((emacs-lisp . t)
