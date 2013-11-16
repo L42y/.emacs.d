@@ -5,6 +5,10 @@
 ;;; Code:
 
 ;; built-in packages
+;;; conf-mode
+(add-to-list 'auto-mode-alist '("\\.*rc$" . conf-unix-mode))
+
+
 ;;; desktop
 (require 'desktop)
 (desktop-save-mode 1)
