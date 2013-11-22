@@ -19,6 +19,7 @@
 (require 'pkgs)
 (require 'defuns)
 (require 'global)
+(require 'savefile)
 (require 'progmodes)
 (require 'othermodes)
 (require 'keybindings)
