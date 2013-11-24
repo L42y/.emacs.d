@@ -58,7 +58,6 @@
    (emacs-lisp . t)))
 (setq org-src-fontify-natively t)
 
-(require 'org-publish)
 (setq org-html-doctype "html5"
       org-html-html5-fancy t
       org-html-metadata-timestamp-format "%Y-%m-%d %H:%M")
