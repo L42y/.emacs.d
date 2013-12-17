@@ -27,6 +27,7 @@
                       exec-path-from-shell
                       expand-region
                       flycheck
+                      go-mode
                       helm
                       helm-projectile
                       htmlize
