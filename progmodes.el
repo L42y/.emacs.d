@@ -37,6 +37,10 @@
 (define-key ac-complete-mode-map "\r" nil)
 
 
+;;; electric
+(add-hook 'prog-mode-hook 'electric-indent-mode)
+
+
 ;;; flycheck
 (require 'flycheck)
 (add-hook 'prog-mode-hook 'flycheck-mode)
