@@ -44,5 +44,10 @@
   (setq ns-function-modifier 'hyper))
 
 
+;;; start server
+(require 'server)
+(unless (server-running-p) (server-start))
+
+
 (provide 'global)
 ;;; global.el ends here
