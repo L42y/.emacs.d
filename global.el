@@ -11,7 +11,7 @@
 
 ;;; set fonts
 (set-fontset-font t 'han "Hiragino Sans GB 12")
-(add-to-list 'default-frame-alist '(font . "CosmicSansNeueMono 15"))
+(add-to-list 'default-frame-alist '(font . "FantasqueSansMono 15"))
 
 
 ;;; better defaults
