@@ -27,6 +27,7 @@
                       exec-path-from-shell
                       expand-region
                       flycheck
+                      flycheck-tip
                       go-mode
                       helm
                       helm-projectile
