@@ -47,6 +47,7 @@
                       pkgbuild-mode
                       projectile
                       rainbow-delimiters
+                      rainbow-mode
                       scss-mode
                       smartparens
                       smex
