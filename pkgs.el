@@ -28,6 +28,9 @@
                       expand-region
                       flycheck
                       flycheck-tip
+                      gitattributes-mode
+                      gitconfig-mode
+                      gitignore-mode
                       go-mode
                       helm
                       helm-projectile
