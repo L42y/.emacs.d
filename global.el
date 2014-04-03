@@ -6,7 +6,7 @@
 
 ;;; load color theme
 (if (display-graphic-p)
-    (load-theme 'monokai t))
+    (load-theme 'flatui t))
 
 
 ;;; set fonts

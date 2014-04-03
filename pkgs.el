@@ -26,6 +26,7 @@
                       emmet-mode
                       exec-path-from-shell
                       expand-region
+                      flatui-theme
                       flycheck
                       flycheck-tip
                       gitattributes-mode
