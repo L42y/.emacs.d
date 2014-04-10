@@ -34,6 +34,7 @@
                       gitignore-mode
                       go-mode
                       helm
+                      helm-open-github
                       helm-projectile
                       htmlize
                       ibuffer-vc
