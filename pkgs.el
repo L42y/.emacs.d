@@ -9,8 +9,7 @@
 (setq package-archives
       '(("gnu" . "http://elpa.gnu.org/packages/")
         ("org" . "http://orgmode.org/elpa/")
-        ("melpa" . "http://melpa.milkbox.net/packages/")
-        ))
+        ("melpa" . "http://melpa.milkbox.net/packages/")))
 (package-initialize)
 
 
