@@ -22,6 +22,7 @@
                       cider
                       clojure-mode
                       clojure-test-mode
+                      color-identifiers-mode
                       diff-hl
                       emmet-mode
                       exec-path-from-shell
