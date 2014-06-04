@@ -74,12 +74,6 @@
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
 
-;; scss
-(require 'scss-mode)
-(add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
-(setq scss-compile-at-save nil)
-
-
 ;;; auto insert
 (require 'autoinsert)
 (auto-insert-mode)
