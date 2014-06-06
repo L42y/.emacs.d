@@ -1,5 +1,6 @@
 # Packages
 elpa/
+.python-environments/
 
 # Backups
 auto-save-list/
