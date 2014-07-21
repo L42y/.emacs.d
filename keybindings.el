@@ -58,6 +58,10 @@
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
 
+;;; string-edit
+(global-set-key (kbd "C-c i") 'string-edit-at-point)
+
+
 ;;; C-a
 (global-set-key (kbd "C-a") 'smart-line-beginning)
 

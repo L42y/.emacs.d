@@ -55,6 +55,7 @@
                       rainbow-mode
                       smartparens
                       smex
+                      string-edit
                       tagedit
                       tern
                       tern-auto-complete
