@@ -16,5 +16,13 @@ then move it to the beginning of the line."
       (beginning-of-line))))
 
 
+;;; open-line-then-newline-and-indent
+(defun open-line-then-newline-and-indent ()
+  "Combination of `open-line' and `newline-and-indent'."
+  (interactive)
+  (open-line 1)
+  (newline-and-indent))
+
+
 (provide 'defuns)
 ;;; defuns.el ends here
