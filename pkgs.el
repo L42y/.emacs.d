@@ -39,6 +39,7 @@
                       htmlize
                       ibuffer-vc
                       jedi
+                      js-doc
                       js2-mode
                       json-mode
                       magit
