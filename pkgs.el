@@ -23,6 +23,7 @@
                       clojure-test-mode
                       color-identifiers-mode
                       diff-hl
+                      editorconfig
                       emmet-mode
                       exec-path-from-shell
                       expand-region
