@@ -20,8 +20,10 @@ then move it to the beginning of the line."
 (defun open-line-then-newline-and-indent ()
   "Combination of `open-line' and `newline-and-indent'."
   (interactive)
-  (open-line 1)
-  (newline-and-indent))
+  (newline-and-indent)
+  (newline-and-indent)
+  (forward-line -1)
+  (indent-according-to-mode))
 
 
 (provide 'defuns)
