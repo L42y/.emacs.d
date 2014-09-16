@@ -48,6 +48,7 @@
                       org
                       org-plus-contrib
                       paredit
+                      pip-requirements
                       pkgbuild-mode
                       projectile
                       rainbow-delimiters
