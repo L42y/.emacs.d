@@ -18,9 +18,6 @@
                       ace-jump-mode
                       auto-complete
                       better-defaults
-                      cider
-                      clojure-mode
-                      clojure-test-mode
                       color-identifiers-mode
                       diff-hl
                       editorconfig
