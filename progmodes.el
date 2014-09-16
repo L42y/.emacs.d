@@ -67,8 +67,6 @@
 
 
 ;;; javascript
-(require 'js)
-(require 'js2-mode)
 (setq-default js-indent-level 2
               js2-basic-offset 2)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
