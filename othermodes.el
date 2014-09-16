@@ -99,7 +99,7 @@
 
 ;; third-party packages
 ;;; ag.el
-(require 'ag)
+(setq ag-reuse-buffers 't)
 (setq ag-highlight-search t)
 
 
