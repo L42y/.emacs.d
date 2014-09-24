@@ -18,6 +18,7 @@
 (defvar my-packages '(
                        ag
                        ace-jump-mode
+                       angular-snippets
                        auto-complete
                        better-defaults
                        color-identifiers-mode
@@ -61,7 +62,8 @@
                        tagedit
                        tern
                        tern-auto-complete
-                       virtualenvwrapper))
+                       virtualenvwrapper
+                       yasnippet))
 
 (dolist (package my-packages)
   (unless (package-installed-p package)
