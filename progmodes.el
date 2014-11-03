@@ -42,10 +42,8 @@
 (add-hook 'prog-mode-hook 'flycheck-mode)
 (setq flycheck-check-syntax-automatically '(mode-enabled save))
 
-(require 'flycheck-tip)
-(setq flycheck-tip-avoid-show-func nil
-      flycheck-display-errors-function
-      'flycheck-tip-display-current-line-error-message)
+(setq flycheck-display-errors-function
+      'flycheck-pos-tip-error-messages)
 
 
 ;;; C

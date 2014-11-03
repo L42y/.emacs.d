@@ -27,7 +27,7 @@
                       expand-region
                       flatui-theme
                       flycheck
-                      flycheck-tip
+                      flycheck-pos-tip
                       gitattributes-mode
                       gitconfig-mode
                       gitignore-mode
