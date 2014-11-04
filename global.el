@@ -10,8 +10,8 @@
 
 
 ;;; set fonts
+(set-frame-font "Fantasque Sans Mono 15")
 (set-fontset-font t 'han "Hiragino Sans GB 12")
-(add-to-list 'default-frame-alist '(font . "FantasqueSansMono 15"))
 
 
 ;;; better defaults
