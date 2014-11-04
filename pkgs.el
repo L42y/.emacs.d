@@ -46,7 +46,6 @@
                       monokai-theme
                       multiple-cursors
                       nginx-mode
-                      org
                       org-plus-contrib
                       paredit
                       pip-requirements
