@@ -44,6 +44,10 @@
           (lambda ()
             (toggle-truncate-lines)))
 
+(require 'ox-md)
+(require 'ox-gfm)
+(setq org-md-headline-style 'atx)
+
 (require 'org-crypt)
 (org-crypt-use-before-save-magic)
 (setq org-tags-exclude-from-inheritance (quote ("crypt")))
