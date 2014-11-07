@@ -1,5 +1,6 @@
 # Packages
 elpa/
+el-get/
 .python-environments/
 
 # Backups
