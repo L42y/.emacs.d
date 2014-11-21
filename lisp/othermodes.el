@@ -38,6 +38,11 @@
              (define-key dired-mode-map "e" 'wdired-change-to-wdired-mode)))
 
 
+;;; easypg
+(require 'epa-file)
+(epa-file-enable)
+
+
 ;;; org-mode awesomeness
 (require 'org)
 (add-hook 'org-mode-hook
