@@ -37,6 +37,11 @@
 (global-auto-revert-mode 1)
 
 
+;;; $PATH
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
+
 ;;; under mac, have Command as Meta and keep Option for localized input
 (when (string-match "apple-darwin" system-configuration)
   (setq mac-allow-anti-aliasing t)

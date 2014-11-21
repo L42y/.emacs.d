@@ -111,11 +111,6 @@
 (require 'helm-config)
 
 
-;;; $PATH
-(when (memq window-system '(mac ns))
-  (exec-path-from-shell-initialize))
-
-
 ;;; projectile
 (require 'projectile)
 (projectile-global-mode)
