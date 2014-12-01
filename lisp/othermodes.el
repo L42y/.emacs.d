@@ -130,8 +130,7 @@
               (ibuffer-do-sort-by-alphabetic))))
 
 
-;;; rainbow-delimiters
-(require 'rainbow-delimiters)
+;;; rainbow
 (add-hook 'css-mode-hook 'rainbow-mode)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'prog-mode-hook 'rainbow-identifiers-mode)
