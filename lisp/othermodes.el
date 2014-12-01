@@ -132,6 +132,7 @@
 
 ;;; rainbow-delimiters
 (require 'rainbow-delimiters)
+(add-hook 'css-mode-hook 'rainbow-mode)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'prog-mode-hook 'rainbow-identifiers-mode)
 
