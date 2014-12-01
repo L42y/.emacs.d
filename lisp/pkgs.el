@@ -51,6 +51,7 @@
                       pkgbuild-mode
                       projectile
                       rainbow-delimiters
+                      rainbow-identifiers
                       rainbow-mode
                       smartparens
                       smex
