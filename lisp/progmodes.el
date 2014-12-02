@@ -23,9 +23,8 @@
 (mapc (lambda (hook)
         (add-hook hook (lambda ()
                          (setq-default tab-width 2))))
-      '(js2-mode-hook
-        js-mode-hook
-        css-mode-hook))
+      '(js-mode-hook
+        js2-mode-hook))
 
 
 ;;; auto-complte
