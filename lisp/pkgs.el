@@ -62,6 +62,7 @@
                       tern
                       tern-auto-complete
                       virtualenvwrapper
+                      wgrep-ag
                       yasnippet))
 
 (dolist (package my-packages)
