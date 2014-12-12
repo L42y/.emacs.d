@@ -46,6 +46,8 @@
                       monokai-theme
                       multiple-cursors
                       nginx-mode
+                      org-plus-contrib
+                      ox-gfm
                       paredit
                       pip-requirements
                       pkgbuild-mode
@@ -80,8 +82,7 @@
 
 (setq
  my:el-get-packages
- '(el-get
-   org-mode))
+ '(el-get))
 
 (el-get 'sync my:el-get-packages)
 
