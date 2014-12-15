@@ -199,9 +199,5 @@
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
 
-;;; color-identifiers-mode
-(add-hook 'after-init-hook 'global-color-identifiers-mode)
-
-
 (provide 'othermodes)
 ;;; othermodes.el ends here

@@ -19,7 +19,6 @@
                       angular-snippets
                       auto-complete
                       better-defaults
-                      color-identifiers-mode
                       diff-hl
                       editorconfig
                       emmet-mode
