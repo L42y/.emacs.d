@@ -42,7 +42,6 @@
                       json-mode
                       magit
                       markdown-mode
-                      monokai-theme
                       multiple-cursors
                       nginx-mode
                       org-plus-contrib
