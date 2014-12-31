@@ -71,6 +71,10 @@
      (define-key js2-mode-map "@" 'js-doc-insert-tag)))
 
 
+;;; web
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
+
+
 ;;; auto insert
 (require 'autoinsert)
 (auto-insert-mode)

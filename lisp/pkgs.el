@@ -60,6 +60,7 @@
                       tern
                       tern-auto-complete
                       virtualenvwrapper
+                      web-mode
                       wgrep-ag
                       yasnippet))
 

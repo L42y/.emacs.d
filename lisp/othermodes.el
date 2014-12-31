@@ -188,6 +188,7 @@
 
 ;;; tern
 (add-hook 'js2-mode-hook (lambda () (tern-mode t)))
+(add-hook 'web-mode-hook (lambda () (tern-mode t)))
 (require 'tern-auto-complete)
 (tern-ac-setup)
 (setq tern-ac-on-dot t)
