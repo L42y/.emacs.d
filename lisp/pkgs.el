@@ -62,6 +62,7 @@
                       virtualenvwrapper
                       web-mode
                       wgrep-ag
+                      yaml-mode
                       yasnippet))
 
 (dolist (package my-packages)
