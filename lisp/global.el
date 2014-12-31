@@ -11,8 +11,8 @@
 
 ;;; set fonts
 (set-frame-font "Fantasque Sans Mono 15")
-(set-fontset-font t 'han "Hiragino Sans GB 12")
-(setq face-font-rescale-alist (list (cons "Hiragino Sans GB" 1.2)))
+(set-fontset-font t 'han "Hiragino Sans GB")
+(setq face-font-rescale-alist (list (cons "Hiragino Sans GB" 1.1)))
 
 
 ;;; better defaults
