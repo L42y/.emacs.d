@@ -57,9 +57,11 @@
 
 
 ;;; wdired
-(add-hook 'dired-mode-hook
-          '(lambda ()
-             (define-key dired-mode-map "e" 'wdired-change-to-wdired-mode)))
+(use-package wdired
+  :init (progn
+          (add-hook 'dired-mode-hook
+                    '(lambda ()
+                       (define-key dired-mode-map "e" 'wdired-change-to-wdired-mode)))))
 
 
 ;;; easypg
