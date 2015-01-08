@@ -11,11 +11,13 @@
 
 
 ;;; desktop
-(require 'desktop)
-(desktop-save-mode 1)
-(setq desktop-restore-eager 20
-      desktop-lazy-verbose nil)
-(add-to-list 'desktop-modes-not-to-save '(dired-mode fundamental-mode))
+(use-package desktop
+  :init (progn
+          (desktop-save-mode 1))
+  :config (progn
+            (setq desktop-restore-eager 20
+                  desktop-lazy-verbose nil)
+            (add-to-list 'desktop-modes-not-to-save '(dired-mode fundamental-mode))))
 
 
 (use-package ibuffer
