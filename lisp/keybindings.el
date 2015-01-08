@@ -12,10 +12,6 @@
 (global-set-key (kbd "C-c a") 'org-agenda)
 
 
-;;; smex
-(global-set-key (kbd "C-x <RET>") 'smex)
-
-
 ;;; expand-region
 (global-set-key (kbd "C-=") 'er/expand-region)
 

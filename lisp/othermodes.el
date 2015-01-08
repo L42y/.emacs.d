@@ -240,5 +240,10 @@
   :bind ("C-." . ace-jump-mode))
 
 
+(use-package smex
+  :ensure t
+  :bind ("C-x <RET>" . smex))
+
+
 (provide 'othermodes)
 ;;; othermodes.el ends here
