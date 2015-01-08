@@ -18,8 +18,10 @@
 
 
 ;;; use ido for minibuffer completion
-(setq ido-show-dot-for-dired t)
-(setq ido-enable-flex-matching nil)
+(use-package ido
+  :config (progn
+            (setq ido-show-dot-for-dired t)
+            (setq ido-enable-flex-matching nil)))
 
 
 ;;; ispell
