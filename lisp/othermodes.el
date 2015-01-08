@@ -223,10 +223,12 @@
 
 
 ;;; tagedit
-(require 'tagedit)
-(add-hook 'html-mode-hook (lambda () (tagedit-mode 1)))
-(tagedit-add-paredit-like-keybindings)
-(tagedit-add-experimental-features)
+(use-package tagedit
+  :ensure t
+  :init (add-hook 'html-mode-hook 'tagedit-mode)
+  :config (progn
+            (tagedit-add-paredit-like-keybindings)
+            (tagedit-add-experimental-features)))
 
 
 ;;; expand-region
