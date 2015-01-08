@@ -244,8 +244,9 @@
 
 
 ;;; markdown
-(require 'markdown-mode)
-(add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
+(use-package markdown-mode
+  :ensure t
+  :init (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode)))
 
 
 ;;; virtualenvwrapper
