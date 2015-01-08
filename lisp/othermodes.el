@@ -172,8 +172,9 @@
 
 
 ;;; projectile
-(require 'projectile)
-(projectile-global-mode)
+(use-package projectile
+  :ensure t
+  :init (projectile-global-mode))
 
 
 ;;; ibuffer-vc
