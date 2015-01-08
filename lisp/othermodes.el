@@ -6,7 +6,8 @@
 
 ;; built-in packages
 ;;; conf-mode
-(add-to-list 'auto-mode-alist '("\\.*rc$" . conf-unix-mode))
+(use-package conf-mode
+  :init (add-to-list 'auto-mode-alist '("\\.*rc$" . conf-unix-mode)))
 
 
 ;;; desktop
