@@ -8,10 +8,6 @@
 (global-set-key (kbd "C-x C-k") 'save-buffers-kill-emacs)
 
 
-;;; org-mode
-(global-set-key (kbd "C-c a") 'org-agenda)
-
-
 ;;; expand-region
 (global-set-key (kbd "C-=") 'er/expand-region)
 
