@@ -132,7 +132,12 @@
 
 
 ;;; helm awesomeness
-(require 'helm-config)
+(use-package helm
+  :bind (("C-x b" . helm-mini)
+         ("C-c h" . helm-projectile)
+         ("C-x C-y" . helm-show-kill-ring))
+  :config (progn
+            (use-package helm-config)))
 
 
 ;;; projectile
