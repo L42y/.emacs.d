@@ -238,8 +238,9 @@
 
 
 ;;; diff-hl
-(require 'diff-hl)
-(global-diff-hl-mode)
+(use-package diff-hl
+  :ensure t
+  :init (global-diff-hl-mode))
 
 
 ;;; markdown
