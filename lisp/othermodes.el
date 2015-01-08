@@ -195,9 +195,11 @@
 
 
 ;;; ispell
-(setq ispell-dictionary "english")
-(setq-default ispell-program-name "aspell")
-(add-hook 'prog-mode-hook 'flyspell-prog-mode)
+(use-package ispell
+  :init (add-hook 'prog-mode-hook 'flyspell-prog-mode)
+  :config (progn
+            (setq ispell-dictionary "english")
+            (setq-default ispell-program-name "aspell")))
 
 
 (use-package osx-dictionary
