@@ -224,5 +224,9 @@
          ("C-c d" . osx-dictionary-search-pointer)))
 
 
+(use-package magit
+  :bind ("C-x C-z" . magit-status))
+
+
 (provide 'othermodes)
 ;;; othermodes.el ends here

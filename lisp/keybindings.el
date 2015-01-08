@@ -4,10 +4,6 @@
 
 ;;; Code:
 
-;;; magit
-(global-set-key (kbd "C-x C-z") 'magit-status)
-
-
 ;;; ace-jump
 (global-set-key (kbd "C-c SPC") 'ace-jump-mode)
 
