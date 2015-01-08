@@ -4,11 +4,6 @@
 
 ;;; Code:
 
-;;; comment
-(global-set-key (kbd "C-'") 'comment-dwim)
-(global-set-key (kbd "C-c g") 'comment-or-uncomment-region)
-
-
 ;;; helm
 (global-set-key (kbd "C-x b") 'helm-mini)
 (global-set-key (kbd "C-c h") 'helm-projectile)

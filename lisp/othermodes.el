@@ -32,6 +32,12 @@
             (setq-default ispell-program-name "aspell")))
 
 
+;;; newcomment
+(use-package newcomment
+  :bind (("C-'" . comment-dwim)
+         ("C-c g" . comment-or-uncomment-region)))
+
+
 ;;; whitespace
 (require 'whitespace)
 (setq whitespace-line-column 80)
