@@ -22,6 +22,14 @@
 (setq ido-enable-flex-matching nil)
 
 
+;;; ispell
+(use-package ispell
+  :init (add-hook 'prog-mode-hook 'flyspell-prog-mode)
+  :config (progn
+            (setq ispell-dictionary "english")
+            (setq-default ispell-program-name "aspell")))
+
+
 ;;; whitespace
 (require 'whitespace)
 (setq whitespace-line-column 80)
@@ -195,14 +203,6 @@
 (require 'tern-auto-complete)
 (tern-ac-setup)
 (setq tern-ac-on-dot t)
-
-
-;;; ispell
-(use-package ispell
-  :init (add-hook 'prog-mode-hook 'flyspell-prog-mode)
-  :config (progn
-            (setq ispell-dictionary "english")
-            (setq-default ispell-program-name "aspell")))
 
 
 (use-package osx-dictionary
