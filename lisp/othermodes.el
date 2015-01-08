@@ -250,10 +250,12 @@
 
 
 ;;; virtualenvwrapper
-(require 'virtualenvwrapper)
-(venv-initialize-interactive-shells)
-(venv-initialize-eshell)
-(setq venv-location "~/.virtualenvs/")
+(use-package virtualenvwrapper
+  :ensure t
+  :config (progn
+            (venv-initialize-eshell)
+            (venv-initialize-interactive-shells)
+            (setq venv-location "~/.virtualenvs/")))
 
 
 ;;; tern
