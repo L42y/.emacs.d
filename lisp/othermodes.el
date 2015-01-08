@@ -231,5 +231,10 @@
   :bind ("C-x C-z" . magit-status))
 
 
+(use-package ace-jump-mode
+  :ensure t
+  :bind ("C-." . ace-jump-mode))
+
+
 (provide 'othermodes)
 ;;; othermodes.el ends here

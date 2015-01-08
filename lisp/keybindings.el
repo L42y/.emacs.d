@@ -4,10 +4,6 @@
 
 ;;; Code:
 
-;;; ace-jump
-(global-set-key (kbd "C-c SPC") 'ace-jump-mode)
-
-
 ;;; ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
