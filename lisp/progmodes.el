@@ -13,7 +13,6 @@
 
 
 ;; linum
-(add-hook 'prog-mode-hook 'linum-mode)
 
 
 ;;; subword
@@ -26,6 +25,8 @@
                          (setq-default tab-width 2))))
       '(js-mode-hook
         js2-mode-hook))
+(use-package linum
+  :init (add-hook 'prog-mode-hook 'linum-mode))
 
 
 ;;; auto-complte
