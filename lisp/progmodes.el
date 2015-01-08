@@ -26,14 +26,6 @@
 (define-key ac-complete-mode-map "\r" nil)
 
 
-;;; C
-(add-hook 'c-mode-hook
-          '(lambda ()
-             (c-set-style "k&r")
-             (setq tab-width 8)
-             (setq c-basic-offset 8)))
-
-
 ;;; python
 (require 'jedi)
 (add-hook 'python-mode-hook 'jedi:setup)
