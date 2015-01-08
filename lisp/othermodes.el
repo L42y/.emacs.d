@@ -270,5 +270,10 @@
          ("C-c C-<" . mc/mark-all-like-this)))
 
 
+(use-package string-edit
+  :ensure t
+  :bind ("C-c i" . string-edit-at-point))
+
+
 (provide 'othermodes)
 ;;; othermodes.el ends here
