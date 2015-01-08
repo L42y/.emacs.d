@@ -58,12 +58,12 @@
 
 
 ;;; auto insert
-(require 'autoinsert)
-(auto-insert-mode)
-(setq auto-insert-directory "~/.emacs.d/templates/")
-(setq auto-insert-query nil)
-(define-auto-insert "\.py" "python.py")
-(define-auto-insert "\.html" "html.html")
+(use-package autoinsert
+  :init (add-hook 'python-mode-hook 'auto-insert)
+  :config (progn
+            (setq auto-insert-query nil
+                  auto-insert-directory "~/.emacs.d/templates/")
+            (define-auto-insert "\.py" "python.py")))
 
 
 (provide 'progmodes)
