@@ -125,6 +125,7 @@
 ;; third-party packages
 ;;; ag.el
 (use-package ag
+  :ensure t
   :bind ("<F5>" . ag-project-at-point)
   :config (progn
             (setq ag-reuse-buffers t)
@@ -133,6 +134,7 @@
 
 ;;; helm awesomeness
 (use-package helm
+  :ensure t
   :bind (("C-x b" . helm-mini)
          ("C-c h" . helm-projectile)
          ("C-x C-y" . helm-show-kill-ring))
@@ -225,6 +227,7 @@
 
 
 (use-package magit
+  :ensure t
   :bind ("C-x C-z" . magit-status))
 
 
