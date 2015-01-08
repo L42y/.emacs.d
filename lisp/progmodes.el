@@ -18,12 +18,15 @@
 
 
 ;;; auto-complte
-(require 'auto-complete-config)
-(ac-config-default)
-
-(define-key ac-completing-map (kbd "C-n") 'ac-next)
-(define-key ac-completing-map (kbd "C-p") 'ac-previous)
-(define-key ac-complete-mode-map "\r" nil)
+(use-package auto-complete
+  :ensure t
+  :config (progn
+            (use-package auto-complete-config
+              :init (ac-config-default)
+              :config (progn
+                        (define-key ac-completing-map (kbd "C-n") 'ac-next)
+                        (define-key ac-completing-map (kbd "C-p") 'ac-previous)
+                        (define-key ac-complete-mode-map "\r" nil)))))
 
 
 ;;; python
