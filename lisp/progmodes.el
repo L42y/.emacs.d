@@ -27,9 +27,11 @@
 
 
 ;;; python
-(require 'jedi)
-(add-hook 'python-mode-hook 'jedi:setup)
-(setq jedi:complete-on-dot t)
+(use-package jedi
+  :ensure t
+  :init (add-hook 'python-mode-hook 'jedi:setup)
+  :config (progn
+            (setq jedi:complete-on-dot t)))
 
 
 ;;; javascript
