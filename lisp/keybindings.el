@@ -4,10 +4,6 @@
 
 ;;; Code:
 
-;;; ibuffer
-(global-set-key (kbd "C-x C-b") 'ibuffer)
-
-
 ;;; quit emacs
 (global-set-key (kbd "C-x C-k") 'save-buffers-kill-emacs)
 

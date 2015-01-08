@@ -17,6 +17,10 @@
 (add-to-list 'desktop-modes-not-to-save '(dired-mode fundamental-mode))
 
 
+(use-package ibuffer
+  :bind ("C-x C-b" . ibuffer))
+
+
 ;;; use ido for minibuffer completion
 (use-package ido
   :config (progn
