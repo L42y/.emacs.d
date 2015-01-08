@@ -200,5 +200,11 @@
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
 
+(use-package osx-dictionary
+             :ensure t
+             :bind (("C-c c" . osx-dictionary-search-word)
+                    ("C-c d" . osx-dictionary-search-pointer)))
+
+
 (provide 'othermodes)
 ;;; othermodes.el ends here
