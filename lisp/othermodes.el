@@ -45,6 +45,15 @@
          ("C-c g" . comment-or-uncomment-region)))
 
 
+;;; sgml
+(use-package sgml-mode
+  :config (progn
+            (setq sgml-basic-offset 4)
+            ;; after deleting a tag, indent properly
+            (defadvice sgml-delete-tag (after reindent activate)
+              (indent-region (point-min) (point-max)))))
+
+
 ;;; whitespace
 (use-package whitespace
   :init (progn
@@ -187,13 +196,7 @@
 (add-hook 'prog-mode-hook 'rainbow-identifiers-mode)
 
 
-;;; sgml
-(require 'sgml-mode)
-(setq sgml-basic-offset 4)
 
-;;; after deleting a tag, indent properly
-(defadvice sgml-delete-tag (after reindent activate)
-  (indent-region (point-min) (point-max)))
 
 
 ;;; zencoding
