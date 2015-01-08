@@ -259,13 +259,17 @@
 
 
 ;;; tern
-(require 'tern-auto-complete)
-(tern-ac-setup)
-(setq tern-ac-on-dot t)
 (use-package tern
   :ensure t
   :init (dolist (hook '(js2-mode-hook web-mode-hook))
           (add-hook hook #'tern-mode)))
+
+
+(use-package tern-auto-complete
+  :ensure t
+  :init (tern-ac-setup)
+  :config (progn
+            (setq tern-ac-on-dot t)))
 
 
 (use-package osx-dictionary
