@@ -189,7 +189,6 @@
 
 
 ;;; rainbow
-(add-hook 'prog-mode-hook 'rainbow-identifiers-mode)
 (use-package rainbow-mode
   :ensure t
   :init (add-hook 'css-mode-hook 'rainbow-mode))
@@ -201,6 +200,10 @@
   :init (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
 
 
+(use-package rainbow-identifiers
+  :ensure t
+  :commands rainbow-identifiers-mode
+  :init (add-hook 'prog-mode-hook 'rainbow-identifiers-mode))
 
 
 ;;; zencoding
