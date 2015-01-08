@@ -189,13 +189,16 @@
 
 
 ;;; rainbow
-(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 (add-hook 'prog-mode-hook 'rainbow-identifiers-mode)
 (use-package rainbow-mode
   :ensure t
   :init (add-hook 'css-mode-hook 'rainbow-mode))
 
 
+(use-package rainbow-delimiters
+  :ensure t
+  :commands rainbow-delimiters-mode
+  :init (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
 
 
 
