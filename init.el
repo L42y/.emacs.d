@@ -22,6 +22,7 @@
 (require 'global)
 (require 'savefile)
 (require 'progmodes)
+(require 'textmodes)
 (require 'othermodes)
 (require 'keybindings)
 

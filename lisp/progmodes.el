@@ -37,19 +37,6 @@
 (define-key ac-complete-mode-map "\r" nil)
 
 
-;;; flycheck
-(use-package flycheck
-  :ensure t
-  :init (add-hook 'prog-mode-hook 'flycheck-mode)
-  :config (progn
-            (setq flycheck-check-syntax-automatically '(mode-enabled save))
-            (use-package flycheck-pos-tip
-              :ensure t
-              :config (progn
-                        (setq flycheck-display-errors-function
-                              'flycheck-pos-tip-error-messages)))))
-
-
 ;;; C
 (add-hook 'c-mode-hook
           '(lambda ()

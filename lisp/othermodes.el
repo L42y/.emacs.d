@@ -5,11 +5,6 @@
 ;;; Code:
 
 ;; built-in packages
-;;; conf-mode
-(use-package conf-mode
-  :init (add-to-list 'auto-mode-alist '("\\.*rc$" . conf-unix-mode)))
-
-
 ;;; desktop
 (use-package desktop
   :init (progn
@@ -31,27 +26,10 @@
             (setq ido-enable-flex-matching nil)))
 
 
-;;; ispell
-(use-package ispell
-  :init (add-hook 'prog-mode-hook 'flyspell-prog-mode)
-  :config (progn
-            (setq ispell-dictionary "english")
-            (setq-default ispell-program-name "aspell")))
-
-
 ;;; newcomment
 (use-package newcomment
   :bind (("C-'" . comment-dwim)
          ("C-c g" . comment-or-uncomment-region)))
-
-
-;;; sgml
-(use-package sgml-mode
-  :config (progn
-            (setq sgml-basic-offset 4)
-            ;; after deleting a tag, indent properly
-            (defadvice sgml-delete-tag (after reindent activate)
-              (indent-region (point-min) (point-max)))))
 
 
 ;;; whitespace
@@ -188,12 +166,6 @@
                           (ibuffer-do-sort-by-alphabetic))))))
 
 
-;;; rainbow
-(use-package rainbow-mode
-  :ensure t
-  :init (add-hook 'css-mode-hook 'rainbow-mode))
-
-
 (use-package rainbow-delimiters
   :ensure t
   :commands rainbow-delimiters-mode
@@ -204,12 +176,6 @@
   :ensure t
   :commands rainbow-identifiers-mode
   :init (add-hook 'prog-mode-hook 'rainbow-identifiers-mode))
-
-
-(use-package emmet-mode
-  :ensure t
-  :init (dolist (hook '(sgml-mode-hook css-mode-hook web-mode-hook))
-          (add-hook hook #'emmet-mode)))
 
 
 ;;; smartparens
@@ -241,12 +207,6 @@
 (use-package diff-hl
   :ensure t
   :init (global-diff-hl-mode))
-
-
-;;; markdown
-(use-package markdown-mode
-  :ensure t
-  :init (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode)))
 
 
 ;;; virtualenvwrapper
