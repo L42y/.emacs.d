@@ -59,6 +59,7 @@
                       tagedit
                       tern
                       tern-auto-complete
+                      use-package
                       virtualenvwrapper
                       web-mode
                       wgrep-ag
@@ -69,6 +70,8 @@
   (unless (package-installed-p package)
     (package-refresh-contents)
     (package-install package)))
+
+(require 'use-package)
 
 
 ;;; el-get
