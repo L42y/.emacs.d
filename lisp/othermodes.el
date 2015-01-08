@@ -213,10 +213,13 @@
 
 
 ;;; smartparens
-(require 'smartparens)
-(require 'smartparens-config)
-(smartparens-global-mode t)
-(show-smartparens-global-mode t)
+(use-package smartparens
+  :ensure t
+  :init (progn
+          (smartparens-global-mode t)
+          (show-smartparens-global-mode t))
+  :config (progn
+            (use-package smartparens-config)))
 
 
 ;;; tagedit
