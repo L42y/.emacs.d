@@ -206,10 +206,10 @@
   :init (add-hook 'prog-mode-hook 'rainbow-identifiers-mode))
 
 
-;;; zencoding
-(add-hook 'sgml-mode-hook 'emmet-mode)
-(add-hook 'css-mode-hook  'emmet-mode)
-(add-hook 'web-mode-hook 'emmet-mode)
+(use-package emmet-mode
+  :ensure t
+  :init (dolist (hook '(sgml-mode-hook css-mode-hook web-mode-hook))
+          (add-hook hook #'emmet-mode)))
 
 
 ;;; smartparens
