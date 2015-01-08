@@ -16,7 +16,6 @@
 ;;; install missing packages
 (defvar my-packages '(ag
                       ace-jump-mode
-                      angular-snippets
                       auto-complete
                       better-defaults
                       diff-hl
@@ -32,7 +31,6 @@
                       gitignore-mode
                       go-mode
                       helm
-                      helm-open-github
                       helm-projectile
                       htmlize
                       ibuffer-vc
