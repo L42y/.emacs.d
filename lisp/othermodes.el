@@ -46,13 +46,14 @@
 
 
 ;;; whitespace
-(require 'whitespace)
-(setq whitespace-line-column 80)
-(setq whitespace-style '(face lines-tail))
-
-(add-hook 'prog-mode-hook 'whitespace-mode)
-(add-hook 'prog-mode-hook
-          '(lambda () (setq show-trailing-whitespace t)))
+(use-package whitespace
+  :init (progn
+          (add-hook 'prog-mode-hook 'whitespace-mode)
+          (add-hook 'prog-mode-hook
+                    '(lambda () (setq show-trailing-whitespace t))))
+  :config (progn
+            (setq whitespace-line-column 80
+                  whitespace-style '(face lines-tail))))
 
 
 ;;; wdired
