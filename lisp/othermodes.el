@@ -108,8 +108,11 @@
 
 ;; third-party packages
 ;;; ag.el
-(setq ag-reuse-buffers 't)
-(setq ag-highlight-search t)
+(use-package ag
+  :bind ("<F5>" . ag-project-at-point)
+  :config (progn
+            (setq ag-reuse-buffers t)
+            (setq ag-highlight-search t)))
 
 
 ;;; helm awesomeness

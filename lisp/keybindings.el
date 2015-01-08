@@ -4,10 +4,6 @@
 
 ;;; Code:
 
-;;; ag
-(global-set-key (kbd "<f5>") 'ag-project-at-point)
-
-
 ;;; comment
 (global-set-key (kbd "C-'") 'comment-dwim)
 (global-set-key (kbd "C-c g") 'comment-or-uncomment-region)
