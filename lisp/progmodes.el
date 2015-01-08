@@ -13,18 +13,6 @@
 
 
 ;; linum
-
-
-;;; subword
-(add-hook 'prog-mode-hook 'subword-mode)
-
-
-;;; only use tab-width of 2 for certain modes.
-(mapc (lambda (hook)
-        (add-hook hook (lambda ()
-                         (setq-default tab-width 2))))
-      '(js-mode-hook
-        js2-mode-hook))
 (use-package linum
   :init (add-hook 'prog-mode-hook 'linum-mode))
 
