@@ -51,7 +51,10 @@
 
 
 ;;; web
-(add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
+(use-package web-mode
+  :ensure t
+  :init (add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
+  :config (setq web-mode-code-indent-offset 2))
 
 
 ;;; auto insert
