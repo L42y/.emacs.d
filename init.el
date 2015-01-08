@@ -24,7 +24,6 @@
 (require 'progmodes)
 (require 'textmodes)
 (require 'othermodes)
-(require 'keybindings)
 
 
 (provide 'init)

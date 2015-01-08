@@ -15,6 +15,8 @@ then move it to the beginning of the line."
     (when (eq pt (point))
       (beginning-of-line))))
 
+(global-set-key (kbd "C-a") 'smart-line-beginning)
+
 
 ;;; open-line-then-newline-and-indent
 (defun open-line-then-newline-and-indent ()
@@ -24,6 +26,8 @@ then move it to the beginning of the line."
   (newline-and-indent)
   (forward-line -1)
   (indent-according-to-mode))
+
+(global-set-key (kbd "M-<RET>") 'open-line-then-newline-and-indent)
 
 
 (provide 'defuns)
