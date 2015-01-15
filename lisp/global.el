@@ -5,8 +5,9 @@
 ;;; Code:
 
 ;;; load color theme
-(if (display-graphic-p)
-    (load-theme 'flatui t))
+(use-package flatui-theme
+  :if window-system
+  :init (load-theme 'flatui t))
 
 
 ;;; set fonts
