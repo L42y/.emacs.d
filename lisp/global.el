@@ -17,7 +17,7 @@
 
 
 ;;; better defaults
-(require 'better-defaults)
+(use-package better-defaults)
 
 
 ;; title bar format
