@@ -51,4 +51,8 @@
   :init (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode)))
 
 
+(use-package json-mode
+  :ensure t)
+
+
 (provide 'textmodes)
