@@ -39,8 +39,9 @@
 
 
 ;;; $PATH
-(when (memq window-system '(mac ns))
-  (exec-path-from-shell-initialize))
+(use-package exec-path-from-shell
+  :if (memq window-system '(mac ns))
+  :init (exec-path-from-shell-initialize))
 
 
 ;;; under mac, have Command as Meta and keep Option for localized input
