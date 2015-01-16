@@ -133,7 +133,7 @@
 ;;; ag.el
 (use-package ag
   :ensure t
-  :bind ("<F5>" . ag-project-at-point)
+  :bind ("<f5>" . ag-project-at-point)
   :config (progn
             (setq ag-reuse-buffers t)
             (setq ag-highlight-search t)))
