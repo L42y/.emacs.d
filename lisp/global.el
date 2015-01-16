@@ -24,9 +24,12 @@
 (setq frame-title-format "%b @ %f")
 
 
-;;; global enabled modes
-(global-hl-line-mode)     ; highlight current line
 (delete-selection-mode t) ; delete marked text on typing
+(use-package hl-line
+  ;; highlight current line
+  :init (global-hl-line-mode))
+
+
 
 ;;; shorter answer
 (defalias 'yes-or-no-p 'y-or-n-p)
