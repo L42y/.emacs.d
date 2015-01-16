@@ -55,4 +55,8 @@
   :ensure t)
 
 
+(use-package nginx-mode
+  :ensure t)
+
+
 (provide 'textmodes)
