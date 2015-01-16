@@ -52,8 +52,8 @@
 
 
 ;;; start server
-(require 'server)
-(unless (server-running-p) (server-start))
+(use-package server
+  :init (server-start))
 
 
 (provide 'global)
