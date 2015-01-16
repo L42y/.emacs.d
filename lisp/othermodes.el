@@ -266,5 +266,9 @@
   :bind ("C-c i" . string-edit-at-point))
 
 
+(use-package editorconfig
+  :ensure t)
+
+
 (provide 'othermodes)
 ;;; othermodes.el ends here
