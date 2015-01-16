@@ -24,6 +24,13 @@
 (setq frame-title-format "%b @ %f")
 
 
+(use-package autorevert
+  ;; whenever an external process changes a file underneath emacs, and there
+  ;; was no unsaved changes in the corresponding buffer, just revert its
+  ;; content to reflect what's on-disk.
+  :init (global-auto-revert-mode 1))
+
+
 (use-package hl-line
   ;; highlight current line
   :init (global-hl-line-mode))
@@ -36,12 +43,6 @@
 
 ;;; shorter answer
 (defalias 'yes-or-no-p 'y-or-n-p)
-
-
-;; whenever an external process changes a file underneath emacs, and there
-;; was no unsaved changes in the corresponding buffer, just revert its
-;; content to reflect what's on-disk.
-(global-auto-revert-mode 1)
 
 
 ;;; $PATH
