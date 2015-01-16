@@ -53,6 +53,7 @@
 
 ;;; org-mode awesomeness
 (use-package org
+  :ensure org-plus-contrib
   :config (progn
             (add-hook 'org-mode-hook
                       (lambda ()
