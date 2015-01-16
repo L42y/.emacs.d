@@ -81,8 +81,9 @@
                (emacs-lisp . t)))))
 
 (use-package ox-md
+  :init (use-package ox-gfm
+          :ensure t)
   :config (progn
-            (use-package ox-gfm)
             (setq org-md-headline-style 'atx)))
 
 (use-package ox-html
