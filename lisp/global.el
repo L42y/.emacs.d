@@ -6,6 +6,7 @@
 
 ;;; load color theme
 (use-package flatui-theme
+  :ensure t
   :if window-system
   :init (load-theme 'flatui t))
 
@@ -17,7 +18,8 @@
 
 
 ;;; better defaults
-(use-package better-defaults)
+(use-package better-defaults
+  :ensure t)
 
 
 ;; title bar format
@@ -47,6 +49,7 @@
 
 ;;; $PATH
 (use-package exec-path-from-shell
+  :ensure t
   :if (memq window-system '(mac ns))
   :init (exec-path-from-shell-initialize))
 
