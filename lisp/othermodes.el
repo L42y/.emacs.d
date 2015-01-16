@@ -243,6 +243,18 @@
   :bind ("C-x C-z" . magit-status))
 
 
+(use-package gitattributes-mode
+  :ensure t)
+
+
+(use-package gitconfig-mode
+  :ensure t)
+
+
+(use-package gitignore-mode
+  :ensure t)
+
+
 (use-package ace-jump-mode
   :ensure t
   :bind ("C-." . ace-jump-mode))
