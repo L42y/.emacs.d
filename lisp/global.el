@@ -24,11 +24,14 @@
 (setq frame-title-format "%b @ %f")
 
 
-(delete-selection-mode t) ; delete marked text on typing
 (use-package hl-line
   ;; highlight current line
   :init (global-hl-line-mode))
 
+
+(use-package delsel
+  ;; delete marked text on typing
+  :init (delete-selection-mode t))
 
 
 ;;; shorter answer
