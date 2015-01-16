@@ -146,7 +146,9 @@
          ("C-c h" . helm-projectile)
          ("C-x C-y" . helm-show-kill-ring))
   :config (progn
-            (use-package helm-config)))
+            (use-package helm-config)
+            (use-package helm-projectile
+              :ensure t)))
 
 
 ;;; projectile
