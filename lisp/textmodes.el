@@ -59,4 +59,8 @@
   :ensure t)
 
 
+(use-package pkgbuild-mode
+  :ensure t)
+
+
 (provide 'textmodes)
