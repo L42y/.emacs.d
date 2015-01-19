@@ -292,5 +292,9 @@
   :ensure t)
 
 
+(use-package wgrep-ag
+  :ensure t)
+
+
 (provide 'othermodes)
 ;;; othermodes.el ends here
