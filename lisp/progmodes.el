@@ -69,5 +69,9 @@
             (define-auto-insert "\.py" "python.py")))
 
 
+(use-package go-mode
+  :ensure t)
+
+
 (provide 'progmodes)
 ;;; progmodes.el ends here
