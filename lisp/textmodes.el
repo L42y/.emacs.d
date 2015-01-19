@@ -67,4 +67,8 @@
   :ensure t)
 
 
+(use-package pip-requirements
+  :ensure t)
+
+
 (provide 'textmodes)
