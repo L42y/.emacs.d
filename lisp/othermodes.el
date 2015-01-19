@@ -288,5 +288,9 @@
   :ensure t)
 
 
+(use-package yasnippet
+  :ensure t)
+
+
 (provide 'othermodes)
 ;;; othermodes.el ends here
