@@ -13,61 +13,9 @@
 (package-initialize)
 
 
-;;; install missing packages
-(defvar my-packages '(ag
-                      ace-jump-mode
-                      auto-complete
-                      better-defaults
-                      diff-hl
-                      editorconfig
-                      emmet-mode
-                      exec-path-from-shell
-                      expand-region
-                      flatui-theme
-                      flycheck
-                      flycheck-pos-tip
-                      gitattributes-mode
-                      gitconfig-mode
-                      gitignore-mode
-                      go-mode
-                      helm
-                      helm-projectile
-                      htmlize
-                      ibuffer-vc
-                      jedi
-                      js-doc
-                      js2-mode
-                      json-mode
-                      magit
-                      markdown-mode
-                      multiple-cursors
-                      nginx-mode
-                      org-plus-contrib
-                      ox-gfm
-                      paredit
-                      pip-requirements
-                      pkgbuild-mode
-                      projectile
-                      rainbow-delimiters
-                      rainbow-identifiers
-                      rainbow-mode
-                      smartparens
-                      smex
-                      string-edit
-                      tagedit
-                      tern
-                      tern-auto-complete
-                      use-package
-                      virtualenvwrapper
-                      web-mode
-                      wgrep-ag
-                      yaml-mode
-                      yasnippet))
-
-(dolist (package my-packages)
-  (unless (package-installed-p package)
-    (package-refresh-contents)
-    (package-install package)))
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
 
 (require 'use-package)
 
