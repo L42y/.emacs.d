@@ -94,6 +94,8 @@
 
 (use-package ox-publish
   :config (progn
+            (use-package htmlize
+              :ensure t)
             (setq org-publish-project-alist
                   '(("L42y"
                      :components ("L42y-content" "L42y-static" "L42y-rss"))
