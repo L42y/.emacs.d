@@ -157,6 +157,7 @@
 
 
 (use-package osx-dictionary
+  :if (eq system-type 'darwin)
   :ensure t
   :bind (("C-c c" . osx-dictionary-search-word)
          ("C-c d" . osx-dictionary-search-pointer)))
