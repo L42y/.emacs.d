@@ -149,13 +149,6 @@
           (add-hook hook #'tern-mode)))
 
 
-(use-package tern-auto-complete
-  :ensure t
-  :init (tern-ac-setup)
-  :config (progn
-            (setq tern-ac-on-dot t)))
-
-
 (use-package osx-dictionary
   :if (eq system-type 'darwin)
   :ensure t

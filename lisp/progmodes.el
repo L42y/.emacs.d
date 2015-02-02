@@ -17,24 +17,19 @@
   :init (add-hook 'prog-mode-hook 'linum-mode))
 
 
-;;; auto-complte
-(use-package auto-complete
+(use-package company
   :ensure t
+  :init (global-company-mode)
   :config (progn
-            (use-package auto-complete-config
-              :init (ac-config-default)
-              :config (progn
-                        (define-key ac-completing-map (kbd "C-n") 'ac-next)
-                        (define-key ac-completing-map (kbd "C-p") 'ac-previous)
-                        (define-key ac-complete-mode-map "\r" nil)))))
-
-
-;;; python
-(use-package jedi
-  :ensure t
-  :init (add-hook 'python-mode-hook 'jedi:setup)
-  :config (progn
-            (setq jedi:complete-on-dot t)))
+            (use-package company-tern
+              :ensure t
+              :init (add-to-list 'company-backends 'company-tern))
+            (use-package company-ycmd
+              :ensure t
+              :init (company-ycmd-setup))
+            (use-package company-quickhelp
+              :ensure t
+              :init (company-quickhelp-mode 1))))
 
 
 ;;; javascript
