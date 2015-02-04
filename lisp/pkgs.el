@@ -1,10 +1,3 @@
-;;; pkgs.el --- Emacs built-in package manager
-
-;;; Commentary:
-
-;;; Code:
-
-;;; builtin package
 (require 'package)
 (setq package-archives
       '(("gnu" . "https://elpa.gnu.org/packages/")
@@ -20,7 +13,6 @@
 (require 'use-package)
 
 
-;;; el-get
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
 (unless (require 'el-get nil t)
@@ -38,4 +30,3 @@
 
 
 (provide 'pkgs)
-;;; pkgs.el ends here

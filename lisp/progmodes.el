@@ -1,10 +1,3 @@
-;;; progmodes.el --- Programming related things
-
-;;; Commentary:
-
-;;; Code:
-
-;;; code style
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq-default fill-column 80)
@@ -12,7 +5,6 @@
 (prefer-coding-system 'utf-8)
 
 
-;; linum
 (use-package linum
   :init (add-hook 'prog-mode-hook 'linum-mode))
 
@@ -24,15 +16,12 @@
             (use-package company-tern
               :ensure t
               :init (add-to-list 'company-backends 'company-tern))
-            (use-package company-ycmd
-              :ensure t
-              :init (company-ycmd-setup))
             (use-package company-quickhelp
               :ensure t
-              :init (company-quickhelp-mode 1))))
+              :init (company-quickhelp-mode 1))
+            (setq company-minimum-prefix-length 2)))
 
 
-;;; javascript
 (use-package js2-mode
   :ensure t
   :init (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
@@ -48,14 +37,12 @@
                 (define-key js2-mode-map "@" 'js-doc-insert-tag))))))
 
 
-;;; web
 (use-package web-mode
   :ensure t
   :init (add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
   :config (setq web-mode-code-indent-offset 2))
 
 
-;;; auto insert
 (use-package autoinsert
   :init (add-hook 'python-mode-hook 'auto-insert)
   :config (progn
@@ -69,4 +56,3 @@
 
 
 (provide 'progmodes)
-;;; progmodes.el ends here

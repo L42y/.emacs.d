@@ -1,11 +1,3 @@
-;;; other-modes.el --- Programming unrelated things
-
-;;; Commentary:
-
-;;; Code:
-
-;; built-in packages
-;;; desktop
 (use-package desktop
   :init (progn
           (desktop-save-mode 1))
@@ -19,20 +11,17 @@
   :bind ("C-x C-b" . ibuffer))
 
 
-;;; use ido for minibuffer completion
 (use-package ido
   :config (progn
             (setq ido-show-dot-for-dired t)
             (setq ido-enable-flex-matching nil)))
 
 
-;;; newcomment
 (use-package newcomment
   :bind (("C-'" . comment-dwim)
          ("C-c g" . comment-or-uncomment-region)))
 
 
-;;; whitespace
 (use-package whitespace
   :init (progn
           (add-hook 'prog-mode-hook 'whitespace-mode)
@@ -43,7 +32,6 @@
                   whitespace-style '(face lines-tail))))
 
 
-;;; wdired
 (use-package wdired
   :init (progn
           (add-hook 'dired-mode-hook
@@ -51,8 +39,6 @@
                        (define-key dired-mode-map "e" 'wdired-change-to-wdired-mode)))))
 
 
-;; third-party packages
-;;; ag.el
 (use-package ag
   :ensure t
   :bind ("<f5>" . ag-project-at-point)
@@ -61,7 +47,6 @@
             (setq ag-highlight-search t)))
 
 
-;;; helm awesomeness
 (use-package helm
   :ensure t
   :bind (("C-x b" . helm-mini)
@@ -73,13 +58,11 @@
               :ensure t)))
 
 
-;;; projectile
 (use-package projectile
   :ensure t
   :init (projectile-global-mode))
 
 
-;;; ibuffer-vc
 (use-package ibuffer-vc
   :ensure t
   :config (progn
@@ -102,7 +85,6 @@
   :init (add-hook 'prog-mode-hook 'rainbow-identifiers-mode))
 
 
-;;; smartparens
 (use-package smartparens
   :ensure t
   :init (progn
@@ -112,7 +94,6 @@
             (use-package smartparens-config)))
 
 
-;;; tagedit
 (use-package tagedit
   :ensure t
   :init (add-hook 'html-mode-hook 'tagedit-mode)
@@ -121,19 +102,16 @@
             (tagedit-add-experimental-features)))
 
 
-;;; expand-region
 (use-package expand-region
   :ensure t
   :bind ("C-=" . er/expand-region))
 
 
-;;; diff-hl
 (use-package diff-hl
   :ensure t
   :init (global-diff-hl-mode))
 
 
-;;; virtualenvwrapper
 (use-package virtualenvwrapper
   :ensure t
   :config (progn
@@ -142,7 +120,6 @@
             (setq venv-location "~/.virtualenvs/")))
 
 
-;;; tern
 (use-package tern
   :ensure t
   :init (dolist (hook '(js2-mode-hook web-mode-hook))
@@ -209,4 +186,3 @@
 
 
 (provide 'othermodes)
-;;; othermodes.el ends here

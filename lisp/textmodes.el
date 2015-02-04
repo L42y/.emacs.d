@@ -1,9 +1,7 @@
-;;; conf-mode
 (use-package conf-mode
   :init (add-to-list 'auto-mode-alist '("\\.*rc$" . conf-unix-mode)))
 
 
-;;; flycheck
 (use-package flycheck
   :ensure t
   :init (add-hook 'prog-mode-hook 'flycheck-mode)
@@ -16,7 +14,6 @@
                               'flycheck-pos-tip-error-messages)))))
 
 
-;;; ispell
 (use-package ispell
   :init (add-hook 'prog-mode-hook 'flyspell-prog-mode)
   :config (progn
@@ -24,7 +21,6 @@
             (setq-default ispell-program-name "aspell")))
 
 
-;;; sgml
 (use-package sgml-mode
   :config (progn
             (setq sgml-basic-offset 4)
@@ -33,7 +29,6 @@
               (indent-region (point-min) (point-max)))))
 
 
-;;; rainbow
 (use-package rainbow-mode
   :ensure t
   :init (add-hook 'css-mode-hook 'rainbow-mode))
@@ -45,7 +40,6 @@
           (add-hook hook #'emmet-mode)))
 
 
-;;; markdown
 (use-package markdown-mode
   :ensure t
   :init (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode)))
