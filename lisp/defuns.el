@@ -30,5 +30,13 @@ then move it to the beginning of the line."
 (global-set-key (kbd "M-<RET>") 'open-line-then-newline-and-indent)
 
 
+(defmacro rename-modeline (package-name mode new-name)
+  `(eval-after-load ,package-name
+     '(defadvice ,mode (after rename-modeline activate)
+        (setq mode-name ,new-name))))
+
+(rename-modeline "js2-mode" js2-mode "JS2")
+
+
 (provide 'defuns)
 ;;; defuns.el ends here
