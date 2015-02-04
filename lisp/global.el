@@ -30,7 +30,10 @@
   ;; whenever an external process changes a file underneath emacs, and there
   ;; was no unsaved changes in the corresponding buffer, just revert its
   ;; content to reflect what's on-disk.
-  :init (global-auto-revert-mode 1))
+  :init (global-auto-revert-mode 1)
+  :config (progn
+            (setq global-auto-revert-non-file-buffers t
+                  auto-revert-verbose nil)))
 
 
 (use-package hl-line
