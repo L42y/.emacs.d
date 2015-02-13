@@ -14,8 +14,10 @@
                               'flycheck-pos-tip-error-messages)))))
 
 
-(use-package ispell
-  :init (add-hook 'prog-mode-hook 'flyspell-prog-mode)
+(use-package flyspell
+  :init (progn
+          (add-hook 'text-mode-hook 'flyspell-mode)
+          (add-hook 'prog-mode-hook 'flyspell-prog-mode))
   :config (progn
             (setq ispell-dictionary "english")
             (setq-default ispell-program-name "aspell")))
