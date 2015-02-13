@@ -19,8 +19,9 @@
           (add-hook 'text-mode-hook 'flyspell-mode)
           (add-hook 'prog-mode-hook 'flyspell-prog-mode))
   :config (progn
-            (setq ispell-dictionary "english")
-            (setq-default ispell-program-name "aspell")))
+            (when (executable-find "hunspell")
+              (setq-default ispell-program-name "hunspell")
+              (setq ispell-really-hunspell t))))
 
 
 (use-package sgml-mode
