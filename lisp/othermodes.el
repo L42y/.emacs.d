@@ -23,6 +23,7 @@
 
 
 (use-package whitespace
+  :diminish whitespace-mode
   :init (progn
           (add-hook 'prog-mode-hook 'whitespace-mode)
           (add-hook 'prog-mode-hook
@@ -60,6 +61,7 @@
 
 (use-package projectile
   :ensure t
+  :diminish projectile-mode
   :init (projectile-global-mode))
 
 
@@ -87,6 +89,7 @@
 
 (use-package smartparens
   :ensure t
+  :diminish smartparens-mode
   :init (progn
           (smartparens-global-mode t)
           (show-smartparens-global-mode t))
@@ -114,6 +117,7 @@
 
 (use-package tern
   :ensure t
+  :diminish tern-mode
   :init (dolist (hook '(js2-mode-hook web-mode-hook))
           (add-hook hook #'tern-mode)))
 
@@ -127,6 +131,7 @@
 
 (use-package magit
   :ensure t
+  :diminish magit-auto-revert-mode
   :bind ("C-x C-z" . magit-status))
 
 
