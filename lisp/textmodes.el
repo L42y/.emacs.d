@@ -17,7 +17,10 @@
 (use-package flyspell
   :init (progn
           (add-hook 'text-mode-hook 'flyspell-mode)
-          (add-hook 'prog-mode-hook 'flyspell-prog-mode))
+          (add-hook 'prog-mode-hook 'flyspell-prog-mode)))
+
+
+(use-package ispell
   :config (progn
             (when (executable-find "hunspell")
               (setq-default ispell-program-name "hunspell")
