@@ -112,14 +112,6 @@
   :init (global-diff-hl-mode))
 
 
-(use-package virtualenvwrapper
-  :ensure t
-  :config (progn
-            (venv-initialize-eshell)
-            (venv-initialize-interactive-shells)
-            (setq venv-location "~/.virtualenvs/")))
-
-
 (use-package tern
   :ensure t
   :init (dolist (hook '(js2-mode-hook web-mode-hook))

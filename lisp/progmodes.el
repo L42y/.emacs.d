@@ -16,10 +16,13 @@
             (use-package company-tern
               :ensure t
               :init (add-to-list 'company-backends 'company-tern))
+            (use-package company-anaconda
+              :ensure t
+              :init (add-to-list 'company-backends 'company-anaconda))
             (use-package company-quickhelp
               :ensure t
               :init (company-quickhelp-mode 1))
-            (setq company-minimum-prefix-length 2)))
+            (setq company-minimum-prefix-length 1)))
 
 
 (use-package js2-mode
@@ -35,6 +38,27 @@
              '(lambda ()
                 (define-key js2-mode-map "\C-ci" 'js-doc-insert-function-doc)
                 (define-key js2-mode-map "@" 'js-doc-insert-tag))))))
+
+
+(use-package python
+  :ensure t
+  :config (progn
+            (use-package pyenv-mode
+              :ensure t)
+            (use-package anaconda-mode
+              :ensure t
+              :init (add-hook 'python-mode-hook 'anaconda-mode))
+            (use-package virtualenvwrapper
+              :ensure t
+              :init (add-hook 'python-mode-hook
+                              (lambda ()
+                                (hack-local-variables)
+                                (when (boundp 'project-venv-name)
+                                  (venv-workon project-venv-name))))
+              :config (progn
+                        (venv-initialize-eshell)
+                        (venv-initialize-interactive-shells)
+                        (setq venv-location "~/.virtualenvs/")))))
 
 
 (use-package web-mode
