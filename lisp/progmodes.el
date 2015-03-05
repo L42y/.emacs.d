@@ -72,10 +72,15 @@
 
 
 (use-package autoinsert
-  :init (add-hook 'python-mode-hook 'auto-insert)
+  :init (progn
+          (add-hook 'js2-mode-hook 'auto-insert)
+          (add-hook 'web-mode-hook 'auto-insert)
+          (add-hook 'python-mode-hook 'auto-insert))
   :config (progn
             (setq auto-insert-query nil
                   auto-insert-directory "~/.emacs.d/templates/")
+            (define-auto-insert "\.js" "javascript.js")
+            (define-auto-insert "\.jsx" "javascript.js")
             (define-auto-insert "\.py" "python.py")))
 
 
