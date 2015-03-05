@@ -63,10 +63,12 @@
 
 (use-package web-mode
   :ensure t
-  :config (setq web-mode-code-indent-offset 2))
   :init (progn
           (add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
           (add-to-list 'auto-mode-alist '("\\.json\\'" . web-mode)))
+  :config (progn
+            (setq web-mode-code-indent-offset 2)
+            (setq web-mode-markup-indent-offset 2)))
 
 
 (use-package autoinsert
