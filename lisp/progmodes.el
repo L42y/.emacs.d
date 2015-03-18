@@ -22,6 +22,12 @@
             (use-package company-quickhelp
               :ensure t
               :init (company-quickhelp-mode 1))
+            (use-package company-statistics
+              :ensure t
+              :init (company-statistics-mode 1)
+              :config (progn
+                        (setq company-statistics-file
+                              (expand-file-name "company-statistics-cache.el" savefile-path))))
             (setq company-minimum-prefix-length 1)))
 
 
