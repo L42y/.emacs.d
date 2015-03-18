@@ -1,5 +1,5 @@
 (use-package conf-mode
-  :init (add-to-list 'auto-mode-alist '("\\.*rc$" . conf-unix-mode)))
+  :mode (("\\.*rc$" . conf-unix-mode)))
 
 
 (use-package flycheck
@@ -48,7 +48,7 @@
 
 (use-package markdown-mode
   :ensure t
-  :init (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode)))
+  :mode ("README\\.md$" . gfm-mode))
 
 
 (use-package nginx-mode

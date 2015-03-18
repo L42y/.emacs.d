@@ -33,7 +33,7 @@
 
 (use-package js2-mode
   :ensure t
-  :init (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+  :mode "\\.js$"
   :config
   (progn
     (setq-default js2-basic-offset 2)
@@ -48,6 +48,8 @@
 
 (use-package python
   :ensure t
+  :mode ("\\.py$" . python-mode)
+  :interpreter ("python" . python-mode)
   :config (progn
             (use-package pyenv-mode
               :ensure t)
@@ -69,9 +71,7 @@
 
 (use-package web-mode
   :ensure t
-  :init (progn
-          (add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
-          (add-to-list 'auto-mode-alist '("\\.json\\'" . web-mode)))
+  :mode "\\.json$"
   :config (progn
             (setq web-mode-code-indent-offset 2)
             (setq web-mode-markup-indent-offset 2)))
