@@ -73,8 +73,8 @@
   :ensure t
   :mode "\\.json$"
   :config (progn
-            (setq web-mode-code-indent-offset 2)
-            (setq web-mode-markup-indent-offset 2)))
+            (setq web-mode-code-indent-offset 2
+                  web-mode-markup-indent-offset 2)))
 
 
 (use-package autoinsert
