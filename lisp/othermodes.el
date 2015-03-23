@@ -3,7 +3,10 @@
           (desktop-save-mode 1))
   :config (progn
             (setq desktop-restore-eager 20
-                  desktop-lazy-verbose nil)
+                  desktop-lazy-verbose nil
+                  desktop-path (list savefile-path)
+                  desktop-base-file-name "desktop"
+                  desktop-base-lock-name "desktop.lock")
             (add-to-list 'desktop-modes-not-to-save '(dired-mode fundamental-mode))))
 
 
@@ -13,8 +16,10 @@
 
 (use-package ido
   :config (progn
-            (setq ido-show-dot-for-dired t)
-            (setq ido-enable-flex-matching nil)))
+            (setq ido-show-dot-for-dired t
+                  ido-enable-flex-matching nil
+                  ido-save-directory-list-file (expand-file-name
+                                                "ido" savefile-path))))
 
 
 (use-package newcomment
@@ -62,7 +67,10 @@
 (use-package projectile
   :ensure t
   :diminish projectile-mode
-  :init (projectile-global-mode))
+  :init (projectile-global-mode)
+  :config (progn
+            (setq projectile-known-projects-file
+                  (expand-file-name "projectile-projects" savefile-path))))
 
 
 (use-package ibuffer-vc
@@ -154,7 +162,9 @@
 
 (use-package smex
   :ensure t
-  :bind ("C-x <RET>" . smex))
+  :bind ("C-x <RET>" . smex)
+  :config (progn
+            (setq smex-save-file (expand-file-name "smex" savefile-path))))
 
 
 (use-package multiple-cursors
@@ -162,7 +172,9 @@
   :bind (("C-S-c C-S-c" . mc/edit-lines)
          ("C->" . mc/mark-next-like-this)
          ("C-<" . mc/mark-previous-like-this)
-         ("C-c C-<" . mc/mark-all-like-this)))
+         ("C-c C-<" . mc/mark-all-like-this))
+  :config (progn
+            (setq mc/list-file (expand-file-name "mc-lists.el" savefile-path))))
 
 
 (use-package string-edit
@@ -180,6 +192,11 @@
 
 (use-package wgrep-ag
   :ensure t)
+
+
+(use-package pcache
+  :config (progn
+            (setq pcache-directory (expand-file-name "pcache" savefile-path))))
 
 
 (provide 'othermodes)

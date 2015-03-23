@@ -9,11 +9,10 @@
 (setq face-font-rescale-alist (list (cons "Hiragino Sans GB" 1.1)))
 
 
-(use-package better-defaults
-  :ensure t)
-
-
 (setq frame-title-format "%b @ %f")
+
+
+(defalias 'yes-or-no-p 'y-or-n-p)
 
 
 (use-package autorevert
@@ -23,21 +22,41 @@
                   auto-revert-verbose nil)))
 
 
-(use-package hl-line
-  :init (global-hl-line-mode))
+(use-package better-defaults
+  :ensure t)
 
 
 (use-package delsel
   :init (delete-selection-mode t))
 
 
-(defalias 'yes-or-no-p 'y-or-n-p)
-
-
 (use-package exec-path-from-shell
   :ensure t
   :if (memq window-system '(mac ns))
   :init (exec-path-from-shell-initialize))
+
+
+(use-package hl-line
+  :init (global-hl-line-mode))
+
+
+(use-package recentf
+  :config (progn
+            (setq recentf-save-file (expand-file-name "recentf" savefile-path))))
+
+
+(use-package saveplace
+  :config (progn
+            (setq save-place-file (expand-file-name "places" savefile-path))))
+
+
+(use-package server
+  :init (server-start))
+
+
+(use-package tramp-cache
+  :config (progn
+            (setq tramp-persistency-file-name (expand-file-name "tramp" savefile-path))))
 
 
 (when (string-match "apple-darwin" system-configuration)
@@ -47,8 +66,4 @@
   (setq ns-function-modifier 'hyper))
 
 
-(use-package server
-  :init (server-start))
-
-
-(provide 'global)
+(provide 'globals)

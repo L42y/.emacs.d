@@ -21,8 +21,7 @@
 
 (require 'pkgs)
 (require 'defuns)
-(require 'global)
-(require 'savefile)
+(require 'globals)
 (require 'orgmodes)
 (require 'progmodes)
 (require 'textmodes)
