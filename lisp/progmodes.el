@@ -94,4 +94,21 @@
   :ensure t)
 
 
+(use-package mmm-mode
+  :ensure t
+  :config (progn
+            (mmm-add-classes
+             '((jsx
+                :submode web-mode
+                :face mmm-code-submode-face
+                :front "\\((\\)[[:space:]\n]*<"
+                :front-match 1
+                :back ">[[:space:]\n]*\\()\\)"
+                :back-match 1)))
+            (setq mmm-global-mode 'maybe
+                  mmm-parse-when-idle t)
+            (mmm-add-mode-ext-class 'js2-mode "\\.js\\'" 'jsx)
+            (mmm-add-mode-ext-class 'js2-mode "\\.jsx\\'" 'jsx)))
+
+
 (provide 'progmodes)
