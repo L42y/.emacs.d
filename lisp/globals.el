@@ -32,8 +32,11 @@
 
 (use-package exec-path-from-shell
   :ensure t
-  :init (exec-path-from-shell-initialize))
   :if (and (eq system-type 'darwin) (display-graphic-p))
+  :config (progn
+            (dolist (var '("GOPATH" "PYTHONPATH"))
+              (add-to-list 'exec-path-from-shell-variables var))
+            (exec-path-from-shell-initialize)))
 
 
 (use-package hl-line
