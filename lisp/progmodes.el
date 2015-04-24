@@ -37,6 +37,7 @@
   :config
   (progn
     (setq-default js2-basic-offset 2)
+    (setq js2-include-node-externs t)
     (use-package js-doc
       :ensure t
       :init (add-hook
