@@ -13,6 +13,9 @@
   :ensure t
   :init (global-company-mode)
   :config (progn
+            (use-package company-web
+              :ensure t
+              :init (add-to-list 'company-backends 'company-web-html))
             (use-package company-tern
               :ensure t
               :init (add-to-list 'company-backends 'company-tern))
