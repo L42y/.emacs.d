@@ -50,6 +50,10 @@
                 (define-key js2-mode-map "@" 'js-doc-insert-tag))))))
 
 
+(use-package tj-mode
+  :ensure t)
+
+
 (use-package python
   :ensure t
   :mode ("\\.py$" . python-mode)
