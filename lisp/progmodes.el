@@ -37,20 +37,19 @@
 (use-package js2-mode
   :ensure t
   :mode "\\.js$"
-  :config
-  (progn
-    (setq-default js2-basic-offset 2)
-    (setq js2-include-node-externs t)
-    (use-package js-doc
-      :ensure t
-      :init (add-hook
-             'js2-mode-hook
-             '(lambda ()
-                (define-key js2-mode-map "\C-ci" 'js-doc-insert-function-doc)
-                (define-key js2-mode-map "@" 'js-doc-insert-tag))))
-    (use-package js2-refactor
-      :ensure t
-      :init (add-hook 'js2-mode-hook #'js2-refactor-mode))))
+  :config (progn
+            (setq-default js2-basic-offset 2)
+            (setq js2-include-node-externs t)
+            (use-package js-doc
+              :ensure t
+              :init (add-hook
+                     'js2-mode-hook
+                     '(lambda ()
+                        (define-key js2-mode-map "\C-ci" 'js-doc-insert-function-doc)
+                        (define-key js2-mode-map "@" 'js-doc-insert-tag))))
+            (use-package js2-refactor
+              :ensure t
+              :init (add-hook 'js2-mode-hook #'js2-refactor-mode))))
 
 
 (use-package tj-mode
@@ -119,8 +118,7 @@
                 :back-match 1)))
             (setq mmm-global-mode 'maybe
                   mmm-parse-when-idle t)
-            (mmm-add-mode-ext-class 'js2-mode "\\.js\\'" 'jsx)
-            (mmm-add-mode-ext-class 'js2-mode "\\.jsx\\'" 'jsx)))
+            (mmm-add-mode-ext-class 'js2-mode "\\.js\\'" 'jsx)))
 
 
 (provide 'progmodes)
