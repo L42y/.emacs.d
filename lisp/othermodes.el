@@ -194,6 +194,11 @@
   :ensure t)
 
 
+(use-package switch-window
+  :ensure t
+  :bind ("C-x o" . switch-window))
+
+
 (use-package pcache
   :config (progn
             (setq pcache-directory (expand-file-name "pcache" savefile-path))))
