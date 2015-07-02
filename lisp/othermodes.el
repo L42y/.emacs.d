@@ -154,9 +154,9 @@
   :ensure t)
 
 
-(use-package ace-jump-mode
+(use-package avy
   :ensure t
-  :bind ("C-." . ace-jump-mode))
+  :bind ("C-," . avy-goto-char-2))
 
 
 (use-package smex
