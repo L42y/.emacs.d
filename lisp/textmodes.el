@@ -17,7 +17,11 @@
 (use-package flyspell
   :init (progn
           (add-hook 'text-mode-hook 'flyspell-mode)
-          (add-hook 'prog-mode-hook 'flyspell-prog-mode)))
+          (add-hook 'prog-mode-hook 'flyspell-prog-mode))
+  :config (progn
+            (use-package flyspell-popup
+              :ensure t
+              :init (bind-key "C-;" 'flyspell-popup-correct flyspell-mode-map))))
 
 
 (use-package ispell
