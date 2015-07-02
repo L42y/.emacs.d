@@ -139,7 +139,6 @@
 
 (use-package magit
   :ensure t
-  :diminish magit-auto-revert-mode
   :bind ("C-x C-z" . magit-status))
 
 
