@@ -121,4 +121,8 @@
             (mmm-add-mode-ext-class 'js2-mode "\\.js\\'" 'jsx)))
 
 
+(use-package clojure-mode
+  :ensure t)
+
+
 (provide 'progmodes)
