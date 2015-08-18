@@ -55,6 +55,11 @@
               :init (add-hook 'js2-mode-hook #'js2-refactor-mode))))
 
 
+(use-package coffee-mode
+  :mode "\\.coffee$"
+  :ensure t)
+
+
 (use-package tj-mode
   :ensure t)
 
