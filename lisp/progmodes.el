@@ -19,6 +19,9 @@
             (use-package company-tern
               :ensure t
               :init (add-to-list 'company-backends 'company-tern))
+            (use-package company-emoji
+              :ensure t
+              :init (add-to-list 'company-backends 'company-emoji))
             (use-package company-anaconda
               :ensure t
               :init (add-to-list 'company-backends 'company-anaconda))
