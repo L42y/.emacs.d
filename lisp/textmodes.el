@@ -2,6 +2,11 @@
   :mode (("\\.*rc$" . conf-unix-mode)))
 
 
+(use-package css-mode
+  :config (progn
+            (setq css-indent-offset 2)))
+
+
 (use-package flycheck
   :ensure t
   :init (add-hook 'prog-mode-hook 'flycheck-mode)
