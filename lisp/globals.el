@@ -1,7 +1,7 @@
-(use-package monokai-theme
+(use-package flatui-theme
   :ensure t
   :if window-system
-  :init (load-theme 'monokai t))
+  :init (load-theme 'flatui t))
 
 
 (set-frame-font "Fantasque Sans Mono 15")
