@@ -49,7 +49,9 @@
                         (define-key js2-mode-map "@" 'js-doc-insert-tag))))
             (use-package js2-refactor
               :ensure t
-              :init (add-hook 'js2-mode-hook #'js2-refactor-mode))))
+              :init (add-hook 'js2-mode-hook #'js2-refactor-mode)
+              :config (progn
+                        (js2r-add-keybindings-with-prefix "C-c C-m")))))
 
 
 (use-package coffee-mode
