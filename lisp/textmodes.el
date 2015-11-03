@@ -38,7 +38,7 @@
 
 (use-package sgml-mode
   :config (progn
-            (setq sgml-basic-offset 4)
+            (setq sgml-basic-offset 2)
             ;; after deleting a tag, indent properly
             (defadvice sgml-delete-tag (after reindent activate)
               (indent-region (point-min) (point-max)))))
