@@ -55,13 +55,14 @@
                      :base-directory "~/Dropbox/Emacs/Org/L42y.org/"
                      :base-extension "org"
                      :html-extension "html"
-                     :publishing-directory "~/BTSync/L42y.org/"
+                     :publishing-directory "~/Projects/L42y.org/"
                      :publishing-function (org-html-publish-to-html)
                      :with-toc nil
                      :recursive t
                      :html-preamble nil
                      :html-postamble nil
                      :section-numbers nil
+                     :preserve-breaks t
                      :html-head-extra
                      "<link rel=\"stylesheet\" href=\"/_/css/main.css\">"
                      :htmlized-source t
@@ -70,14 +71,14 @@
                     ("L42y-static"
                      :base-directory "~/Dropbox/Emacs/Org/L42y.org/_/"
                      :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf"
-                     :publishing-directory "~/BTSync/L42y.org/_/"
+                     :publishing-directory "~/Projects/L42y.org/_/"
                      :recursive t
                      :publishing-function (org-publish-attachment))
                     ("L42y-rss"
                      :base-directory "~/Dropbox/Emacs/Org/L42y.org/"
                      :base-extension "org"
                      :publishing-function (org-rss-publish-to-rss)
-                     :publishing-directory "~/BTSync/L42y.org/"
+                     :publishing-directory "~/Projects/L42y.org/"
                      :exclude ".*"
                      :include ("writing.org")
                      :with-toc nil
