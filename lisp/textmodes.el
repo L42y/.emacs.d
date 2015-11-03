@@ -51,7 +51,7 @@
 
 (use-package emmet-mode
   :ensure t
-  :init (dolist (hook '(sgml-mode-hook css-mode-hook web-mode-hook))
+  :init (dolist (hook '(sgml-mode-hook css-mode-hook web-mode-hook js2-jsx-mode-hook))
           (add-hook hook #'emmet-mode)))
 
 
