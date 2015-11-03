@@ -4,7 +4,8 @@
   :init (load-theme 'flatui t))
 
 
-(set-frame-font "Fantasque Sans Mono 15")
+(add-to-list 'default-frame-alist
+             '(font . "Fantasque Sans Mono 15"))
 (set-fontset-font t 'han "Hiragino Sans GB")
 (setq face-font-rescale-alist (list (cons "Hiragino Sans GB" 1.1)))
 
