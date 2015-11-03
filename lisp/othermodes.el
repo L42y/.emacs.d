@@ -203,4 +203,8 @@
             (setq pcache-directory (expand-file-name "pcache" savefile-path))))
 
 
+(use-package restart-emacs
+  :ensure t)
+
+
 (provide 'othermodes)
