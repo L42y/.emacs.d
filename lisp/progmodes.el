@@ -90,7 +90,9 @@
   :ensure t
   :mode ("\\.html$" "\\.json$" "/\\([[:upper:]]\\w+\\)\\(/index\\)?\\.js$")
   :config (progn
-            (setq web-mode-style-padding 2
+            (setq web-mode-content-types-alist
+                  '(("jsx" . "/\\([[:upper:]]\\w+\\)\\(/index\\)?\\.js$"))
+                  web-mode-style-padding 2
                   web-mode-script-padding 2
                   web-mode-css-indent-offset 2
                   web-mode-code-indent-offset 2
