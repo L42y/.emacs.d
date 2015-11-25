@@ -1,7 +1,7 @@
-(use-package flatui-theme
+(use-package monokai-theme
   :ensure t
   :if window-system
-  :init (load-theme 'flatui t))
+  :init (load-theme 'monokai t))
 
 
 (add-to-list 'default-frame-alist
