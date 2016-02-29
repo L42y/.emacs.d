@@ -5,7 +5,7 @@
 
 
 (add-to-list 'default-frame-alist
-             '(font . "Fantasque Sans Mono 15"))
+             '(font . "Fira Code 13"))
 (set-fontset-font t 'han "Hiragino Sans GB")
 (setq face-font-rescale-alist (list (cons "Hiragino Sans GB" 1.1)))
 
@@ -67,7 +67,8 @@
   (setq mac-allow-anti-aliasing t)
   (setq mac-command-modifier 'meta)
   (setq mac-option-modifier 'super)
-  (setq ns-function-modifier 'hyper))
+  (setq ns-function-modifier 'hyper)
+  (mac-auto-operator-composition-mode))
 
 
 (provide 'globals)
