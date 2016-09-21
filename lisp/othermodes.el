@@ -186,7 +186,8 @@
 
 
 (use-package yasnippet
-  :ensure t)
+  :ensure t
+  :config (yas-global-mode 1))
 
 
 (use-package wgrep-ag
