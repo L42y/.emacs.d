@@ -106,7 +106,7 @@
 
 (use-package tagedit
   :ensure t
-  :init (dolist (hook '(sgml-mode-hook js2-jsx-mode-hook))
+  :init (dolist (hook '(sgml-mode-hook))
           (add-hook hook #'tagedit-mode))
   :config (progn
             (tagedit-add-paredit-like-keybindings)
