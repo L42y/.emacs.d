@@ -11,6 +11,20 @@
 
 ;;; Code:
 
+(require 'package)
+(setq package-archives
+      '(("gnu" . "https://elpa.gnu.org/packages/")
+        ("melpa" . "https://melpa.org/packages/")))
+(package-initialize)
+
+
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+(eval-when-compile
+  (require 'use-package))
+
 (defvar sweet-home (file-name-directory load-file-name))
 (defvar elisp-path (expand-file-name "lisp" sweet-home))
 (defvar savefile-path (expand-file-name "savefile" sweet-home))
@@ -19,7 +33,6 @@
 (setq custom-file (expand-file-name "custom.el" sweet-home))
 (load custom-file 'noerror)
 
-(require 'pkgs)
 (require 'defuns)
 (require 'globals)
 (require 'orgmodes)
