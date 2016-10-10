@@ -47,7 +47,7 @@
 
 (use-package ag
   :ensure t
-  :bind ("<f5>" . ag-project-at-point)
+  :bind ("<f5>" . ag-project)
   :config (progn
             (setq ag-highlight-search t)))
 
