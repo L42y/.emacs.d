@@ -36,7 +36,8 @@
 
 (use-package js2-mode
   :ensure t
-  :mode "\\.js$"
+  :mode (("\\.js$" . js2-mode)
+         ("/\\([[:upper:]]\\w+\\)\\(/index\\)?\\.js$" . js2-jsx-mode))
   :config (progn
             (setq-default js2-basic-offset 2)
             (setq js2-include-node-externs t)
@@ -88,7 +89,7 @@
 
 (use-package web-mode
   :ensure t
-  :mode ("\\.html$" "\\.json$" "/\\([[:upper:]]\\w+\\)\\(/index\\)?\\.js$")
+  :mode ("\\.html$" "\\.json$")
   :config (progn
             (setq web-mode-content-types-alist
                   '(("jsx" . "/\\([[:upper:]]\\w+\\)\\(/index\\)?\\.js$"))
