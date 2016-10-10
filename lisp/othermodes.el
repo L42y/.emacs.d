@@ -138,8 +138,11 @@
 
 
 (use-package magit
+  :bind ("C-x C-z" . magit-status)
   :ensure t
-  :bind ("C-x C-z" . magit-status))
+  :config (use-package magit-filenotify
+            :ensure t
+            :config (add-hook 'magit-status-mode-hook 'magit-filenotify-mode)))
 
 
 (use-package gitattributes-mode
