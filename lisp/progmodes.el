@@ -55,6 +55,17 @@
                         (js2r-add-keybindings-with-prefix "C-c C-m")))))
 
 
+(use-package typescript-mode
+  :mode (("\\.ts$" . typescript-mode))
+  :ensure t
+  :config (progn
+            (use-package tide
+              :init (add-hook 'typescript-mode-hook 'tide-mode)
+              :config (tide-restart-server)
+              :ensure t
+              :commands (tide-mode))))
+
+
 (use-package coffee-mode
   :mode "\\.coffee$"
   :config (setq coffee-tab-width 2)
