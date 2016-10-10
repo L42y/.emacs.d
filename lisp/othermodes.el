@@ -211,4 +211,8 @@
   :ensure t)
 
 
+;; (use-package jade
+;;   :ensure t)
+
+
 (provide 'othermodes)
