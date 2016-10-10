@@ -6,7 +6,8 @@
 
 
 (use-package linum
-  :init (add-hook 'prog-mode-hook 'linum-mode))
+  :init (add-hook 'prog-mode-hook 'linum-mode)
+  :commands (linum-mode))
 
 
 (use-package company
