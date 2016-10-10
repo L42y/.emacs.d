@@ -124,4 +124,13 @@
   :ensure t)
 
 
+(use-package elm-mode
+  :init (add-to-list 'company-backends 'company-elm)
+  :ensure t
+  :config (setq elm-format-on-save t
+                elm-format-command "elm-format-0.17"
+                elm-sort-imports-on-save t)
+  :commands (company-elm))
+
+
 (provide 'progmodes)
