@@ -33,12 +33,12 @@
 (setq custom-file (expand-file-name "custom.el" sweet-home))
 (load custom-file 'noerror)
 
-(require 'defuns)
-(require 'globals)
-(require 'orgmodes)
-(require 'progmodes)
-(require 'textmodes)
-(require 'othermodes)
+(use-package defuns)
+(use-package globals)
+(use-package orgmodes)
+(use-package progmodes)
+(use-package textmodes)
+(use-package othermodes)
 
 
 (provide 'init)
