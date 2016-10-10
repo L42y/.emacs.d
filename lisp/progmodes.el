@@ -16,6 +16,9 @@
             (use-package company-web
               :ensure t
               :init (add-to-list 'company-backends 'company-web-html))
+            (use-package company-flow
+              :ensure t
+              :init (add-to-list 'company-backends 'company-flow))
             (use-package company-tern
               :ensure t
               :init (add-to-list 'company-backends 'company-tern))
