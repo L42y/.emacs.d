@@ -23,6 +23,7 @@
   :init (progn
           (add-hook 'text-mode-hook 'flyspell-mode)
           (add-hook 'prog-mode-hook 'flyspell-prog-mode))
+  :commands (flyspell-mode flyspell-prog-mode)
   :config (progn
             (use-package flyspell-popup
               :ensure t
