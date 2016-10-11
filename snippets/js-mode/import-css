@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: import css
+# key: impcss
+# --
+import './${1:index}.css';

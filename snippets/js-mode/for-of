@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: for of
+# key: forof
+# --
+for (const ${1:item} of ${2:iterable}) {
+  $0
+}

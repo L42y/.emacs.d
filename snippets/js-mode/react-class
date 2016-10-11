@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: React Class
+# key: rctcls
+# --
+class $1 extends React.Component {
+  render() {
+    $0
+  }
+}
