@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: static prop
+# key: static
+# --
+static ${1:$$(yas-choose-value '("propTypes" "defaultProps" "contextTypes"))} = {
+  $0
+};
