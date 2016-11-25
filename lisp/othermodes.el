@@ -15,6 +15,7 @@
 
 
 (use-package ido
+  :init (ido-mode)
   :config (progn
             (setq ido-show-dot-for-dired t
                   ido-enable-flex-matching nil
