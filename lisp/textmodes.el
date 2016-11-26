@@ -80,4 +80,9 @@
   :ensure t)
 
 
+(use-package json-mode
+  :mode ("\\.json$")
+  :ensure t)
+
+
 (provide 'textmodes)
