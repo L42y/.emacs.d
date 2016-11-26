@@ -40,8 +40,7 @@
 
 (use-package js2-mode
   :ensure t
-  :mode (("\\.js$" . js2-mode)
-         ("/\\([[:upper:]]\\w+\\)\\(/index\\)?\\.js$" . js2-jsx-mode))
+  :mode ("\\.js$" . js2-mode)
   :config (progn
             (setq-default js2-basic-offset 2)
             (setq js2-include-node-externs t)
@@ -52,6 +51,9 @@
                      '(lambda ()
                         (define-key js2-mode-map "\C-ci" 'js-doc-insert-function-doc)
                         (define-key js2-mode-map "@" 'js-doc-insert-tag))))
+            (use-package rjsx-mode
+              :mode ("/\\([[:upper:]]\\w+\\)\\(/index\\)?\\.js$" . rjsx-mode)
+              :ensure t)
             (use-package js2-refactor
               :ensure t
               :init (add-hook 'js2-mode-hook #'js2-refactor-mode)
