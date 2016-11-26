@@ -4,6 +4,7 @@ custom.el
 # Packages
 elpa/
 el-get/
+anaconda-mode/
 .python-environments/
 
 # Backups
