@@ -44,6 +44,7 @@
   :config (progn
             (setq-default js2-basic-offset 2)
             (setq js-enabled-frameworks (quote (javascript))
+                  js-switch-indent-offset js2-basic-offset
                   js2-include-node-externs t)
             (use-package js-doc
               :ensure t
