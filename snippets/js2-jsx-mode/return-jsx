@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: return jsx
+# key: rtnjsx
+# --
+return (
+  <${1:div}$2>
+    $0
+  </$1>
+);
