@@ -77,7 +77,7 @@
 
 
 (use-package json-mode
-  :mode ("\\.json$")
+  :mode ("\\.json$" . json-mode)
   :ensure t)
 
 
