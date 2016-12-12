@@ -43,6 +43,21 @@
               (indent-region (point-min) (point-max)))))
 
 
+(use-package web-mode
+  :mode ("\\.html$" . web-mode)
+  :ensure t
+  :config (progn
+            (setq web-mode-style-padding sgml-basic-offset
+                  web-mode-script-padding sgml-basic-offset
+                  web-mode-css-indent-offset sgml-basic-offset
+                  web-mode-code-indent-offset sgml-basic-offset
+                  web-mode-markup-indent-offset sgml-basic-offset
+                  web-mode-enable-auto-pairing t
+                  web-mode-enable-css-colorization t
+                  web-mode-enable-current-column-highlight t
+                  web-mode-enable-current-element-highlight t)))
+
+
 (use-package emmet-mode
   :ensure t
   :config (dolist (hook '(sgml-mode-hook css-mode-hook web-mode-hook js2-jsx-mode-hook))
