@@ -50,8 +50,11 @@
 
 
 (use-package markdown-mode
+  :mode ("README\\.md$" . gfm-mode)
   :ensure t
-  :mode ("README\\.md$" . gfm-mode))
+  :config (use-package apib-mode
+            :mode ("\\.apib$" . apib-mode)
+            :ensure t))
 
 
 (use-package nginx-mode
