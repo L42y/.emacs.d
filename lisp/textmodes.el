@@ -4,7 +4,10 @@
 
 (use-package css-mode
   :config (progn
-            (setq css-indent-offset 2)))
+            (setq css-indent-offset 2)
+            (use-package rainbow-mode
+              :init (add-hook 'css-mode-hook 'rainbow-mode)
+              :ensure t)))
 
 
 (use-package flycheck
@@ -38,11 +41,6 @@
             ;; after deleting a tag, indent properly
             (defadvice sgml-delete-tag (after reindent activate)
               (indent-region (point-min) (point-max)))))
-
-
-(use-package rainbow-mode
-  :ensure t
-  :init (add-hook 'css-mode-hook 'rainbow-mode))
 
 
 (use-package emmet-mode
