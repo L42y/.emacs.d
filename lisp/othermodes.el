@@ -42,17 +42,6 @@
          ("C-c g" . comment-or-uncomment-region)))
 
 
-(use-package whitespace
-  :diminish whitespace-mode
-  :init (progn
-          (add-hook 'prog-mode-hook 'whitespace-mode)
-          (add-hook 'prog-mode-hook
-                    '(lambda () (setq show-trailing-whitespace t))))
-  :config (progn
-            (setq whitespace-line-column 80
-                  whitespace-style '(face lines-tail))))
-
-
 (use-package wdired
   :init (progn
           (add-hook 'dired-mode-hook
@@ -60,100 +49,40 @@
                        (define-key dired-mode-map "e" 'wdired-change-to-wdired-mode)))))
 
 
+(use-package whitespace
+  :init (progn
+          (add-hook 'prog-mode-hook 'whitespace-mode)
+          (add-hook 'prog-mode-hook
+                    '(lambda () (setq show-trailing-whitespace t))))
+  :config (progn
+            (setq whitespace-line-column 80
+                  whitespace-style '(face lines-tail)))
+  :diminish whitespace-mode)
+
+
 (use-package ag
-  :ensure t
   :bind ("<f5>" . ag-project)
+  :ensure t
   :config (progn
             (setq ag-highlight-search t)))
 
 
-(use-package helm
-  :ensure t
-  :bind (("C-x b" . helm-mini)
-         ("C-c h" . helm-projectile)
-         ("C-x C-y" . helm-show-kill-ring))
-  :config (progn
-            (use-package helm-config)
-            (use-package helm-projectile
-              :ensure t)))
-
-
-(use-package projectile
-  :ensure t
-  :diminish projectile-mode
-  :init (projectile-global-mode)
-  :config (progn
-            (setq projectile-known-projects-file
-                  (expand-file-name "projectile-projects" savefile-path))))
-
-
-(use-package ibuffer-vc
-  :ensure t
-  :config (progn
-            (add-hook 'ibuffer-hook
-                      (lambda ()
-                        (ibuffer-vc-set-filter-groups-by-vc-root)
-                        (unless (eq ibuffer-sorting-mode 'alphabetic)
-                          (ibuffer-do-sort-by-alphabetic))))))
-
-
-(use-package rainbow-delimiters
-  :ensure t
-  :commands rainbow-delimiters-mode
-  :init (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
-
-
-(use-package rainbow-identifiers
-  :ensure t
-  :commands rainbow-identifiers-mode
-  :init (add-hook 'prog-mode-hook 'rainbow-identifiers-mode))
-
-
-(use-package smartparens
-  :ensure t
-  :diminish smartparens-mode
-  :init (progn
-          (smartparens-global-mode t)
-          (show-smartparens-global-mode t))
-  :config (progn
-            (use-package smartparens-config)))
-
-
-(use-package tagedit
-  :ensure t
-  :init (dolist (hook '(sgml-mode-hook))
-          (add-hook hook #'tagedit-mode))
-  :config (progn
-            (tagedit-add-paredit-like-keybindings)
-            (tagedit-add-experimental-features)))
-
-
-(use-package expand-region
-  :ensure t
-  :bind ("C-=" . er/expand-region))
+(use-package avy
+  :bind ("C-," . avy-goto-char-2)
+  :ensure t)
 
 
 (use-package diff-hl
-  :ensure t
-  :init (global-diff-hl-mode))
+  :init (global-diff-hl-mode)
+  :ensure t)
 
 
-(use-package tern
-  :ensure t
-  :diminish tern-mode
-  :init (dolist (hook '(js2-mode-hook web-mode-hook))
-          (add-hook hook #'tern-mode)))
+(use-package editorconfig
+  :ensure t)
 
 
-(use-package osx-dictionary
-  :if (eq system-type 'darwin)
-  :ensure t
-  :bind (("C-c c" . osx-dictionary-search-input)
-         ("C-c d" . osx-dictionary-search-pointer)))
-
-
-(use-package magit
-  :bind ("C-x C-z" . magit-status)
+(use-package expand-region
+  :bind ("C-=" . er/expand-region)
   :ensure t)
 
 
@@ -169,62 +98,122 @@
   :ensure t)
 
 
-(use-package avy
+(use-package helm
+  :bind (("C-x b" . helm-mini)
+         ("C-c h" . helm-projectile)
+         ("C-x C-y" . helm-show-kill-ring))
   :ensure t
-  :bind ("C-," . avy-goto-char-2))
-
-
-(use-package smex
-  :ensure t
-  :bind ("C-x <RET>" . smex)
   :config (progn
-            (setq smex-save-file (expand-file-name "smex" savefile-path))))
+            (use-package helm-config)
+            (use-package helm-projectile
+              :ensure t)))
+
+
+(use-package ibuffer-vc
+  :ensure t
+  :config (progn
+            (add-hook 'ibuffer-hook
+                      (lambda ()
+                        (ibuffer-vc-set-filter-groups-by-vc-root)
+                        (unless (eq ibuffer-sorting-mode 'alphabetic)
+                          (ibuffer-do-sort-by-alphabetic))))))
+
+
+(use-package jade
+  :ensure t)
 
 
 (use-package multiple-cursors
-  :ensure t
   :bind (("C-S-c C-S-c" . mc/edit-lines)
          ("C->" . mc/mark-next-like-this)
          ("C-<" . mc/mark-previous-like-this)
          ("C-c C-<" . mc/mark-all-like-this))
+  :ensure t
   :config (progn
             (setq mc/list-file (expand-file-name "mc-lists.el" savefile-path))))
 
 
-(use-package string-edit
-  :ensure t
-  :bind ("C-c i" . string-edit-at-point))
-
-
-(use-package editorconfig
+(use-package osx-dictionary
+  :if (eq system-type 'darwin)
+  :bind (("C-c c" . osx-dictionary-search-input)
+         ("C-c d" . osx-dictionary-search-pointer))
   :ensure t)
 
 
-(use-package yasnippet
+(use-package projectile
   :ensure t
-  :config (yas-global-mode 1))
-
-
-(use-package wgrep-ag
-  :ensure t)
-
-
-(use-package switch-window
-  :ensure t
-  :bind ("C-x o" . switch-window))
-
-
-(use-package pcache
   :config (progn
-            (setq pcache-directory (expand-file-name "pcache" savefile-path))))
+            (projectile-global-mode)
+            (setq projectile-known-projects-file
+                  (expand-file-name "projectile-projects" savefile-path)))
+  :diminish projectile-mode)
+
+
+(use-package rainbow-delimiters
+  :init (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+  :ensure t
+  :commands rainbow-delimiters-mode)
+
+
+(use-package rainbow-identifiers
+  :init (add-hook 'prog-mode-hook 'rainbow-identifiers-mode)
+  :ensure t
+  :commands rainbow-identifiers-mode)
 
 
 (use-package restart-emacs
   :ensure t)
 
 
-;; (use-package jade
-;;   :ensure t)
+(use-package smartparens
+  :ensure t
+  :config (progn
+            (smartparens-global-mode t)
+            (show-smartparens-global-mode t)
+            (use-package smartparens-config))
+  :diminish smartparens-mode)
+
+
+(use-package smex
+  :bind ("C-x <RET>" . smex)
+  :ensure t
+  :config (progn
+            (setq smex-save-file (expand-file-name "smex" savefile-path))))
+
+
+(use-package string-edit
+  :bind ("C-c i" . string-edit-at-point)
+  :ensure t)
+
+
+(use-package switch-window
+  :bind ("C-x o" . switch-window)
+  :ensure t)
+
+
+(use-package tagedit
+  :init (dolist (hook '(sgml-mode-hook))
+          (add-hook hook #'tagedit-mode))
+  :ensure t
+  :config (progn
+            (tagedit-add-paredit-like-keybindings)
+            (tagedit-add-experimental-features)))
+
+
+(use-package tern
+  :init (dolist (hook '(js2-mode-hook web-mode-hook))
+          (add-hook hook #'tern-mode))
+  :ensure t
+  :diminish tern-mode)
+
+
+(use-package wgrep-ag
+  :ensure t)
+
+
+(use-package yasnippet
+  :ensure t
+  :config (yas-global-mode 1))
 
 
 (provide 'othermodes)
