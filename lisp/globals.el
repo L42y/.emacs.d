@@ -10,6 +10,12 @@
 (setq face-font-rescale-alist (list (cons "Hiragino Sans GB" 1.1)))
 
 
+(prefer-coding-system 'utf-8)
+
+
+(setq fill-column 80)
+
+
 (setq frame-title-format "%b @ %f")
 
 

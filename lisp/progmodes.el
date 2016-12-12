@@ -1,7 +1,3 @@
-(setq-default fill-column 80)
-(prefer-coding-system 'utf-8)
-
-
 (use-package company
   :ensure t
   :init (global-company-mode)
