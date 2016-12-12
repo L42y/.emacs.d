@@ -155,4 +155,8 @@
   :commands (company-elm))
 
 
+(use-package php-mode
+  :ensure t)
+
+
 (provide 'progmodes)
