@@ -32,6 +32,11 @@
                                                 "ido" savefile-path))))
 
 
+(use-package linum
+  :init (add-hook 'prog-mode-hook 'linum-mode)
+  :commands (linum-mode))
+
+
 (use-package newcomment
   :bind (("C-'" . comment-dwim)
          ("C-c g" . comment-or-uncomment-region)))

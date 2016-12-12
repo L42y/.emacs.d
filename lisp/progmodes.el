@@ -5,11 +5,6 @@
 (prefer-coding-system 'utf-8)
 
 
-(use-package linum
-  :init (add-hook 'prog-mode-hook 'linum-mode)
-  :commands (linum-mode))
-
-
 (use-package company
   :ensure t
   :init (global-company-mode)
