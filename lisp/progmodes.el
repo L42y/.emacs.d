@@ -111,8 +111,8 @@
 
 
 (use-package web-mode
+  :mode ("\\.html$" . web-mode)
   :ensure t
-  :mode ("\\.html$")
   :config (progn
             (setq web-mode-content-types-alist
                   '(("jsx" . "/\\([[:upper:]]\\w+\\)\\(/index\\)?\\.js$"))
