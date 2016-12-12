@@ -64,11 +64,12 @@
 
 
 (when (string-match "apple-darwin" system-configuration)
-  (setq mac-allow-anti-aliasing t)
-  (setq mac-command-modifier 'meta)
-  (setq mac-option-modifier 'super)
-  (setq ns-function-modifier 'hyper)
-  (mac-auto-operator-composition-mode))
+  (setq mac-option-modifier 'super
+        mac-command-modifier 'meta
+        ns-function-modifier 'hyper
+        mac-allow-anti-aliasing t)
+  (when (fboundp 'mac-auto-operator-composition-mode)
+    (mac-auto-operator-composition-mode)))
 
 
 (provide 'globals)
