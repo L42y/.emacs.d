@@ -26,18 +26,10 @@
   :init (progn
           (add-hook 'text-mode-hook 'flyspell-mode)
           (add-hook 'prog-mode-hook 'flyspell-prog-mode))
-  :commands (flyspell-mode flyspell-prog-mode)
   :config (progn
             (use-package flyspell-popup
-              :ensure t
-              :init (bind-key "C-;" 'flyspell-popup-correct flyspell-mode-map))))
-
-
-(use-package ispell
-  :config (progn
-            (when (executable-find "hunspell")
-              (setq-default ispell-program-name "hunspell")
-              (setq ispell-really-hunspell t))))
+              :init (bind-key "C-;" 'flyspell-popup-correct flyspell-mode-map)
+              :ensure t)))
 
 
 (use-package sgml-mode
