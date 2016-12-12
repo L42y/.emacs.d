@@ -110,15 +110,6 @@
                         (setq venv-location "~/.virtualenvs/")))))
 
 
-(use-package autoinsert
-  :init (progn
-          (add-hook 'python-mode-hook 'auto-insert))
-  :config (progn
-            (setq auto-insert-query nil
-                  auto-insert-directory "~/.emacs.d/templates/")
-            (define-auto-insert "\.py" "python.py")))
-
-
 (use-package go-mode
   :ensure t)
 
