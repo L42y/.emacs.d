@@ -1,7 +1,4 @@
-(setq-default indent-tabs-mode nil)
-(setq-default tab-width 4)
 (setq-default fill-column 80)
-(setq indent-line-function 'insert-tab)
 (prefer-coding-system 'utf-8)
 
 
