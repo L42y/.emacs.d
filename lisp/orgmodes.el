@@ -3,44 +3,34 @@
             (add-hook 'org-mode-hook
                       (lambda ()
                         (toggle-truncate-lines)))
-            (use-package org-crypt)))
-
-
-(use-package org-agenda
-  :bind ("C-c a" . org-agenda))
-
-
-(use-package org-crypt
-  :config (progn
-            (org-crypt-use-before-save-magic)
-            (setq org-tags-exclude-from-inheritance (quote ("crypt")))
-            (setq org-crypt-key "i@l42y.com")))
-
-
-(use-package ob
-  :config (progn
-            (setq org-src-fontify-natively t)
-            (org-babel-do-load-languages
-             'org-babel-load-languages
-             '((sh . t)
-               (js . t)
-               (org . t)
-               (python . t)
-               (emacs-lisp . t)))))
-
-
-(use-package ox-md
-  :init (use-package ox-gfm
-          :ensure t)
-  :config (progn
-            (setq org-md-headline-style 'atx)))
-
-
-(use-package ox-html
-  :config (progn
-            (setq org-html-doctype "html5"
-                  org-html-html5-fancy t
-                  org-html-metadata-timestamp-format "%Y-%m-%d %H:%M")))
+            (use-package ob
+              :config (progn
+                        (setq org-src-fontify-natively t)
+                        (org-babel-do-load-languages
+                         'org-babel-load-languages
+                         '((sh . t)
+                           (js . t)
+                           (org . t)
+                           (python . t)
+                           (emacs-lisp . t)))))
+            (use-package ox-md
+              :config (progn
+                        (setq org-md-headline-style 'atx)
+                        (use-package ox-gfm
+                          :ensure t)))
+            (use-package ox-html
+              :config (progn
+                        (setq org-html-doctype "html5"
+                              org-html-html5-fancy t
+                              org-html-metadata-timestamp-format "%Y-%m-%d %H:%M")))
+            (use-package org-crypt)
+            (use-package org-agenda
+              :bind ("C-c a" . org-agenda))
+            (use-package org-crypt
+              :config (progn
+                        (org-crypt-use-before-save-magic)
+                        (setq org-crypt-key "i@l42y.com"
+                              org-tags-exclude-from-inheritance (quote ("crypt")))))))
 
 
 (use-package ox-publish
