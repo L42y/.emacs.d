@@ -118,7 +118,10 @@
 
 (use-package magit
   :bind ("C-x C-z" . magit-status)
-  :ensure t)
+  :ensure t
+  :config (progn
+            (use-package magit-gerrit
+              :ensure t)))
 
 
 (use-package multiple-cursors
