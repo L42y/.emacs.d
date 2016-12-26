@@ -44,7 +44,8 @@
 
 
 (use-package web-mode
-  :mode ("\\.html$" . web-mode)
+  :mode (("\\.hbs$" . web-mode)
+         ("\\.html$" . web-mode))
   :ensure t
   :config (progn
             (setq web-mode-style-padding sgml-basic-offset
