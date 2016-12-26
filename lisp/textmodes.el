@@ -30,6 +30,10 @@
           (add-hook 'text-mode-hook 'flyspell-mode)
           (add-hook 'prog-mode-hook 'flyspell-prog-mode))
   :config (progn
+            (use-package ispell
+              :config (when (executable-find "hunspell")
+                        (setq ispell-program-name "hunspell"
+                              ispell-really-hunspell t)))
             (use-package flyspell-popup
               :init (bind-key "C-;" 'flyspell-popup-correct flyspell-mode-map)
               :ensure t)))
