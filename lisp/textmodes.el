@@ -27,6 +27,7 @@
 
 (use-package flyspell
   :init (progn
+          (add-hook 'org-mode-hook 'flyspell-mode)
           (add-hook 'text-mode-hook 'flyspell-mode)
           (add-hook 'prog-mode-hook 'flyspell-prog-mode))
   :config (progn
