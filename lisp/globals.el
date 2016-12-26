@@ -50,23 +50,12 @@
   :init (global-hl-line-mode))
 
 
-(use-package recentf
-  :config (progn
-            (setq recentf-save-file (expand-file-name "recentf" savefile-path))))
-
-
-(use-package saveplace
-  :config (progn
-            (setq save-place-file (expand-file-name "places" savefile-path))))
+(use-package no-littering
+  :ensure t)
 
 
 (use-package server
   :init (server-start))
-
-
-(use-package tramp-cache
-  :config (progn
-            (setq tramp-persistency-file-name (expand-file-name "tramp" savefile-path))))
 
 
 (when (string-match "apple-darwin" system-configuration)

@@ -13,7 +13,6 @@
   :config (progn
             (setq desktop-restore-eager 20
                   desktop-lazy-verbose nil
-                  desktop-path (list savefile-path)
                   desktop-base-file-name "desktop"
                   desktop-base-lock-name "desktop.lock")
             (add-to-list 'desktop-modes-not-to-save '(dired-mode fundamental-mode))))
@@ -27,9 +26,7 @@
   :init (ido-mode)
   :config (progn
             (setq ido-show-dot-for-dired t
-                  ido-enable-flex-matching nil
-                  ido-save-directory-list-file (expand-file-name
-                                                "ido" savefile-path))))
+                  ido-enable-flex-matching nil)))
 
 
 (use-package linum
@@ -129,9 +126,7 @@
          ("C->" . mc/mark-next-like-this)
          ("C-<" . mc/mark-previous-like-this)
          ("C-c C-<" . mc/mark-all-like-this))
-  :ensure t
-  :config (progn
-            (setq mc/list-file (expand-file-name "mc-lists.el" savefile-path))))
+  :ensure t)
 
 
 (use-package osx-dictionary
@@ -144,9 +139,7 @@
 (use-package projectile
   :ensure t
   :config (progn
-            (projectile-global-mode)
-            (setq projectile-known-projects-file
-                  (expand-file-name "projectile-projects" savefile-path)))
+            (projectile-global-mode))
   :diminish projectile-mode)
 
 
@@ -177,9 +170,7 @@
 
 (use-package smex
   :bind ("C-x <RET>" . smex)
-  :ensure t
-  :config (progn
-            (setq smex-save-file (expand-file-name "smex" savefile-path))))
+  :ensure t)
 
 
 (use-package string-edit

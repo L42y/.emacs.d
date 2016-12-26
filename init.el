@@ -27,7 +27,6 @@
 
 (defvar sweet-home (file-name-directory load-file-name))
 (defvar elisp-path (expand-file-name "lisp" sweet-home))
-(defvar savefile-path (expand-file-name "savefile" sweet-home))
 (add-to-list 'load-path elisp-path)
 
 (setq custom-file (expand-file-name "custom.el" sweet-home))

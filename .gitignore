@@ -7,13 +7,5 @@ el-get/
 anaconda-mode/
 .python-environments/
 
-# Backups
-auto-save-list/
-backups/
-
-# Save files
-savefile/
-tramp
-
-# EShell
-eshell/
+# var
+var/
