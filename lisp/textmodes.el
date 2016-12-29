@@ -49,6 +49,9 @@
 
 
 (use-package web-mode
+  :init (add-hook 'js2-jsx-mode-hook
+                  '(lambda()
+                     (setq emmet-expand-jsx-className? t)))
   :mode (("\\.hbs$" . web-mode)
          ("\\.html$" . web-mode))
   :ensure t
