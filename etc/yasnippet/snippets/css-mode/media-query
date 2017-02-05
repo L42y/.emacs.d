@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: media query
+# key: @m
+# --
+@media only screen and ($1) {
+  $0
+}
