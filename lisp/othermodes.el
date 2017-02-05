@@ -57,13 +57,6 @@
   :diminish whitespace-mode)
 
 
-(use-package ag
-  :bind ("<f5>" . ag-project)
-  :ensure t
-  :config (progn
-            (setq ag-highlight-search t)))
-
-
 (use-package avy
   :bind ("C-," . avy-goto-char-2)
   :ensure t)
@@ -98,9 +91,12 @@
 (use-package helm
   :bind (("C-x b" . helm-mini)
          ("C-c h" . helm-projectile)
+         ("C-c s" . helm-projectile-ag)
          ("C-x C-y" . helm-show-kill-ring))
   :ensure t
   :config (progn
+            (use-package helm-ag
+              :ensure t)
             (use-package helm-config)
             (use-package helm-projectile
               :ensure t)))
