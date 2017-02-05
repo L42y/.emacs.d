@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: const assign
+# key: con
+# --
+const $0 = $1;
