@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: callback
+# key: cb
+# --
+($1) => {
+  $0
+}
