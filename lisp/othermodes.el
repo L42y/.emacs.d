@@ -89,7 +89,8 @@
 
 
 (use-package helm
-  :bind (("C-x b" . helm-mini)
+  :bind (("M-x" . helm-M-x)
+         ("C-x b" . helm-mini)
          ("C-c h" . helm-projectile)
          ("C-c s" . helm-projectile-ag)
          ("C-x C-y" . helm-show-kill-ring))
@@ -98,6 +99,8 @@
             (use-package helm-ag
               :ensure t)
             (use-package helm-config)
+            (use-package helm-command
+              :config (setq helm-M-x-fuzzy-match t))
             (use-package helm-projectile
               :ensure t)))
 
