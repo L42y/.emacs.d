@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
-# name: static prop
-# key: static
+# name: react static
+# key: rctstc
 # --
 static ${1:$$(yas-choose-value '("propTypes" "defaultProps" "contextTypes" "childContextTypes"))} = {
   $0
