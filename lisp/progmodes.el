@@ -40,6 +40,12 @@
                      '(lambda ()
                         (define-key js2-mode-map "\C-ci" 'js-doc-insert-function-doc)
                         (define-key js2-mode-map "@" 'js-doc-insert-tag))))
+            (use-package xref-js2
+              :init (add-hook
+                     'js2-mode-hook
+                     (lambda ()
+                       (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)))
+              :ensure t)
             (use-package rjsx-mode
               :mode ("/\\([[:upper:]]\\w+\\)\\(/index\\)?\\.js$" . rjsx-mode)
               :ensure t)
