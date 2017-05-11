@@ -7,7 +7,7 @@
 (add-to-list 'default-frame-alist
              '(font . "Fira Code 13"))
 (set-fontset-font t 'han "Hiragino Sans GB")
-(setq face-font-rescale-alist (list (cons "Hiragino Sans GB" 1.1)))
+(setq face-font-rescale-alist (list (cons "Hiragino Sans GB" 1.3)))
 
 
 (prefer-coding-system 'utf-8)
