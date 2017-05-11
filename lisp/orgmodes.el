@@ -23,14 +23,13 @@
                         (setq org-html-doctype "html5"
                               org-html-html5-fancy t
                               org-html-metadata-timestamp-format "%Y-%m-%d %H:%M")))
-            (use-package org-crypt)
-            (use-package org-agenda
-              :bind ("C-c a" . org-agenda))
             (use-package org-crypt
               :config (progn
                         (org-crypt-use-before-save-magic)
                         (setq org-crypt-key "i@l42y.com"
-                              org-tags-exclude-from-inheritance (quote ("crypt")))))))
+                              org-tags-exclude-from-inheritance (quote ("crypt")))))
+            (use-package org-agenda
+              :bind ("C-c a" . org-agenda))))
 
 
 (use-package ox-publish
