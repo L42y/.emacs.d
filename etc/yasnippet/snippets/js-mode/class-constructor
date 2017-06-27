@@ -2,7 +2,7 @@
 # name: class constructor
 # key: cst
 # --
-constructor(${1:props}) {
+constructor($1) {
   super($1);
   $0
 }

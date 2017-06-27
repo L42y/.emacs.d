@@ -2,4 +2,4 @@
 # name: const assign
 # key: con
 # --
-const $0 = $1;
+const $2 = $1;$0
