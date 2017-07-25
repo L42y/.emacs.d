@@ -64,8 +64,7 @@
   :ensure t
   :config (progn
             (use-package tide
-              :init (add-hook 'typescript-mode-hook 'tide-mode)
-              :config (tide-restart-server)
+              :init (add-hook 'typescript-mode-hook 'tide-setup)
               :ensure t
               :commands (tide-mode))))
 
