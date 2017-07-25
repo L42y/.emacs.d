@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: React componentWillReceiveProps
+# key: rctwrp
+# --
+componentWillReceiveProps(${1:nextProps}) {
+  $0
+}
