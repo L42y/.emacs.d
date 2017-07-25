@@ -127,9 +127,7 @@
   :ensure t
   :config (progn
             (use-package magit-imerge
-              :ensure t)
-            (use-package magit-gerrit
-              :ensure t)))
+              :ensure t))
 
 
 (use-package multiple-cursors
