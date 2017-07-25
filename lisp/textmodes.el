@@ -108,4 +108,8 @@
   :ensure t)
 
 
+(use-package yarn-mode
+  :ensure t)
+
+
 (provide 'textmodes)
