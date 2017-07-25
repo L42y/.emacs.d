@@ -118,6 +118,10 @@
                           (ibuffer-do-sort-by-alphabetic))))))
 
 
+(use-package indium
+  :ensure t)
+
+
 (use-package magit
   :bind ("C-x C-z" . magit-status)
   :ensure t
