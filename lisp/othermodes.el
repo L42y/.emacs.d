@@ -122,6 +122,8 @@
   :bind ("C-x C-z" . magit-status)
   :ensure t
   :config (progn
+            (use-package magit-imerge
+              :ensure t)
             (use-package magit-gerrit
               :ensure t)))
 
