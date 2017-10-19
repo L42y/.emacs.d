@@ -67,12 +67,7 @@
 
 (use-package typescript-mode
   :mode (("\\.ts$" . typescript-mode))
-  :ensure t
-  :config (progn
-            (use-package tide
-              :init (add-hook 'typescript-mode-hook 'tide-setup)
-              :ensure t
-              :commands (tide-mode))))
+  :ensure t)
 
 
 (use-package coffee-mode

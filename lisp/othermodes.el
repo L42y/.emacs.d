@@ -215,6 +215,14 @@
   :diminish tern-mode)
 
 
+(use-package tide
+  :init (dolist (hook '(typescript-mode-hook))
+          (add-hook hook #'tide-setup))
+  :ensure t
+  :config (progn
+            (tide-hl-identifier-mode +1)))
+
+
 (use-package wgrep-ag
   :ensure t)
 
