@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: class constructor
-# key: cst
+# key: ctor
 # --
 constructor($1) {
   super($1);
