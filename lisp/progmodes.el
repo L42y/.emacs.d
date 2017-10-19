@@ -53,10 +53,12 @@
               :ensure t
               :init (add-hook 'js2-mode-hook #'js2-refactor-mode)
               :config (progn
-                        (js2r-add-keybindings-with-prefix "C-c C-m")))
+                        (js2r-add-keybindings-with-prefix "C-c C-m"))
+              :diminish js2-refactor-mode)
             (use-package js2-highlight-vars
               :init (add-hook 'js2-mode-hook #'js2-highlight-vars-mode)
-              :ensure t)))
+              :ensure t
+              :diminish js2-highlight-vars-mode)))
 
 
 (use-package typescript-mode

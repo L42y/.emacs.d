@@ -26,7 +26,8 @@
   :init (global-auto-revert-mode 1)
   :config (progn
             (setq global-auto-revert-non-file-buffers t
-                  auto-revert-verbose nil)))
+                  auto-revert-verbose nil))
+  :diminish auto-revert-mode)
 
 
 (use-package better-defaults
