@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: async function
+# key: async
+# --
+$1 = async ($2) => {
+  $3
+};
