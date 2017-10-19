@@ -122,6 +122,13 @@
   :ensure t)
 
 
+(use-package lsp-mode
+  :ensure t
+  :config (progn
+            (use-package lsp-javascript-typescript
+              :ensure t)))
+
+
 (use-package magit
   :bind ("C-x C-z" . magit-status)
   :ensure t
