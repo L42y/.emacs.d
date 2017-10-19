@@ -2,7 +2,7 @@
 # name: React Class
 # key: rctcls
 # --
-class $1 extends PureComponent {
+class $1 extends Component {
   render() {
     $0
   }

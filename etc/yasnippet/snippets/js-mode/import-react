@@ -2,4 +2,4 @@
 # name: import react
 # key: imprct
 # --
-import React, {PureComponent$1} from 'react';$0
+import React, {Component$1} from 'react';$0
