@@ -124,4 +124,8 @@
   :ensure t)
 
 
+(use-package reason-mode
+  :ensure t)
+
+
 (provide 'progmodes)
