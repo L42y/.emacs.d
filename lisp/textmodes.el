@@ -113,4 +113,9 @@
   :ensure t)
 
 
+(use-package graphql-mode
+  :mode ("\\.gql$" . graphql-mode)
+  :ensure t)
+
+
 (provide 'textmodes)
