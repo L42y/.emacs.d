@@ -63,6 +63,14 @@
               (indent-region (point-min) (point-max)))))
 
 
+(use-package ssh-config-mode
+  :mode (("/sshd?_config\\'" . ssh-config-mode)
+         ("/\\.ssh/config\\'" . ssh-config-mode)
+         ("/known_hosts\\'" . ssh-known-hosts-mode)
+         ("/authorized_keys2?\\'" . ssh-authorized-keys-mode))
+  :ensure t)
+
+
 (use-package web-mode
   :init (add-hook 'js2-jsx-mode-hook
                   '(lambda()
