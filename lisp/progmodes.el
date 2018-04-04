@@ -29,7 +29,8 @@
 (use-package js2-mode
   :ensure t
   :bind (:map js2-mode-map
-              ("M-." . nil))
+              ("M-." . nil)
+              ("C-c C-s" . nil))
   :mode (("\\.js$" . js2-mode)
          ("\\.mjs$" . js2-mode))
   :config (progn

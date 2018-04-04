@@ -57,6 +57,12 @@
   :diminish whitespace-mode)
 
 
+(use-package ag
+  :bind (("C-c C-s" . ag-project))
+  :config (setq ag-reuse-window t
+                ag-highlight-search t))
+
+
 (use-package avy
   :bind ("C-," . avy-goto-char-2)
   :ensure t)
@@ -224,6 +230,7 @@
 
 
 (use-package wgrep-ag
+  :init (add-hook 'ag-mode-hook 'wgrep-ag-setup)
   :ensure t)
 
 
