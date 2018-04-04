@@ -135,6 +135,9 @@
               :init (add-hook 'php-mode-hook #'lsp-php-enable)
               :ensure t)
             (use-package lsp-javascript-typescript
+              :init (progn
+                      (add-hook 'js-mode-hook #'lsp-javascript-typescript-enable)
+                      (add-hook 'typescript-mode-hook #'lsp-javascript-typescript-enable))
               :ensure t)))
 
 
@@ -225,11 +228,12 @@
 
 
 (use-package tide
-  :init (dolist (hook '(typescript-mode-hook))
+  :init (dolist (hook '(js-mode-hook typescript-mode-hook))
           (add-hook hook #'tide-setup))
   :ensure t
   :config (progn
-            (tide-hl-identifier-mode +1)))
+            (tide-hl-identifier-mode +1)
+            (flycheck-add-next-checker 'javascript-eslint 'jsx-tide 'append)))
 
 
 (use-package wgrep-ag
