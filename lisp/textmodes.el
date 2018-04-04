@@ -50,6 +50,11 @@
               :ensure t)))
 
 
+(use-package prettier-js
+  :init (add-hook 'js2-mode-hook 'prettier-js-mode)
+  :ensure t)
+
+
 (use-package sgml-mode
   :config (progn
             (setq sgml-basic-offset 2)
