@@ -9,6 +9,7 @@ elpa/
 el-get/
 anaconda-mode/
 .python-environments/
+php-language-server/
 
 # var
 var/
