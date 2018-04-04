@@ -74,4 +74,9 @@
                      :html-link-use-abs-url t)))))
 
 
+(use-package ox-hugo
+  :after ox
+  :ensure t)
+
+
 (provide 'orgmodes)
