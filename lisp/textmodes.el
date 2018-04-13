@@ -15,8 +15,8 @@
 
 
 (use-package flycheck
-  :ensure t
   :init (add-hook 'prog-mode-hook 'flycheck-mode)
+  :ensure t
   :config (progn
             (setq flycheck-check-syntax-automatically '(mode-enabled save))
             (use-package flycheck-elm
@@ -28,11 +28,10 @@
               (flycheck-add-mode 'javascript-eslint 'flow-minor-mode)
               (flycheck-add-next-checker 'javascript-flow 'javascript-eslint)
               :ensure t)
-            (use-package flycheck-pos-tip
+            (use-package flycheck-posframe
+              :init (add-hook 'flycheck-mode-hook #'flycheck-posframe-mode)
               :ensure t
-              :config (progn
-                        (setq flycheck-display-errors-function
-                              'flycheck-pos-tip-error-messages)))))
+              :config (flycheck-posframe-configure-pretty-defaults))))
 
 
 (use-package flyspell
