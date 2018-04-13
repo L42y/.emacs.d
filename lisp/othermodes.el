@@ -131,6 +131,9 @@
 (use-package lsp-mode
   :ensure t
   :config (progn
+            (use-package lsp-ui
+              :init (add-hook 'lsp-mode-hook 'lsp-ui-mode)
+              :ensure t)
             (use-package lsp-php
               :init (add-hook 'php-mode-hook #'lsp-php-enable)
               :ensure t)
