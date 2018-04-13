@@ -8,9 +8,9 @@
                         (setq org-src-fontify-natively t)
                         (org-babel-do-load-languages
                          'org-babel-load-languages
-                         '((sh . t)
-                           (js . t)
+                         '((js . t)
                            (org . t)
+                           (shell . t)
                            (python . t)
                            (emacs-lisp . t)))))
             (use-package ox-md
