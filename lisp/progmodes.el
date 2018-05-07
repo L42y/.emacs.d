@@ -74,10 +74,6 @@
   :ensure t)
 
 
-(use-package tj-mode
-  :ensure t)
-
-
 (use-package python
   :ensure t
   :mode ("\\.py$" . python-mode)
