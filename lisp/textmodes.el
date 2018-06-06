@@ -14,6 +14,10 @@
     :ensure t))
 
 
+(use-package flymake
+  :diminish flymake-mode)
+
+
 (use-package flycheck
   :init (add-hook 'prog-mode-hook 'flycheck-mode)
   :ensure t
@@ -52,7 +56,8 @@
 
 (use-package prettier-js
   :init (add-hook 'js2-mode-hook 'prettier-js-mode)
-  :ensure t)
+  :ensure t
+  :diminish prettier-js-mode)
 
 
 (use-package sgml-mode
