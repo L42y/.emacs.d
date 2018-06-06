@@ -1,23 +1,20 @@
 (use-package company
   :ensure t
   :init (global-company-mode)
-  :config (progn
-            (use-package company-lsp
-              :ensure t
-              :init (add-to-list 'company-backends 'company-lsp))
-            (use-package company-web
-              :ensure t
-              :init (add-to-list 'company-backends 'company-web-html))
-            (use-package company-tern
-              :ensure t
-              :init (add-to-list 'company-backends 'company-tern))
-            (use-package company-anaconda
-              :ensure t
-              :init (add-to-list 'company-backends 'company-anaconda))
-            (use-package company-quickhelp
-              :ensure t
-              :init (company-quickhelp-mode 1))
-            (setq company-minimum-prefix-length 1)))
+  :config
+  (use-package company-lsp
+    :ensure t
+    :init (add-to-list 'company-backends 'company-lsp))
+  (use-package company-web
+    :ensure t
+    :init (add-to-list 'company-backends 'company-web-html))
+  (use-package company-anaconda
+    :ensure t
+    :init (add-to-list 'company-backends 'company-anaconda))
+  (use-package company-quickhelp
+    :ensure t
+    :init (company-quickhelp-mode 1))
+  (setq company-minimum-prefix-length 1))
 
 
 (use-package js2-mode
@@ -27,37 +24,32 @@
               ("C-c C-s" . nil))
   :mode (("\\.js$" . js2-mode)
          ("\\.mjs$" . js2-mode))
-  :config (progn
-            (setq-default js2-basic-offset 2)
-            (setq js-enabled-frameworks (quote (javascript))
-                  js-switch-indent-offset js2-basic-offset
-                  js2-include-node-externs t)
-            (use-package js-doc
-              :ensure t
-              :init (add-hook
-                     'js2-mode-hook
-                     '(lambda ()
-                        (define-key js2-mode-map "\C-ci" 'js-doc-insert-function-doc)
-                        (define-key js2-mode-map "@" 'js-doc-insert-tag))))
-            (use-package xref-js2
-              :init (add-hook
-                     'js2-mode-hook
-                     (lambda ()
-                       (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)))
-              :ensure t)
-            (use-package rjsx-mode
-              :mode ("/\\([[:upper:]]\\w+\\)\\(/index\\)?\\.js$" . rjsx-mode)
-              :ensure t)
-            (use-package js2-refactor
-              :ensure t
-              :init (add-hook 'js2-mode-hook #'js2-refactor-mode)
-              :config (progn
-                        (js2r-add-keybindings-with-prefix "C-c C-m"))
-              :diminish js2-refactor-mode)
-            (use-package js2-highlight-vars
-              :init (add-hook 'js2-mode-hook #'js2-highlight-vars-mode)
-              :ensure t
-              :diminish js2-highlight-vars-mode)))
+  :config
+  (setq-default js2-basic-offset 2)
+  (setq js-enabled-frameworks (quote (javascript))
+        js-switch-indent-offset js2-basic-offset
+        js2-include-node-externs t)
+  (use-package js-doc
+    :ensure t
+    :init (add-hook
+           'js2-mode-hook
+           '(lambda ()
+              (define-key js2-mode-map "\C-ci" 'js-doc-insert-function-doc)
+              (define-key js2-mode-map "@" 'js-doc-insert-tag))))
+  (use-package xref-js2
+    :init (add-hook
+           'js2-mode-hook
+           (lambda ()
+             (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)))
+    :ensure t)
+  (use-package rjsx-mode
+    :mode ("/\\([[:upper:]]\\w+\\)\\(/index\\)?\\.js$" . rjsx-mode)
+    :ensure t)
+  (use-package js2-refactor
+    :ensure t
+    :init (add-hook 'js2-mode-hook #'js2-refactor-mode)
+    :config (js2r-add-keybindings-with-prefix "C-c C-m")
+    :diminish js2-refactor-mode))
 
 
 (use-package typescript-mode
@@ -75,23 +67,23 @@
   :ensure t
   :mode ("\\.py$" . python-mode)
   :interpreter ("python" . python-mode)
-  :config (progn
-            (use-package pyenv-mode
-              :ensure t)
-            (use-package anaconda-mode
-              :ensure t
-              :init (add-hook 'python-mode-hook 'anaconda-mode))
-            (use-package virtualenvwrapper
-              :ensure t
-              :init (add-hook 'python-mode-hook
-                              (lambda ()
-                                (hack-local-variables)
-                                (when (boundp 'project-venv-name)
-                                  (venv-workon project-venv-name))))
-              :config (progn
-                        (venv-initialize-eshell)
-                        (venv-initialize-interactive-shells)
-                        (setq venv-location "~/.virtualenvs/")))))
+  :config
+  (use-package pyenv-mode
+    :ensure t)
+  (use-package anaconda-mode
+    :ensure t
+    :init (add-hook 'python-mode-hook 'anaconda-mode))
+  (use-package virtualenvwrapper
+    :init (add-hook 'python-mode-hook
+                    (lambda ()
+                      (hack-local-variables)
+                      (when (boundp 'project-venv-name)
+                        (venv-workon project-venv-name))))
+    :ensure t
+    :config
+    (venv-initialize-eshell)
+    (venv-initialize-interactive-shells)
+    (setq venv-location "~/.virtualenvs/")))
 
 
 (use-package go-mode

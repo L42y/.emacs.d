@@ -24,9 +24,9 @@
 
 (use-package autorevert
   :init (global-auto-revert-mode 1)
-  :config (progn
-            (setq global-auto-revert-non-file-buffers t
-                  auto-revert-verbose nil))
+  :config
+  (setq auto-revert-verbose nil
+        global-auto-revert-non-file-buffers t)
   :diminish auto-revert-mode)
 
 
@@ -41,10 +41,10 @@
 (use-package exec-path-from-shell
   :ensure t
   :if (and (eq system-type 'darwin) (display-graphic-p))
-  :config (progn
-            (dolist (var '("GOPATH" "PYTHONPATH"))
-              (add-to-list 'exec-path-from-shell-variables var))
-            (exec-path-from-shell-initialize)))
+  :config
+  (dolist (var '("GOPATH" "PYTHONPATH"))
+    (add-to-list 'exec-path-from-shell-variables var))
+  (exec-path-from-shell-initialize))
 
 
 (use-package hl-line

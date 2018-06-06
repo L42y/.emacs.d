@@ -1,21 +1,21 @@
 (use-package autoinsert
-  :init (progn
-          (add-hook 'python-mode-hook 'auto-insert))
-  :config (progn
-            (setq auto-insert-query nil
-                  auto-insert-directory "~/.emacs.d/templates/")
-            (define-auto-insert "\.py" "python.py")))
+  :init
+  (add-hook 'python-mode-hook 'auto-insert)
+  :config
+  (setq auto-insert-query nil
+        auto-insert-directory "~/.emacs.d/templates/")
+  (define-auto-insert "\.py" "python.py"))
 
 
 (use-package desktop
-  :init (progn
-          (desktop-save-mode 1))
-  :config (progn
-            (setq desktop-restore-eager 20
-                  desktop-lazy-verbose nil
-                  desktop-base-file-name "desktop"
-                  desktop-base-lock-name "desktop.lock")
-            (add-to-list 'desktop-modes-not-to-save '(dired-mode fundamental-mode))))
+  :init
+  (desktop-save-mode 1)
+  :config
+  (setq desktop-restore-eager 20
+        desktop-lazy-verbose nil
+        desktop-base-file-name "desktop"
+        desktop-base-lock-name "desktop.lock")
+  (add-to-list 'desktop-modes-not-to-save '(dired-mode fundamental-mode)))
 
 
 (use-package ibuffer
@@ -24,9 +24,9 @@
 
 (use-package ido
   :init (ido-mode)
-  :config (progn
-            (setq ido-show-dot-for-dired t
-                  ido-enable-flex-matching nil)))
+  :config
+  (setq ido-show-dot-for-dired t
+        ido-enable-flex-matching nil))
 
 
 (use-package linum
@@ -40,20 +40,20 @@
 
 
 (use-package wdired
-  :init (progn
-          (add-hook 'dired-mode-hook
-                    '(lambda ()
-                       (define-key dired-mode-map "e" 'wdired-change-to-wdired-mode)))))
+  :init
+  (add-hook 'dired-mode-hook
+            '(lambda ()
+               (define-key dired-mode-map "e" 'wdired-change-to-wdired-mode))))
 
 
 (use-package whitespace
-  :init (progn
-          (add-hook 'prog-mode-hook 'whitespace-mode)
-          (add-hook 'prog-mode-hook
-                    '(lambda () (setq show-trailing-whitespace t))))
-  :config (progn
-            (setq whitespace-line-column 80
-                  whitespace-style '(face lines-tail)))
+  :init
+  (add-hook 'prog-mode-hook 'whitespace-mode)
+  (add-hook 'prog-mode-hook
+            '(lambda () (setq show-trailing-whitespace t)))
+  :config
+  (setq whitespace-line-column 80
+        whitespace-style '(face lines-tail))
   :diminish whitespace-mode)
 
 
@@ -104,24 +104,24 @@
          ("C-c s" . helm-projectile-ag)
          ("C-x C-y" . helm-show-kill-ring))
   :ensure t
-  :config (progn
-            (use-package helm-ag
-              :ensure t)
-            (use-package helm-config)
-            (use-package helm-command
-              :config (setq helm-M-x-fuzzy-match t))
-            (use-package helm-projectile
-              :ensure t)))
+  :config
+  (use-package helm-ag
+    :ensure t)
+  (use-package helm-config)
+  (use-package helm-command
+    :config (setq helm-M-x-fuzzy-match t))
+  (use-package helm-projectile
+    :ensure t))
 
 
 (use-package ibuffer-vc
   :ensure t
-  :config (progn
-            (add-hook 'ibuffer-hook
-                      (lambda ()
-                        (ibuffer-vc-set-filter-groups-by-vc-root)
-                        (unless (eq ibuffer-sorting-mode 'alphabetic)
-                          (ibuffer-do-sort-by-alphabetic))))))
+  :config
+  (add-hook 'ibuffer-hook
+            (lambda ()
+              (ibuffer-vc-set-filter-groups-by-vc-root)
+              (unless (eq ibuffer-sorting-mode 'alphabetic)
+                (ibuffer-do-sort-by-alphabetic)))))
 
 
 (use-package indium
@@ -130,26 +130,26 @@
 
 (use-package lsp-mode
   :ensure t
-  :config (progn
-            (use-package lsp-ui
-              :init (add-hook 'lsp-mode-hook 'lsp-ui-mode)
-              :ensure t)
-            (use-package lsp-php
-              :init (add-hook 'php-mode-hook #'lsp-php-enable)
-              :ensure t)
-            (use-package lsp-javascript-typescript
-              :init (progn
-                      (add-hook 'js-mode-hook #'lsp-javascript-typescript-enable)
-                      (add-hook 'typescript-mode-hook #'lsp-javascript-typescript-enable))
-              :ensure t)))
+  :config
+  (use-package lsp-ui
+    :init (add-hook 'lsp-mode-hook 'lsp-ui-mode)
+    :ensure t)
+  (use-package lsp-php
+    :init (add-hook 'php-mode-hook #'lsp-php-enable)
+    :ensure t)
+  (use-package lsp-javascript-typescript
+    :init
+    (add-hook 'js-mode-hook #'lsp-javascript-typescript-enable)
+    (add-hook 'typescript-mode-hook #'lsp-javascript-typescript-enable)
+    :ensure t))
 
 
 (use-package magit
   :bind ("C-x C-z" . magit-status)
   :ensure t
-  :config (progn
-            (use-package magit-imerge
-              :ensure t)))
+  :config
+  (use-package magit-imerge
+    :ensure t))
 
 
 (use-package multiple-cursors
@@ -169,8 +169,7 @@
 
 (use-package projectile
   :ensure t
-  :config (progn
-            (projectile-mode))
+  :config (projectile-mode)
   :diminish projectile-mode)
 
 
@@ -192,10 +191,10 @@
 
 (use-package smartparens
   :ensure t
-  :config (progn
-            (smartparens-global-mode t)
-            (show-smartparens-global-mode t)
-            (use-package smartparens-config))
+  :config
+  (smartparens-global-mode t)
+  (show-smartparens-global-mode t)
+  (use-package smartparens-config)
   :diminish smartparens-mode)
 
 
@@ -218,9 +217,6 @@
   :init (dolist (hook '(sgml-mode-hook))
           (add-hook hook #'tagedit-mode))
   :ensure t
-  :config (progn
-            (tagedit-add-paredit-like-keybindings)
-            (tagedit-add-experimental-features)))
 
 
 (use-package tern
@@ -237,6 +233,9 @@
   :config (progn
             (tide-hl-identifier-mode +1)
             (flycheck-add-next-checker 'javascript-eslint 'jsx-tide 'append)))
+  :config
+  (tagedit-add-paredit-like-keybindings)
+  (tagedit-add-experimental-features))
 
 
 (use-package wgrep-ag
