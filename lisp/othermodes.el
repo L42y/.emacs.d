@@ -85,6 +85,13 @@
   :ensure t)
 
 
+(use-package eglot
+  :bind (:map eglot-mode-map
+              ("M-." . xref-find-definitions)
+              ("C-c h" . eglot-help-at-point))
+  :ensure t)
+
+
 (use-package expand-region
   :bind ("C-=" . er/expand-region)
   :ensure t)
