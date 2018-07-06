@@ -77,9 +77,6 @@
 
 
 (use-package web-mode
-  :init (add-hook 'js2-jsx-mode-hook
-                  '(lambda()
-                     (setq emmet-expand-jsx-className? t)))
   :mode (("\\.hbs$" . web-mode)
          ("\\.html$" . web-mode))
   :ensure t
@@ -98,8 +95,13 @@
 
 (use-package emmet-mode
   :ensure t
-  :config (dolist (hook '(sgml-mode-hook css-mode-hook web-mode-hook js2-jsx-mode-hook))
-            (add-hook hook #'emmet-mode)))
+  :config
+  (dolist (hook '(sgml-mode-hook css-mode-hook web-mode-hook rjsx-mode-hook))
+    (add-hook hook #'emmet-mode))
+  (add-hook 'js2-jsx-mode-hook
+            '(lambda()
+               (setq-local emmet-expand-jsx-className? t)
+               (setq-local emmet-self-closing-tag-style " /"))))
 
 
 (use-package markdown-mode
