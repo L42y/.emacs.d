@@ -18,6 +18,10 @@
   (add-to-list 'desktop-modes-not-to-save '(dired-mode fundamental-mode)))
 
 
+(use-package display-line-numbers
+  :init (add-hook 'prog-mode-hook 'display-line-numbers-mode))
+
+
 (use-package eldoc
   :diminish eldoc-mode)
 
@@ -31,11 +35,6 @@
   :config
   (setq ido-show-dot-for-dired t
         ido-enable-flex-matching nil))
-
-
-(use-package linum
-  :init (add-hook 'prog-mode-hook 'linum-mode)
-  :commands (linum-mode))
 
 
 (use-package newcomment
