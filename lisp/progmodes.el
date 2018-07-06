@@ -11,6 +11,9 @@
   (use-package company-anaconda
     :ensure t
     :init (add-to-list 'company-backends 'company-anaconda))
+  (use-package company-posframe
+    :init (company-posframe-mode 1)
+    :ensure t)
   (use-package company-quickhelp
     :ensure t
     :init (company-quickhelp-mode 1))

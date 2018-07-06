@@ -15,7 +15,9 @@
         desktop-lazy-verbose nil
         desktop-base-file-name "desktop"
         desktop-base-lock-name "desktop.lock")
-  (add-to-list 'desktop-modes-not-to-save '(dired-mode fundamental-mode)))
+  (add-to-list 'desktop-modes-not-to-save 'dired-mode)
+  (add-to-list 'desktop-modes-not-to-save 'fundamental-mode)
+  (add-to-list 'desktop-modes-not-to-save 'company-posframe-mode))
 
 
 (use-package display-line-numbers
