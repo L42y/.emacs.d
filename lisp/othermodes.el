@@ -146,7 +146,10 @@
     :init (add-hook 'lsp-mode-hook 'lsp-ui-mode)
     :ensure t)
   (use-package lsp-php
-    :init (add-hook 'php-mode-hook #'lsp-php-enable)
+    :init
+    (add-hook 'php-mode-hook #'lsp-php-enable)
+    :config
+    (setq lsp-php-server-install-dir "~/.composer")
     :ensure t)
   (use-package lsp-javascript-typescript
     :init
