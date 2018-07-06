@@ -112,7 +112,6 @@
 (use-package helm
   :bind (("M-x" . helm-M-x)
          ("C-x b" . helm-mini)
-         ("C-c h" . helm-projectile)
          ("C-c s" . helm-projectile-ag)
          ("C-x C-y" . helm-show-kill-ring))
   :ensure t
