@@ -60,9 +60,8 @@
   :ensure t)
 
 
-(use-package coffee-mode
-  :mode "\\.coffee$"
-  :config (setq coffee-tab-width 2)
+(use-package dart-mode
+  :mode "\\.dart$"
   :ensure t)
 
 
