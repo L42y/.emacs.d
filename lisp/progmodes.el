@@ -1,29 +1,3 @@
-(use-package company
-  :ensure t
-  :config
-  (use-package company-web
-    :ensure t
-    :config (push 'company-web-html company-backends))
-
-  (use-package company-anaconda
-    :ensure t
-    :config (push 'company-anaconda company-backends))
-
-  (use-package company-posframe
-    :init (company-posframe-mode 1)
-    :ensure t
-    :diminish company-posframe-mode)
-
-  (use-package company-quickhelp
-    :ensure t
-    :config (company-quickhelp-mode 1))
-
-  (setq company-minimum-prefix-length 1)
-
-  (global-company-mode 1)
-  :diminish company-mode)
-
-
 (use-package js2-mode
   :ensure t
   :bind (:map js2-mode-map
