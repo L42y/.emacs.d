@@ -231,22 +231,6 @@
   :init (dolist (hook '(sgml-mode-hook))
           (add-hook hook #'tagedit-mode))
   :ensure t
-
-
-(use-package tern
-  :init (dolist (hook '(js2-mode-hook web-mode-hook))
-          (add-hook hook #'tern-mode))
-  :ensure t
-  :diminish tern-mode)
-
-
-(use-package tide
-  :init (dolist (hook '(js-mode-hook typescript-mode-hook))
-          (add-hook hook #'tide-setup))
-  :ensure t
-  :config (progn
-            (tide-hl-identifier-mode +1)
-            (flycheck-add-next-checker 'javascript-eslint 'jsx-tide 'append)))
   :config
   (tagedit-add-paredit-like-keybindings)
   (tagedit-add-experimental-features))
