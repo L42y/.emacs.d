@@ -89,6 +89,21 @@
   :bind (:map eglot-mode-map
               ("M-." . xref-find-definitions)
               ("C-c h" . eglot-help-at-point))
+  :hook ((js-mode . eglot-ensure)
+         (css-mode .eglot-ensure)
+         (php-mode . eglot-ensure)
+         (web-mode . eglot-ensure)
+         (html-mode . eglot-ensure)
+         (json-mode . eglot-ensure)
+         (rjsx-mode . eglot-ensure))
+  :config
+  (setq eglot-server-programs
+        '((sh-mode . ("bash-language-server" "start"))
+          ((js2-mode rjsx-mode) . ("typescript-language-server" "--stdio"))
+          (php-mode . ("php" "/Users/biao/.composer/vendor/felixfbecker/language-server/bin/php-language-server.php"))
+          (css-mode . ("css-languageserver" "--stdio"))
+          ((web-mode html-mode) . ("html-languageserver" "--stdio"))
+          (json-mode . ("json-languageserver" "--stdio"))))
   :ensure t)
 
 
@@ -146,15 +161,12 @@
     :init (add-hook 'lsp-mode-hook 'lsp-ui-mode)
     :ensure t)
   (use-package lsp-php
-    :init
-    (add-hook 'php-mode-hook #'lsp-php-enable)
     :config
     (setq lsp-php-server-install-dir "~/.composer")
     :ensure t)
+  (use-package lsp-typescript
+    :ensure t)
   (use-package lsp-javascript-typescript
-    :init
-    (add-hook 'js-mode-hook #'lsp-javascript-typescript-enable)
-    (add-hook 'typescript-mode-hook #'lsp-javascript-typescript-enable)
     :ensure t))
 
 

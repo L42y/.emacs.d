@@ -2,9 +2,6 @@
   :ensure t
   :init (global-company-mode)
   :config
-  (use-package company-lsp
-    :ensure t
-    :init (add-to-list 'company-backends 'company-lsp))
   (use-package company-web
     :ensure t
     :init (add-to-list 'company-backends 'company-web-html))
