@@ -1,20 +1,27 @@
 (use-package company
   :ensure t
-  :init (global-company-mode)
   :config
   (use-package company-web
     :ensure t
-    :init (add-to-list 'company-backends 'company-web-html))
+    :config (push 'company-web-html company-backends))
+
   (use-package company-anaconda
     :ensure t
-    :init (add-to-list 'company-backends 'company-anaconda))
+    :config (push 'company-anaconda company-backends))
+
   (use-package company-posframe
     :init (company-posframe-mode 1)
-    :ensure t)
+    :ensure t
+    :diminish company-posframe-mode)
+
   (use-package company-quickhelp
     :ensure t
-    :init (company-quickhelp-mode 1))
-  (setq company-minimum-prefix-length 1))
+    :config (company-quickhelp-mode 1))
+
+  (setq company-minimum-prefix-length 1)
+
+  (global-company-mode 1)
+  :diminish company-mode)
 
 
 (use-package js2-mode
