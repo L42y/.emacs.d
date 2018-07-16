@@ -14,8 +14,7 @@
     :ensure t))
 
 
-(use-package flymake
-  :diminish flymake-mode)
+(use-package flymake)
 
 
 (use-package flycheck
