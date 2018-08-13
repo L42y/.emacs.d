@@ -93,6 +93,10 @@
     :ensure t
     :config (company-quickhelp-mode 1))
 
+  (use-package company-statistics
+    :ensure
+    :config (company-statistics-mode 1))
+
   (setq company-minimum-prefix-length 1)
 
   (global-company-mode 1)
