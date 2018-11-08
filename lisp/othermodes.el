@@ -207,8 +207,14 @@
   (use-package lsp-typescript
     :ensure t)
   (use-package lsp-javascript-typescript
-    :ensure t))
-
+    :hook ((js-mode . lsp-javascript-typescript-enable)
+           (web-mode . (lambda ()
+                         (when (string-equal "jsx" web-mode-content-type)
+                           (lsp-javascript-typescript-enable))))
+           (rjsx-mode . lsp-javascript-typescript-enable)
+           (typescript-mode . lsp-javascript-typescript-enable))
+    :ensure t)
+  (setq lsp-enable-eldoc nil))
 
 (use-package magit
   :bind ("C-x C-z" . magit-status)
