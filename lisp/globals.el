@@ -60,7 +60,8 @@
 
 
 (when (string-match "apple-darwin" system-configuration)
-  (setq mac-option-modifier 'super
+  (setq mac-frame-tabbing nil
+        mac-option-modifier 'super
         mac-command-modifier 'meta
         ns-function-modifier 'hyper
         mac-allow-anti-aliasing t)
