@@ -108,7 +108,8 @@
 
 
 (use-package markdown-mode
-  :mode ("README\\.md$" . gfm-mode)
+  :mode (("\\.mdx$" . gfm-mode)
+         ("README\\.md$" . gfm-mode))
   :ensure t
   :config (use-package apib-mode
             :mode ("\\.apib$" . apib-mode)
