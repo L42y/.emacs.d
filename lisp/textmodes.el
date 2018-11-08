@@ -54,7 +54,10 @@
 
 
 (use-package prettier-js
-  :init (add-hook 'js2-mode-hook 'prettier-js-mode)
+  :hook ((js2-mode . prettier-js-mode)
+         (web-mode . prettier-js-mode)
+         (json-mode . prettier-js-mode)
+         (typescript-mode . prettier-js-mode))
   :ensure t
   :diminish prettier-js-mode)
 
