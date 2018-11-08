@@ -198,6 +198,8 @@
   (use-package lsp-ui
     :hook (lsp-mode . lsp-ui-mode)
     :ensure t)
+  (use-package lsp-sh
+    :ensure t)
   (use-package lsp-php
     :config
     (setq lsp-php-server-install-dir "~/.composer")
