@@ -76,6 +76,10 @@
 (use-package company
   :ensure t
   :config
+  (use-package company-lsp
+    :ensure t
+    :config (push 'company-lsp company-backends))
+
   (use-package company-web
     :ensure t
     :config (push 'company-web-html company-backends))
