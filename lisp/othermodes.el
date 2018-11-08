@@ -284,6 +284,10 @@
 
 (use-package tide
   :hook ((before-save . tide-format-before-save)
+         (web-mode . (lambda ()
+                       (when (string-equal "jsx" web-mode-content-type)
+                         (tide-setup)
+                         (tide-hl-identifier-mode))))
          (typescript-mode . tide-setup)
          (typescript-mode . tide-hl-identifier-mode))
   :after (company flycheck typescript-mode)
