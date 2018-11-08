@@ -282,6 +282,14 @@
   (tagedit-add-experimental-features))
 
 
+(use-package tide
+  :hook ((before-save . tide-format-before-save)
+         (typescript-mode . tide-setup)
+         (typescript-mode . tide-hl-identifier-mode))
+  :after (company flycheck typescript-mode)
+  :ensure t)
+
+
 (use-package wgrep-ag
   :init (add-hook 'ag-mode-hook 'wgrep-ag-setup)
   :ensure t)
