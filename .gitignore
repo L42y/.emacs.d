@@ -11,5 +11,6 @@ anaconda-mode/
 .python-environments/
 php-language-server/
 
-# var
+# Emacs specific
 var/
+backups/
