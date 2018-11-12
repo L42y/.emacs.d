@@ -84,6 +84,10 @@
     :ensure t
     :config (push 'company-web-html company-backends))
 
+  (use-package company-tabnine
+    :ensure t
+    :config (push 'company-tabnine company-backends))
+
   (use-package company-anaconda
     :ensure t
     :config (push 'company-anaconda company-backends))
