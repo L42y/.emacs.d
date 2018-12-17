@@ -44,9 +44,10 @@
   (add-hook 'prog-mode-hook 'flyspell-prog-mode)
   :config
   (use-package ispell
-    :config (when (executable-find "hunspell")
-              (setq ispell-program-name "hunspell"
-                    ispell-really-hunspell t)))
+    :config (when (executable-find "enchant-2")
+              (setq ispell-dictionary "english"
+                    ispell-program-name "enchant-2"
+                    ispell-really-enchant t)))
   (use-package flyspell-popup
     :init (bind-key "C-;" 'flyspell-popup-correct flyspell-mode-map)
     :ensure t)

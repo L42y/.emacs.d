@@ -5,10 +5,10 @@
   - Installing [[https://hunspell.github.io][Hunspell]]
     - macOS
       #+BEGIN_SRC sh
-      brew install hunspell
+      brew install enchant
       #+END_SRC
 
     - Arch Linux
       #+BEGIN_SRC sh
-      pacman -S hunspell hunspell-en
+      pacman -S enchant
       #+END_SRC
