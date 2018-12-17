@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: return React Native View
+# key: rtnview
+# --
+return (
+  <${1:View}$2>
+    $0
+  </$1>
+);
