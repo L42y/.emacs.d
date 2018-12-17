@@ -108,6 +108,8 @@
     :ensure
     :config (company-statistics-mode 1))
 
+  (use-package company-english-helper)
+
   (setq company-minimum-prefix-length 1)
 
   (global-company-mode 1)
