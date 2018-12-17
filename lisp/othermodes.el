@@ -28,6 +28,10 @@
   :diminish eldoc-mode)
 
 
+(use-package eshell
+  :config (setq eshell-prompt-function 'epe-theme-lambda))
+
+
 (use-package ibuffer
   :bind ("C-x C-b" . ibuffer))
 
@@ -71,6 +75,9 @@
 (use-package avy
   :bind ("C-," . avy-goto-char-2)
   :ensure t)
+
+
+(use-package aweshell)
 
 
 (use-package company
