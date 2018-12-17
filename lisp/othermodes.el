@@ -200,28 +200,13 @@
 
 
 (use-package lsp-mode
+  :hook ((prog-mode . lsp))
   :ensure t
   :config
   (use-package lsp-ui
     :hook (lsp-mode . lsp-ui-mode)
     :ensure t)
-  (use-package lsp-sh
-    :ensure t)
-  (use-package lsp-php
-    :config
-    (setq lsp-php-server-install-dir "~/.composer")
-    :ensure t)
-  (use-package lsp-typescript
-    :ensure t)
-  (use-package lsp-javascript-typescript
-    :hook ((js-mode . lsp-javascript-typescript-enable)
-           (web-mode . (lambda ()
-                         (when (string-equal "jsx" web-mode-content-type)
-                           (lsp-javascript-typescript-enable))))
-           (rjsx-mode . lsp-javascript-typescript-enable)
-           (typescript-mode . lsp-javascript-typescript-enable))
-    :ensure t)
-  (setq lsp-enable-eldoc nil))
+  (use-package lsp-clients))
 
 (use-package magit
   :bind ("C-x C-z" . magit-status)
