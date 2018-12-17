@@ -287,8 +287,7 @@
 
 
 (use-package tide
-  :hook ((before-save . tide-format-before-save)
-         (web-mode . (lambda ()
+  :hook ((web-mode . (lambda ()
                        (when (string-equal "jsx" web-mode-content-type)
                          (tide-setup)
                          (tide-hl-identifier-mode))))
