@@ -83,10 +83,6 @@
 (use-package company
   :ensure t
   :config
-  (use-package company-lsp
-    :ensure t
-    :config (push 'company-lsp company-backends))
-
   (use-package company-web
     :ensure t
     :config (push 'company-web-html company-backends))
@@ -132,17 +128,19 @@
   :bind (:map eglot-mode-map
               ("M-." . xref-find-definitions)
               ("C-c h" . eglot-help-at-point))
-  :hook ((css-mode .eglot-ensure)
+  :hook ((css-mode . eglot-ensure)
+         (js2-mode . eglot-ensure)
          (web-mode . (lambda ()
                        (when (string-equal "html" web-mode-content-type)
                          (eglot-ensure))))
          (html-mode . eglot-ensure)
          (json-mode . eglot-ensure)
+         (rjsx-mode . eglot-ensure)
          (dockerfile-mode . eglot-ensure))
   :config
   (setq eglot-server-programs
         '((sh-mode . ("bash-language-server" "start"))
-          ((js2-mode rjsx-mode) . ("javascript-typescript-stdio"))
+          ((js2-mode rjsx-mode) . ("typescript-language-server" "--stdio"))
           (css-mode . ("css-languageserver" "--stdio"))
           (web-mode . (lambda ()
                         (when (string-equal "html" web-mode-content-type)
@@ -199,16 +197,6 @@
 
 (use-package indium
   :ensure t)
-
-
-(use-package lsp-mode
-  :hook ((prog-mode . lsp))
-  :ensure t
-  :config
-  (use-package lsp-ui
-    :hook (lsp-mode . lsp-ui-mode)
-    :ensure t)
-  (use-package lsp-clients))
 
 (use-package magit
   :bind ("C-x C-z" . magit-status)
