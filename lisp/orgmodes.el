@@ -3,6 +3,7 @@
   (add-hook 'org-mode-hook
             (lambda ()
               (toggle-truncate-lines)))
+  :ensure org-plus-contrib
   :config
   (use-package ob
     :config
