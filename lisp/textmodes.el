@@ -46,8 +46,8 @@
   (use-package ispell
     :config (when (executable-find "enchant-2")
               (setq ispell-dictionary "english"
-                    ispell-program-name "enchant-2"
                     ispell-really-enchant t)))
+  ;; if spell checking is broken, probably because of enchant-lsmod binary is gone
   (use-package flyspell-popup
     :init (bind-key "C-;" 'flyspell-popup-correct flyspell-mode-map)
     :ensure t)
