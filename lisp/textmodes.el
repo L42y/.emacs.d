@@ -5,10 +5,6 @@
 (use-package css-mode
   :config
   (setq css-indent-offset 2)
-  (use-package css-comb
-    :bind (:map css-mode-map
-                ("C-c C-x c" . css-comb))
-    :ensure t)
   (use-package rainbow-mode
     :init (add-hook 'css-mode-hook 'rainbow-mode)
     :ensure t))
