@@ -245,11 +245,6 @@
   :ensure t)
 
 
-(use-package string-edit
-  :bind ("C-c i" . string-edit-at-point)
-  :ensure t)
-
-
 (use-package switch-window
   :bind ("C-x o" . switch-window)
   :ensure t)
