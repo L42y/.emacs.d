@@ -77,9 +77,6 @@
   :ensure t)
 
 
-(use-package aweshell)
-
-
 (use-package company
   :ensure t
   :config
