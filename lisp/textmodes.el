@@ -54,13 +54,10 @@
   :diminish flyspell-mode)
 
 
-(use-package prettier-js
-  :hook ((js2-mode . prettier-js-mode)
-         (web-mode . prettier-js-mode)
-         (json-mode . prettier-js-mode)
-         (typescript-mode . prettier-js-mode))
+(use-package prettier
+  :init (add-hook 'after-init-hook #'global-prettier-mode)
   :ensure t
-  :diminish prettier-js-mode)
+  :diminish prettier-mode)
 
 
 (use-package sgml-mode
