@@ -72,11 +72,6 @@
                 ag-highlight-search t))
 
 
-(use-package avy
-  :bind ("C-," . avy-goto-char-2)
-  :ensure t)
-
-
 (use-package company
   :ensure t
   :config
