@@ -18,9 +18,6 @@
   :ensure t
   :config
   (setq flycheck-check-syntax-automatically '(mode-enabled save))
-  (use-package flycheck-elm
-    :init (add-to-list 'flycheck-checkers 'elm)
-    :ensure t)
   (use-package flycheck-flow
     :config
     (flycheck-add-mode 'javascript-flow 'flow-minor-mode)
