@@ -71,10 +71,6 @@
   :ensure t)
 
 
-(use-package php-mode
-  :ensure t)
-
-
 (use-package reason-mode
   :ensure t)
 
