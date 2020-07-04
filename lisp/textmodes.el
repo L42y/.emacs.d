@@ -18,12 +18,6 @@
   :ensure t
   :config
   (setq flycheck-check-syntax-automatically '(mode-enabled save))
-  (use-package flycheck-flow
-    :config
-    (flycheck-add-mode 'javascript-flow 'flow-minor-mode)
-    (flycheck-add-mode 'javascript-eslint 'flow-minor-mode)
-    (flycheck-add-next-checker 'javascript-flow 'javascript-eslint)
-    :ensure t)
   (use-package flycheck-posframe
     :init (add-hook 'flycheck-mode-hook #'flycheck-posframe-mode)
     :ensure t
