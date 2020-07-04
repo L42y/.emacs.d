@@ -71,10 +71,6 @@
   :ensure t)
 
 
-(use-package clojure-mode
-  :ensure t)
-
-
 (use-package php-mode
   :ensure t)
 
