@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: React getChildContext
-# key: rctgcc
-# --
-getChildContext() {
-  $0
-}

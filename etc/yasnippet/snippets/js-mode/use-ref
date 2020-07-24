@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: useRef hook
+# key: userf
+# --
+const ${2:ref} = useRef($1)$0

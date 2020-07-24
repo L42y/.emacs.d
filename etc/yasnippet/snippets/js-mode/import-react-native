@@ -2,4 +2,4 @@
 # name: import from react-native
 # key: imprn
 # --
-import {${1:View}$2} from 'react-native';$0
+import {${1:View}$2} from 'react-native'$0

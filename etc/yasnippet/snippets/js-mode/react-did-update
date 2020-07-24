@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: React componentDidUpdate
-# key: rctdu
-# --
-componentDidUpdate(${1:prevProps}${2:, prevState}) {
-  $0
-}

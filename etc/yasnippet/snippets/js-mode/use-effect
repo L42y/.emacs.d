@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: useEffect hook
+# key: useef
+# --
+useEffect(() => {
+  $3
+}${1:, [$2]})$0

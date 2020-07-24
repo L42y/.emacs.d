@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: React shouldComponentUpdate
-# key: rctsu
-# --
-shouldComponentUpdate(${1:nextProps}${2:, nextState}) {
-  $0
-}

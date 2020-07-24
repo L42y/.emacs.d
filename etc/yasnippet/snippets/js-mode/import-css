@@ -2,4 +2,4 @@
 # name: import css
 # key: impcss
 # --
-import './${1:index}.css';
+import './${1:index}.css'

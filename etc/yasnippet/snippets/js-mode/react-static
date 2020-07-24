@@ -4,4 +4,4 @@
 # --
 static ${1:$$(yas-choose-value '("propTypes" "defaultProps" "contextTypes" "childContextTypes" "getDerivedStateFromProps"))} = {
   $0
-};
+}

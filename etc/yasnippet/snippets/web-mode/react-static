@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: react static
-# key: rctstc
-# --
-public static ${1:$$(yas-choose-value '("defaultProps" "contextTypes" "childContextTypes" "getDerivedStateFromProps"))} = $0;

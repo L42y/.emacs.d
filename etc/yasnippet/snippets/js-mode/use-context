@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: useContext
+# key: usectx
+# --
+const $2 = useContext($1)$0

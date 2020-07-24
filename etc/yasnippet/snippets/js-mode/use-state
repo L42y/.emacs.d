@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: useState hook
+# key: usest
+# --
+const $2 = useState($1)$0

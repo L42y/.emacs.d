@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: useCallback hook
+# key: usecb
+# --
+const ${5:memoized} = useCallback(() => ${3:{$4}}${1:, [$2]})$0

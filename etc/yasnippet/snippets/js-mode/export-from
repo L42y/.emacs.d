@@ -2,4 +2,4 @@
 # name: export from
 # key: expfrm
 # --
-export $2 from '$1';$0
+export $2 from '$1'$0

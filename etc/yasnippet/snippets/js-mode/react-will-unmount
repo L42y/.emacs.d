@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: React componentWillUnmount
-# key: rctwum
-# --
-componentWillUnmount() {
-  $0
-}

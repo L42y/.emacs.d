@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: useMemo hook
+# key: usemm
+# --
+const ${5:memoized} = useMemo(() => ${3:{$4}}${1:, [$2]})$0

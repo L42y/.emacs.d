@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: React componentDidMount
-# key: rctdm
-# --
-componentDidMount() {
-  $0
-}
