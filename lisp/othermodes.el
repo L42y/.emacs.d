@@ -185,6 +185,8 @@
   :bind ("C-x C-z" . magit-status)
   :ensure t
   :config
+  (use-package forge
+    :ensure t)
   (use-package magit-imerge
     :ensure t))
 
