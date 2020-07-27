@@ -95,7 +95,12 @@
 (use-package markdown-mode
   :mode (("\\.mdx$" . gfm-mode)
          ("README\\.md$" . gfm-mode))
-  :ensure t)
+  :ensure t
+  :config
+  (use-package markdown-toc
+    :ensure t
+    :config (setq markdown-toc-header-toc-end "<!-- Markdown TOC end -->"
+                  markdown-toc-header-toc-start "<!-- Markdown TOC start -->")))
 
 
 (use-package nginx-mode
