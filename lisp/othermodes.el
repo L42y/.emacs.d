@@ -28,10 +28,6 @@
   :diminish eldoc-mode)
 
 
-(use-package eshell
-  :config (setq eshell-prompt-function 'epe-theme-lambda))
-
-
 (use-package ibuffer
   :bind ("C-x C-b" . ibuffer))
 
