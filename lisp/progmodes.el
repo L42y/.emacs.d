@@ -9,7 +9,8 @@
   (setq-default js2-basic-offset 2)
   (setq js-enabled-frameworks (quote (javascript))
         js-switch-indent-offset js2-basic-offset
-        js2-include-node-externs t)
+        js2-include-node-externs t
+        js2-strict-missing-semi-warning nil)
   (use-package js-doc
     :ensure t
     :init (add-hook
