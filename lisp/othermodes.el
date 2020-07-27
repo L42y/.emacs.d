@@ -64,6 +64,7 @@
 
 (use-package ag
   :bind (("C-c C-s" . ag-project))
+  :ensure t
   :config (setq ag-reuse-window t
                 ag-highlight-search t))
 
