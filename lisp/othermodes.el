@@ -91,7 +91,7 @@
   (setq company-minimum-prefix-length 1)
 
   (global-company-mode 1)
-  :diminish company-mode)
+  :delight " 🏢")
 
 
 (use-package delight
@@ -284,7 +284,7 @@
   (use-package tree-sitter-langs
     :ensure t)
   :ensure t
-  :delight)
+  :delight " 🌲")
 
 
 (use-package wgrep-ag
