@@ -269,6 +269,21 @@
   :ensure t)
 
 
+(use-package tree-sitter
+  :hook
+  (web-mode . (lambda ()
+                (when (string-equal "jsx" web-mode-content-type)
+                  (tree-sitter-mode)
+                  (tree-sitter-hl-mode))))
+  (typescript-mode . tree-sitter-mode)
+  (typescript-mode . tree-sitter-hl-mode)
+  :config
+  (use-package tree-sitter-langs
+    :ensure t)
+  :ensure t
+  :delight)
+
+
 (use-package wgrep-ag
   :init (add-hook 'ag-mode-hook 'wgrep-ag-setup)
   :ensure t)
