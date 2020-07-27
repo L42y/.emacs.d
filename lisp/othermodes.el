@@ -99,6 +99,14 @@
   :diminish company-mode)
 
 
+(use-package delight
+  :ensure t)
+
+
+(use-package diminish
+  :ensure t)
+
+
 (use-package diff-hl
   :init
   (add-hook 'prog-mode-hook 'turn-on-diff-hl-mode)
