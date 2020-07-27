@@ -81,13 +81,8 @@
     :config (push 'company-anaconda company-backends))
 
   (use-package company-posframe
-    :init (company-posframe-mode 1)
     :ensure t
-    :diminish company-posframe-mode)
-
-  (use-package company-quickhelp
-    :ensure t
-    :config (company-quickhelp-mode 1))
+    :delight)
 
   (use-package company-statistics
     :ensure
