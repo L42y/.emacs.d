@@ -63,7 +63,7 @@
 
 
 (use-package ag
-  :bind (("C-c C-s" . ag-project))
+  :bind (("C-c C-p" . ag-project))
   :ensure t
   :config (setq ag-reuse-window t
                 ag-highlight-search t))
@@ -163,7 +163,6 @@
   :bind (("M-x" . helm-M-x)
          ("C-x b" . helm-mini)
          ("C-c p" . helm-projectile)
-         ("C-c s" . helm-projectile-ag)
          ("C-x C-y" . helm-show-kill-ring))
   :ensure t
   :config
