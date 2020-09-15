@@ -231,6 +231,13 @@
   :ensure t)
 
 
+(use-package rg
+  :config
+  (rg-enable-menu)
+  (rg-enable-default-bindings)
+  :ensure t)
+
+
 (use-package smartparens
   :ensure t
   :config
