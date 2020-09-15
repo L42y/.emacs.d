@@ -271,7 +271,6 @@
                        (when (string-equal "jsx" web-mode-content-type)
                          (tide-setup)
                          (tide-hl-identifier-mode))))
-         (before-save . tide-format-before-save)
          (typescript-mode . tide-setup)
          (typescript-mode . tide-hl-identifier-mode))
   :after (company flycheck typescript-mode)
