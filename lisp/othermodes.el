@@ -62,6 +62,12 @@
   :diminish whitespace-mode)
 
 
+(use-package abridge-diff
+  :init (abridge-diff-mode 1)
+  :after magit
+  :ensure t)
+
+
 (use-package ag
   :bind (("C-c C-p" . ag-project))
   :ensure t
@@ -188,6 +194,7 @@
   :bind ("C-x C-z" . magit-status)
   :ensure t
   :config
+  (setq magit-diff-refine-hunk 'all)
   (use-package forge
     :ensure t)
   (use-package magit-imerge
