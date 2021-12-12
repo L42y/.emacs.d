@@ -41,12 +41,6 @@
   :diminish flyspell-mode)
 
 
-(use-package prettier
-  :init (add-hook 'after-init-hook #'global-prettier-mode)
-  :ensure t
-  :diminish prettier-mode)
-
-
 (use-package sgml-mode
   :config
   (setq sgml-basic-offset 2)

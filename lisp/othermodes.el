@@ -75,6 +75,11 @@
                 ag-highlight-search t))
 
 
+(use-package apheleia
+  :init (apheleia-global-mode +1)
+  :ensure t)
+
+
 (use-package company
   :ensure t
   :config
