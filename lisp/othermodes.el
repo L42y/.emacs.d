@@ -63,9 +63,9 @@
 
 
 (use-package abridge-diff
-  :init (abridge-diff-mode 1)
   :after magit
-  :ensure t)
+  :ensure t
+  :diminish abridge-diff-mode)
 
 
 (use-package ag
