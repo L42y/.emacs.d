@@ -279,29 +279,25 @@
 
 
 (use-package tide
-  :hook ((web-mode . (lambda ()
-                       (when (string-equal "jsx" web-mode-content-type)
-                         (tide-setup)
-                         (tide-hl-identifier-mode))))
-         (typescript-mode . tide-setup)
+  :hook ((typescript-mode . tide-setup)
          (typescript-mode . tide-hl-identifier-mode))
   :after (company flycheck typescript-mode)
   :ensure t)
 
 
 (use-package tree-sitter
-  :hook
-  (web-mode . (lambda ()
-                (when (string-equal "jsx" web-mode-content-type)
-                  (tree-sitter-mode)
-                  (tree-sitter-hl-mode))))
-  (typescript-mode . tree-sitter-mode)
-  (typescript-mode . tree-sitter-hl-mode)
+  :hook ((typescript-mode . tree-sitter-mode)
+         (typescript-tsx-tree-sitter-mode . tree-sitter-hl-mode))
   :config
-  (use-package tree-sitter-langs
-    :ensure t)
+  (tree-sitter-require 'tsx)
+  (add-to-list 'tree-sitter-major-mode-language-alist
+               '(typescript-tsx-tree-sitter-mode . tsx))
   :ensure t
   :delight " 🌲")
+
+(use-package tree-sitter-langs
+  :after tree-sitter
+  :ensure t)
 
 
 (use-package wgrep-ag

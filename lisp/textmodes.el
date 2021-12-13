@@ -59,7 +59,6 @@
 
 (use-package web-mode
   :mode (("\\.hbs$" . web-mode)
-         ("\\.tsx$" . web-mode)
          ("\\.html$" . web-mode))
   :ensure t
   :config
