@@ -269,15 +269,6 @@
   :ensure t)
 
 
-(use-package tagedit
-  :init (dolist (hook '(sgml-mode-hook))
-          (add-hook hook #'tagedit-mode))
-  :ensure t
-  :config
-  (tagedit-add-paredit-like-keybindings)
-  (tagedit-add-experimental-features))
-
-
 (use-package tide
   :hook ((typescript-mode . tide-setup)
          (typescript-mode . tide-hl-identifier-mode))
