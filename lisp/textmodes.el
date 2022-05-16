@@ -6,7 +6,7 @@
   :config
   (setq css-indent-offset 2)
   (use-package rainbow-mode
-    :init (add-hook 'css-mode-hook 'rainbow-mode)
+    :hook (css-mode)
     :ensure t))
 
 
@@ -14,7 +14,7 @@
 
 
 (use-package flycheck
-  :init (add-hook 'prog-mode-hook 'flycheck-mode)
+  :hook (prog-mode . flycheck-mode)
   :ensure t
   :config
   (setq flycheck-check-syntax-automatically '(mode-enabled save))
@@ -25,10 +25,8 @@
 
 
 (use-package flyspell
-  :init
-  (add-hook 'org-mode-hook 'flyspell-mode)
-  (add-hook 'text-mode-hook 'flyspell-mode)
-  (add-hook 'prog-mode-hook 'flyspell-prog-mode)
+  :hook ((org-mode text-mode) . flyspell-mode)
+  :hook (prog-mode . flyspell-prog-mode)
   :config
   (use-package ispell
     :config (when (executable-find "enchant-2")
@@ -75,10 +73,9 @@
 
 
 (use-package emmet-mode
+  :hook (sgml-mode css-mode web-mode rjsx-mode)
   :ensure t
   :config
-  (dolist (hook '(sgml-mode-hook css-mode-hook web-mode-hook rjsx-mode-hook))
-    (add-hook hook #'emmet-mode))
   (add-hook 'js2-jsx-mode-hook
             '(lambda()
                (setq-local emmet-expand-jsx-className? t)
