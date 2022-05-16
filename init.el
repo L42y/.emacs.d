@@ -26,6 +26,8 @@
 
 (eval-when-compile
   (require 'use-package))
+(require 'diminish)
+(require 'bind-key)
 
 (defvar sweet-home (file-name-directory load-file-name))
 (defvar elisp-path (expand-file-name "lisp" sweet-home))
