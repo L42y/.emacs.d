@@ -1,7 +1,7 @@
-(use-package darkokai-theme
+(use-package monokai-theme
   :ensure t
   :if window-system
-  :init (load-theme 'darkokai t))
+  :init (load-theme 'monokai t))
 
 
 (add-to-list 'default-frame-alist
