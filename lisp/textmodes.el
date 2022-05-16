@@ -17,11 +17,7 @@
   :hook (prog-mode . flycheck-mode)
   :ensure t
   :config
-  (setq flycheck-check-syntax-automatically '(mode-enabled save))
-  (use-package flycheck-posframe
-    :init (add-hook 'flycheck-mode-hook #'flycheck-posframe-mode)
-    :ensure t
-    :config (flycheck-posframe-configure-pretty-defaults)))
+  (setq flycheck-check-syntax-automatically '(mode-enabled save)))
 
 
 (use-package flyspell
