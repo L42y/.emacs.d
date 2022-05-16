@@ -33,29 +33,13 @@
 
 (use-package rjsx-mode
   :mode ("/\\([[:upper:]]\\w+\\)\\(/index\\)?\\.js$" . rjsx-mode)
-  :hook (typescript-tsx-tree-sitter-mode . rjsx-minor-mode)
   :ensure t
   :diminish rjsx-minor-mode)
 
-(define-derived-mode typescript-tsx-tree-sitter-mode typescript-mode "TSX"
-  "Major mode for editing TSX files.
-
-Refer to Typescript documentation for syntactic differences between normal and
-TSX variants of Typescript."
-  (setq-local indent-line-function 'rjsx-indent-line))
-
 (use-package typescript-mode
-  :mode (("\\.ts$" . typescript-mode)
-         ("\\.tsx$" . typescript-tsx-tree-sitter-mode))
+  :mode ("\\.ts$" . typescript-mode)
   :config
   (setq typescript-indent-level 2)
-
-  (add-hook 'typescript-tsx-tree-sitter-mode-local-vars-hook
-            'rjsx-minor-mode)
-
-  (map :map typescript-tsx-tree-sitter-mode-map
-       "<" 'rjsx-electric-lt
-       ">" 'rjsx-electric-gt)
   :ensure t)
 
 

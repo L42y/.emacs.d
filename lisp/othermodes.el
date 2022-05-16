@@ -270,25 +270,25 @@
 
 
 (use-package tide
-  :hook ((typescript-mode . tide-setup)
-         (typescript-mode . tide-hl-identifier-mode))
+  :hook ((tsx-mode typescript-mode) . tide-setup)
+  :hook ((tsx-mode typescript-mode) . tide-hl-identifier-mode)
   :after (company flycheck typescript-mode)
   :ensure t)
 
 
 (use-package tree-sitter
-  :hook ((typescript-mode . tree-sitter-mode)
-         (typescript-tsx-tree-sitter-mode . tree-sitter-hl-mode))
-  :config
-  (tree-sitter-require 'tsx)
-  (add-to-list 'tree-sitter-major-mode-language-alist
-               '(typescript-tsx-tree-sitter-mode . tsx))
+  :hook (typescript-mode)
   :ensure t
   :delight " 🌲")
 
 (use-package tree-sitter-langs
   :after tree-sitter
   :ensure t)
+
+
+(use-package tsx-mode
+  :init (add-hook 'tsx-mode-hook (lambda () (tree-sitter-hl-mode -1)))
+  :mode ("\\.tsx$" . tsx-mode))
 
 
 (use-package wgrep-ag

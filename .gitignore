@@ -5,7 +5,9 @@
 custom.el
 
 # Packages
-elpa/
+!elpa/
+elpa/*
+!elpa/recipes/
 el-get/
 anaconda-mode/
 .python-environments/

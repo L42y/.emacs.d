@@ -1,0 +1,4 @@
+(tsi :fetcher github
+     :repo "orzechowskid/tsi.el"
+     :files ("*.el"
+             (:exclude "*.test.el")))

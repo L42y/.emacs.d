@@ -1,0 +1,3 @@
+(tsx-mode :fetcher github
+          :repo "orzechowskid/tsx-mode.el"
+          :files ("*.el"))
