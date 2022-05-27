@@ -10,24 +10,6 @@
         js-switch-indent-offset js2-basic-offset
         js2-include-node-externs t
         js2-strict-missing-semi-warning nil)
-  (use-package js-doc
-    :ensure t
-    :init (add-hook
-           'js2-mode-hook
-           '(lambda ()
-              (define-key js2-mode-map "\C-ci" 'js-doc-insert-function-doc)
-              (define-key js2-mode-map "@" 'js-doc-insert-tag))))
-  (use-package xref-js2
-    :init (add-hook
-           'js2-mode-hook
-           (lambda ()
-             (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)))
-    :ensure t)
-  (use-package js2-refactor
-    :ensure t
-    :init (add-hook 'js2-mode-hook #'js2-refactor-mode)
-    :config (js2r-add-keybindings-with-prefix "C-c C-m")
-    :diminish js2-refactor-mode)
   :diminish js2-minor-mode)
 
 
