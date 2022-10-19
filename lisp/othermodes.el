@@ -77,6 +77,7 @@
 
 (use-package apheleia
   :init (apheleia-global-mode +1)
+  :config (add-to-list 'apheleia-mode-alist '(tsx-mode . prettier))
   :ensure t)
 
 
