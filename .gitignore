@@ -9,6 +9,7 @@ custom.el
 elpa/*
 !elpa/recipes/
 el-get/
+straight/
 anaconda-mode/
 .python-environments/
 php-language-server/

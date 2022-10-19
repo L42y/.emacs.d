@@ -41,7 +41,8 @@
 
 (use-package newcomment
   :bind (("C-'" . comment-dwim)
-         ("C-c g" . comment-or-uncomment-region)))
+         ("C-c g" . comment-or-uncomment-region))
+  :straight (:type built-in))
 
 
 (use-package wdired
@@ -83,27 +84,29 @@
 
 (use-package company
   :ensure t
+  :custom
+  (company-minimum-prefix-length 1)
   :config
-  (use-package company-web
-    :ensure t
-    :config (push 'company-web-html company-backends))
-
-  (use-package company-anaconda
-    :ensure t
-    :config (push 'company-anaconda company-backends))
-
-  (use-package company-posframe
-    :ensure t
-    :delight)
-
-  (use-package company-statistics
-    :ensure
-    :config (company-statistics-mode 1))
-
-  (setq company-minimum-prefix-length 1)
-
   (global-company-mode 1)
   :delight " 🏢")
+
+(use-package company-web
+  :ensure t
+  :config
+  (push 'company-web-html company-backends))
+
+(use-package company-anaconda
+  :ensure t
+  :config
+  (push 'company-anaconda company-backends))
+
+(use-package company-posframe
+  :ensure t
+  :delight)
+
+(use-package company-statistics
+  :ensure
+  :config (company-statistics-mode 1))
 
 
 (use-package delight
@@ -159,16 +162,16 @@
   :ensure t)
 
 
-(use-package gitattributes-mode
-  :ensure t)
+;; (use-package gitattributes-mode
+;;   :ensure t)
 
 
-(use-package gitconfig-mode
-  :ensure t)
+;; (use-package gitconfig-mode
+;;   :ensure t)
 
 
-(use-package gitignore-mode
-  :ensure t)
+;; (use-package gitignore-mode
+;;   :ensure t)
 
 
 (use-package helm
@@ -178,13 +181,16 @@
          ("C-x C-y" . helm-show-kill-ring))
   :ensure t
   :config
-  (use-package helm-ag
-    :ensure t)
-  (use-package helm-config)
-  (use-package helm-command
-    :config (setq helm-M-x-fuzzy-match t))
-  (use-package helm-projectile
-    :ensure t))
+  (setq helm-M-x-fuzzy-match t)
+  :straight (:includes (helm-config helm-command)))
+
+(use-package helm-ag
+  :after helm
+  :ensure t)
+
+(use-package helm-projectile
+  :after helm
+  :ensure t)
 
 
 (use-package ibuffer-vc
@@ -199,12 +205,16 @@
 (use-package magit
   :bind ("C-x C-z" . magit-status)
   :ensure t
-  :config
-  (setq magit-diff-refine-hunk 'all)
-  (use-package forge
-    :ensure t)
-  (use-package magit-imerge
-    :ensure t))
+  :custom
+  (magit-diff-refine-hunk 'all))
+
+(use-package forge
+  :after magit
+  :ensure t)
+
+(use-package magit-imerge
+  :after magit
+  :ensure t)
 
 
 (use-package multiple-cursors
@@ -256,8 +266,8 @@
   :config
   (smartparens-global-mode t)
   (show-smartparens-global-mode t)
-  (use-package smartparens-config)
-  :diminish smartparens-mode)
+  :diminish smartparens-mode
+  :straight (:includes smartparens-config))
 
 
 (use-package smex
@@ -287,9 +297,19 @@
   :ensure t)
 
 
+(use-package tsi
+  :straight (:host github
+                   :repo "orzechowskid/tsi.el"
+                   :files ("*.el"
+                           (:exclude "*.test.el"))))
+
+
 (use-package tsx-mode
   :init (add-hook 'tsx-mode-hook (lambda () (tree-sitter-hl-mode -1)))
-  :mode ("\\.tsx$" . tsx-mode))
+  :mode ("\\.tsx$" . tsx-mode)
+  :straight (:host github
+                   :repo "orzechowskid/tsx-mode.el"
+                   :files ("*.el")))
 
 
 (use-package wgrep-ag
