@@ -221,6 +221,30 @@
   :after magit
   :ensure t)
 
+
+(use-package lsp-mode
+  :config
+  (defun relay-activation-fn (filename &optional _)
+    (let* ((projectile-root (ignore-errors (projectile-project-root)))
+           (relay-config-json-path (expand-file-name "relay.config.json" projectile-root))
+           (relay-config-js-path (expand-file-name "relay.config.js" projectile-root)))
+      (or (file-exists-p relay-config-json-path)
+          (file-exists-p relay-config-js-path))))
+  (defun relay-lsp-server-start ()
+    (let* ((projectile-root (ignore-errors (projectile-project-root)))
+           (default-directory (or projectile-root default-directory)))
+      (list "npx" "relay-compiler" "lsp")))
+
+  (lsp-register-client
+   (make-lsp-client :new-connection (lsp-stdio-connection #'relay-lsp-server-start)
+                    :activation-fn 'relay-activation-fn
+                    :major-modes '(tsx-mode)
+                    :server-id 'relay-compiler-lsp
+                    :priority -1
+                    :add-on? t))
+  :ensure t)
+
+
 (use-package magit-imerge
   :after magit
   :ensure t)
@@ -316,6 +340,13 @@
 (use-package tsx-mode
   :init (add-hook 'tsx-mode-hook (lambda () (tree-sitter-hl-mode -1)))
   :mode ("\\.tsx$" . tsx-mode)
+  :config
+  (let ((new-gql-delim '((:start "graphql`"
+                          :start-offset 0
+                          :end "`;"
+                          :end-offset -1))))
+    (setq tsx-mode-gql-region-delimiters
+          (append tsx-mode-gql-region-delimiters new-gql-delim)))
   :straight (:host github
                    :repo "orzechowskid/tsx-mode.el"
                    :files ("*.el")))
