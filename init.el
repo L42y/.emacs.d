@@ -24,6 +24,8 @@
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
 
+(setq straight-repository-branch "develop")
+
 ;; (setq straight-recipe-repositories '(org-elpa melpa gnu-elpa-mirror))
 
 ;; (require 'package)
