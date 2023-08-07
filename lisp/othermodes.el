@@ -1,12 +1,3 @@
-(use-package autoinsert
-  :init
-  (add-hook 'python-mode-hook 'auto-insert)
-  :config
-  (setq auto-insert-query nil
-        auto-insert-directory "~/.emacs.d/templates/")
-  (define-auto-insert "\.py" "python.py"))
-
-
 (use-package desktop
   :init
   (desktop-save-mode 1)
