@@ -70,7 +70,7 @@
 
 
 (use-package emmet-mode
-  :hook (sgml-mode css-mode web-mode rjsx-mode)
+  :hook (sgml-mode css-mode web-mode rjsx-mode tsx-mode tsx-ts-mode)
   :ensure t
   :config
   (add-hook 'js2-jsx-mode-hook

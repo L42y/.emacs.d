@@ -312,19 +312,37 @@
 
 
 (use-package tide
-  :hook ((tsx-mode typescript-mode) . tide-setup)
-  :hook ((tsx-mode typescript-mode) . tide-hl-identifier-mode)
-  :after (company flycheck typescript-mode)
+  :hook ((tsx-mode tsx-ts-mode typescript-ts-mode) . tide-setup)
+  :hook ((tsx-mode tsx-ts-mode typescript-ts-mode) . tide-hl-identifier-mode)
+  :after (company flycheck)
   :ensure t)
 
 
 (use-package tree-sitter
   :hook (typescript-mode)
   :ensure t
+  :unless (treesit-available-p)
   :delight " 🌲")
-
 (use-package tree-sitter-langs
   :after tree-sitter
+  :unless (treesit-available-p)
+  :ensure t)
+
+(use-package treesit
+  :if (treesit-available-p)
+  :mode
+  ("\\.tsx$" . tsx-ts-mode)
+  ("\\.ts$" . typescript-ts-mode)
+  :custom
+  (treesit-font-lock-level 4)
+  (treesit-font-lock-feature-list t)
+  :straight (:type built-in))
+(use-package treesit-auto
+  :if (treesit-available-p)
+  :config
+  (global-treesit-auto-mode)
+  :custom
+  (treesit-auto-langs '(typescript javascript python rust tsx go))
   :ensure t)
 
 
@@ -336,13 +354,13 @@
 
 
 (use-package tsx-mode
-  :init (add-hook 'tsx-mode-hook (lambda () (tree-sitter-hl-mode -1)))
-  :mode ("\\.tsx$" . tsx-mode)
+  ;; :init (add-hook 'tsx-mode-hook (lambda () (tree-sitter-hl-mode -1)))
+  ;; :mode ("\\.tsx$" . tsx-mode)
   :config
   (let ((new-gql-delim '((:start "graphql`"
-                          :start-offset 0
-                          :end "`;"
-                          :end-offset -1))))
+                                 :start-offset 0
+                                 :end "`;"
+                                 :end-offset -1))))
     (setq tsx-mode-gql-region-delimiters
           (append tsx-mode-gql-region-delimiters new-gql-delim)))
   :straight (:host github
