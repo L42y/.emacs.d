@@ -218,6 +218,17 @@
   (magit-diff-refine-hunk 'all))
 
 
+(use-package lsp-bridge
+  :init
+  (global-lsp-bridge-mode)
+  :after (posframe yasnippt markdown-mode)
+  :straight '(lsp-bridge
+              :type git
+              :host github
+              :repo "manateelazycat/lsp-bridge"
+              :files (:defaults "*.el" "*.py" "acm" "core" "langserver" "multiserver" "resources")
+              :build (:not compile)))
+
 
 (use-package lsp-mode
   :config
