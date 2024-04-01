@@ -233,12 +233,13 @@
 (use-package lsp-mode
   :config
   (lsp-register-client
-   (make-lsp-client :new-connection (lsp-stdio-connection #'relay-lsp-server-start)
-                    :activation-fn 'relay-activation-fn
-                    :major-modes '(tsx-mode)
-                    :server-id 'relay-compiler-lsp
-                    :priority -1
-                    :add-on? t))
+   (make-lsp-client
+    :new-connection (lsp-stdio-connection #'relay-lsp-server-start)
+    :activation-fn 'relay-activation-fn
+    :major-modes '(tsx-mode tsx-ts-mode)
+    :server-id 'relay-compiler-lsp
+    :priority -1
+    :add-on? t))
   :ensure t)
 
 
