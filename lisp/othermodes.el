@@ -69,7 +69,10 @@
 
 (use-package apheleia
   :init (apheleia-global-mode +1)
-  :config (add-to-list 'apheleia-mode-alist '(tsx-mode . prettier))
+  :config (add-to-list 'apheleia-mode-alist '((tsx-mode . prettier)
+                                              (tsx-ts-mode . prettier)
+                                              (markdown-mode . prettier)
+                                              (typescript-ts-mode. prettier)))
   :ensure t)
 
 
