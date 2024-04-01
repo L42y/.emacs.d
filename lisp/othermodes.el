@@ -217,9 +217,6 @@
   :custom
   (magit-diff-refine-hunk 'all))
 
-(use-package forge
-  :after magit
-  :ensure t)
 
 
 (use-package lsp-mode
