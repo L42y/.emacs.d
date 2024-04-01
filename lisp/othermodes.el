@@ -159,6 +159,12 @@
         eglot-ignored-server-capabilites '(:hoverProvider))
   :ensure t)
 
+(use-package eglot-booster
+  :after eglot
+  :ensure t
+  :config (eglot-booster-mode)
+  :straight (:host github :repo "jdtsmith/eglot-booster" :files ("*.el")))
+
 
 (use-package expand-region
   :bind ("C-=" . er/expand-region)
