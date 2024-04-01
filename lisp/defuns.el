@@ -30,4 +30,18 @@ then move it to the beginning of the line."
 (rename-modeline "js2-mode" js2-mode "JS2")
 
 
+(defun relay-activation-fn (filename &optional _)
+  (let* ((projectile-root (ignore-errors (projectile-project-root)))
+         (relay-config-json-path
+          (expand-file-name "relay.config.json" projectile-root))
+         (relay-config-js-path
+          (expand-file-name "relay.config.js" projectile-root)))
+    (or (file-exists-p relay-config-json-path)
+        (file-exists-p relay-config-js-path))))
+(defun relay-lsp-server-start ()
+  (let* ((projectile-root (ignore-errors (projectile-project-root)))
+         (default-directory (or projectile-root default-directory)))
+    (list "npx" "relay-compiler" "lsp")))
+
+
 (provide 'defuns)

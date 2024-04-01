@@ -215,17 +215,6 @@
 
 (use-package lsp-mode
   :config
-  (defun relay-activation-fn (filename &optional _)
-    (let* ((projectile-root (ignore-errors (projectile-project-root)))
-           (relay-config-json-path (expand-file-name "relay.config.json" projectile-root))
-           (relay-config-js-path (expand-file-name "relay.config.js" projectile-root)))
-      (or (file-exists-p relay-config-json-path)
-          (file-exists-p relay-config-js-path))))
-  (defun relay-lsp-server-start ()
-    (let* ((projectile-root (ignore-errors (projectile-project-root)))
-           (default-directory (or projectile-root default-directory)))
-      (list "npx" "relay-compiler" "lsp")))
-
   (lsp-register-client
    (make-lsp-client :new-connection (lsp-stdio-connection #'relay-lsp-server-start)
                     :activation-fn 'relay-activation-fn
