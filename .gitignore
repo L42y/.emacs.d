@@ -18,3 +18,4 @@ php-language-server/
 var/
 backups/
 eln-cache/
+tree-sitter/
