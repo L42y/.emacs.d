@@ -103,15 +103,6 @@
   :config (company-statistics-mode 1))
 
 
-(use-package copilot
-  :bind (:map copilot-completion-map
-              ("<tab>" . copilot-accept-completion)
-              ("TAB" . copilot-accept-completion))
-  :hook prog-mode
-  :ensure t
-  :straight (:host github :repo "zerolfx/copilot.el" :files ("dist" "*.el")))
-
-
 (use-package delight
   :ensure t)
 
