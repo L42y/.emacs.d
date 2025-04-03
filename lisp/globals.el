@@ -3,10 +3,6 @@
              :custom (straight-use-package-by-default t))
 
 
-(use-package use-package-ensure-system-package
-  :ensure t)
-
-
 (use-package monokai-theme
   :ensure t
   :if window-system
